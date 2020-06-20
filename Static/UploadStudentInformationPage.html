@@ -3,29 +3,44 @@
 <body>
 
 <h1>UploadStudentInformation</h1>
-
-<form action="/action_page.php">
+<p>
   <label for="fname">First Name: </label>
-  <input type="text" id="fname" name="fname">
-  <label for="lname"><br>
+    <input type="text" id="fname" name="fname">
+    <label for="lname"><br>
+      <br>
+      Last Name: </label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="text">Student Id:</label>
+    <input type="text" id="id" name="id"> <br>
+	<br>
+	<label for="text2">Student Email:</label></br>
+  <input type="text" id="id2" name="id2">
+  <br>
+	<br>
+	<label for="text2"> Age:</label>
+	</br>
+  <input type="text" id="id2" name="id2">
+  <br>
+<br>
+	<label for="text2"> Phone:</label>
+	</br>
+  <input type="text" id="id2" name="id2">
+  <br>
+  <br>
+  <label for="Term" >Term:</label>
+  <select name="Term" id="Term">
+    <option value="Summer 2020">Summer 2020</option>
+    <option>Spring 2020</option>
+  </select>
+  <label for="Term"><br>
     <br>
-  Last Name: </label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="text">Student Id:</label>
-  <input type="text" id="id" name="id"><br><br>
-        <label for="Term" >Term:</label>
-        <select name="Term" id="Term">
-          <option value="Summer 2020">Summer 2020</option>
-          <option>Spring 2020</option>
-        </select>
-		  <label for="Term"><br>
-		    <br>
-	      Course:</label>
-        <select name="Term" id="Term">
-          <option value="INFO 5717">INFO 5717</option>
-          <option value="INFO 5707">INFO 5707</option>
-        </select>
-	  <p>Upload Student Photograph:</p>
+    Course:</label>
+  <select name="Term" id="Term">
+    <option value="INFO 5717">INFO 5717</option>
+    <option value="INFO 5707">INFO 5707</option>
+  </select>
+</p>
+  <p>Upload Student Photograph:</p>
   <input type="file" id="myFile" name="filename"><br><br>
 	<form action="MyAttendancePage.html" method="POST">
 		<p>
