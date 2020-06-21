@@ -95,9 +95,16 @@
       <td width="1%" bgcolor="#06993C">&nbsp;</td>
     </tr>
     <tr bgcolor="#751D1F">
-    <td height="40" colspan="3" align="left" bgcolor="#06993C"><a href="AppealPage.html" target="myframe">
-      <input type="button" name="Appeal" id="submit" value="Appeal">
-      <input name="Logout" type="submit" id="Logout" formaction="StudentLoginPage.html" formmethod="POST" title="Logout" value="Logout">    </tr>
+    <td height="40" colspan="3" align="left" bgcolor="#06993C">
+		<a href="AppealPage.html" target="myframe">
+      	<input type="button" name="Appeal" id="submit" value="Appeal">
+			<button onclick="myFunction()">LogOut</button>
+			<script>
+			function myFunction() {
+			  location.replace("StudentLoginPage.html")
+			}
+			</script>
+	</tr>
   </tbody>
 </table>
 <p><iframe frameborder="0" height="500" width="100%" name="myframe">&nbsp;</p>
