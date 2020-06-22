@@ -5,6 +5,28 @@
 <title>CourseSelectionPage</title>
 </head>
 <script language="javascript">
+
+	var termObject = {
+			"Spring 2020":["Info 5717","Info 5707"],
+			"Summer 2020":["Data Analysis","Data Visualization"]
+		};
+	window.onload = function ()
+	{
+		var termSel = document.getElementById("termSel");
+		var	courseSel = document.getElementById("courseSel");
+		for (var term in termObject) {
+			termSel.options[termSel.options.length] = new Option(term, term);
+		}
+		termSel.onchange = function () {
+			courseSel.length = 1; // remove all options bar first
+			if (this.selectedIndex < 1) return; // done  
+			var courses = termObject[termSel.value];
+			for (var i = 0; i < courses.length; i++) {
+            	courseSel.options[courseSel.options.length] = new Option(courses[i], courses[i]);
+        	}	
+    	}
+	}
+
 	function edit(i)
 		{
 			document.getElementById("lblTerm".concat(i)).style.display='none';
@@ -42,29 +64,9 @@
 		var con=confirm("Are you sure to delete the record? This action cannot be rolled back.Rownumber-".concat(i));
 		if(con==true)
 			{
-				alert("The record is deleted");
+				alert("done");
 			}else
-				alert("The record is not deleted")
-	}
-	var termObject = {
-			"Spring 2020":["INFO 5707 Data Modeling for Information Professionals","INFO 5810 Data Analysis and Knowledge Discovery"],
-			"Summer 2020":["INFO 5717 Dynamic WWW Control Structures","INFO 5305 System Analysis and Design"]
-		};
-	window.onload = function ()
-	{
-		var termSel = document.getElementById("termSel");
-		var	courseSel = document.getElementById("courseSel");
-		for (var term in termObject) {
-			termSel.options[termSel.options.length] = new Option(term, term);
-		}
-		termSel.onchange = function () {
-			courseSel.length = 1; // remove all options bar first
-			if (this.selectedIndex < 1) return; // done  
-			var courses = termObject[termSel.value];
-			for (var i = 0; i < courses.length; i++) {
-            	courseSel.options[courseSel.options.length] = new Option(courses[i], courses[i]);
-        	}	
-    	}
+				alert("no")
 	}
 </script>
 <body style="text-align: center">
@@ -80,14 +82,14 @@
           <tr>            </tr>
         </tbody>
       </table>
-       <label for="Term" >Term:</label>
+        <label for="Term" >Term:</label>
 		      <select name="optone" id="termSel" size="1">
         <option value="" selected="selected">Select term</option>
     </select>
 		  <label for="course">Course:</label>
     <select name="opttwo" id="courseSel" size="1">
         <option value="" selected="selected">Please select course </option>
-    </select>	
+    </select>
         <input type="button" name="button" id="button" value="Search">
         <table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
@@ -104,33 +106,34 @@
                   
                 </tr>
                 <tr>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Spring 2020</label>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Summer 2020</label>
                     <input type="text" name="textfield" id="txtTerm1" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label><input type="text" name="textfield" id="txtCourse1" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate1">01/01/2020</label>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5717</label>
+                    <input type="text" name="textfield" id="txtCourse1" style="display: none"></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate1">06/01/2020</label>
                     <input type="text" name="textfield" id="txtStartDate1" style="display: none"></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate1">05/08/2020</label>
+                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate1">08/20/2020</label>
                     <input type="text" name="textfield" id="txtEndDate1" style="display: none"></td>
-                  <td align="center" valign="middle" bgcolor="#FFFFFF">
-					  <a href="ClassDetailsPage.html" target="myiframe">Class Details</a>
-                    <a href="BasicStudentInformation.html" target="myiframe">Student Details</a>
-					  <a href="History.html" target="myiframe">Attendance Details</a></td>
+                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="ClassDetailsPage.html" target="myframe"><input type="button" name="View Details" id="View Details" value="Class Details">
+                    <a href="BasicStudentInformation.html" target="myframe">
+                    <input type="button" name="View Details4" id="View Details4" value="Student Details"> <a href="History.html" target="myframe"> <input type="button" name="View Details5" id="View Details7" value="Attendance Details"></td>
                   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
 					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
                     <input type="button" name="button3" id="btnDelete1" value="Delete" onClick="delcon(1);">
-					</td></tr>
+                                     </td>
                 <tr>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Summer 2020</label>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Spring 2020</label>
                     <input type="text" name="textfield" id="txtTerm2" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label><input type="text" name="textfield" id="txtCourse2" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate2">06/01/2020</label>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5707</label>
+                    <input type="text" name="textfield" id="txtCourse2" style="display: none"></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate2">01/01/2020</label>
                     <input type="text" name="textfield" id="txtStartDate2" style="display: none"></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate2">08/23/2020</label>
+                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate2">05/06/2020</label>
                     <input type="text" name="textfield" id="txtEndDate2" style="display: none"></td>
-                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="ClassDetailsPage.html" target="myiframe">Class Details</a>
-                    <a href="BasicStudentInformation.html" target="myiframe">Student Details</a>
-					  <a href="History.html" target="myiframe">Attendance Details</a></td>
+                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="ClassDetailsPage.html" target="myframe"><input type="button" name="View Details" id="View Details" value="Class Details">
+                    <a href="BasicStudentInformation.html" target="myframe">
+                    <input type="button" name="View Details4" id="View Details4" value="Student Details"> <a href="History.html" target="myframe"> <input type="button" name="View Details5" id="View Details7" value="Attendance Details"></td>
                   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit2" value="Edit" onClick="edit(2);">
 					<input type="button" name="button4" id="btnUpdate2" value="Update" style="display: none" onClick="update(2);"> 
@@ -148,6 +151,6 @@
     </tr>
   </tbody>
 </table>
-<iframe frameborder="0" height="1000" width="100%" name="myiframe"></iframe>
+<iframe frameborder="0" height="1000" width="100%" name="myframe"></iframe>
 </body>
 </html>
