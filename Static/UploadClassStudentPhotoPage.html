@@ -2,39 +2,25 @@
 <html>
 <body>
 
-<h1>UploadClass/Student Photo</h1>
-
-<form action="/action_page.php">
-  <p><br>
-    <label for="Term" >Term:</label>
-    <select name="Term" id="Term">
-      <option value="Summer 2020">Summer 2020</option>
-      <option>Spring 2020</option>
-    </select>
-    <label for="Term"><br>
-      <br>
-      Course:</label>
-    <select name="Term" id="Term">
-      <option value="INFO 5717">INFO 5717</option>
-      <option value="INFO 5707">INFO 5707</option>
-    </select>
-  </p>
+<table bgcolor="#06993C" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="color: #FFFFFF; font-size: 24px;">Upload class photo</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  <label for="lname"><br>
+    </label>Upload your file:</p>
   <p>
-    <label for="date">Date:</label>
-    <input type="date" name="date" id="date">
-    <br>
-    <br>
-    <label for="textfield">Upload Class/Student Photo:</label>
     <input type="file" id="myFile" name="filename">
   </p>
   <p>
-	<form action="ExtractingComparing.html" method="POST" ><p>
-		<input name="submit" type="submit" id="submit" title="submit" value="Submit"></p>
-	  <p><a href="ExtractingComparing.html"><img src="images/img_submit.gif" width="48" height="48" alt=""/></a></p>
-	</form>
+    <input type="submit" name="submit" id="submit" value="Submit" onClick="alert('Upload succesfull!');">    
     <br><br>
   </p>
-</form>
-
+  <form action="MyAttendancePage.html" method="POST">
+    <p></p>
+  </form>
 </body>
 </html>
