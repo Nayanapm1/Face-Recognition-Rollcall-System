@@ -4,28 +4,7 @@
 <meta charset="UTF-8">
 <title>MyAttendancePage</title>
 </head>
-<script language="javascript">	
-		var termObject = {
-			"Spring 2020":["INFO 5707 Data Modeling for Information Professionals","INFO 5810 Data Analysis and Knowledge Discovery"],
-			"Summer 2020":["INFO 5717 Dynamic WWW Control Structures","INFO 5305 System Analysis and Design"]
-		};
-	window.onload = function ()
-	{
-		var termSel = document.getElementById("termSel");
-		var	courseSel = document.getElementById("courseSel");
-		for (var term in termObject) {
-			termSel.options[termSel.options.length] = new Option(term, term);
-		}
-		termSel.onchange = function () {
-			courseSel.length = 1; // remove all options bar first
-			if (this.selectedIndex < 1) return; // done  
-			var courses = termObject[termSel.value];
-			for (var i = 0; i < courses.length; i++) {
-            	courseSel.options[courseSel.options.length] = new Option(courses[i], courses[i]);
-        	}	
-    	}
-	}
-	</script>
+
 <body>
 <table width="100%" border="0">
   <tbody>
@@ -37,14 +16,13 @@
       <td width="98%"><table width="100%" border="0" cellpadding="0">
         <tbody>
           <tr>
-            <th height="23" align="left" valign="middle" bgcolor="#ACB0AE" scope="col"><label for="Term" >Term:</label>
-		      <select name="optone" id="termSel" size="1">
-        <option value="" selected="selected">Select term</option>
-    </select>
-		  <label for="course">Course:</label>
-    <select name="opttwo" id="courseSel" size="1">
-        <option value="" selected="selected">Please select course </option>
-    </select>	
+            <th height="23" align="left" valign="middle" bgcolor="#ACB0AE" scope="col"><label for="Select Term">
+              <label for="date"> </label>
+              <label for="select">Select Course:</label>
+              <select name="select" id="select">
+                <option value="INFO 5717">INFO 5717</option>
+                <option value="INFO 5707">INFO 5707</option>
+              </select>
               <label for="date"> Date:</label>
               <input type="date" name="date" id="date">
 			  <input type="submit" name="search" id="search" value="Search">
@@ -55,58 +33,46 @@
         <table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
           <tr bgcolor="#DEE0DF">
-            <th width="10%" bgcolor="#DEE0DF" scope="col">Select</th>
-			  <th width="10%" height="25" bgcolor="#DEE0DF" scope="col">Date</th>
-            <th width="15%" scope="col">Term</th>
+            <th width="10%" height="25" bgcolor="#DEE0DF" scope="col">Date</th>
             <th width="25%" scope="col">Course</th>
             <th width="10%" scope="col">Presence</th>
             <th width="10%" scope="col">Absence</th>
-            <th width="20%" scope="col">Attendance Rate</th>
+            <th width="20%" scope="col">Appeal request</th>
             </tr>
-          <tr>
-            <th scope="col"><input type="checkbox" name="checkbox" id="checkbox"></th>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <th height="25" scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><input type="submit" name="submit" id="submit" value="Send" onClick="alert('Appeal request sent!');"></th>
           </tr>
-          <tr>
-            <th scope="col"><input type="checkbox" name="checkbox2" id="checkbox2"></th>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <th height="25" scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><input type="submit" name="submit2" id="submit2" value="Send" onClick="alert('Appeal request sent!');"></th>
           </tr>
-          <tr>
-            <th scope="col"><input type="checkbox" name="checkbox3" id="checkbox3"></th>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <th height="25" scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><input type="submit" name="submit3" id="sbmit3" value="Send" onClick="alert('Appeal request sent!');"></th>
           </tr>
-          <tr>
-            <th scope="col"><input type="checkbox" name="checkbox4" id="checkbox4"></th>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <th height="25" scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><input type="submit" name="submit" id="submit" value="Send" onClick="alert('Appeal request sent!');"></th>
           </tr>
-          <tr>
-            <th scope="col"><input type="checkbox" name="checkbox5" id="checkbox5"></th>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <th height="25" scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
             <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><input type="submit" name="submit3" id="submit3" value="Send" onClick="alert('Appeal request sent!');"></th>
           </tr>
         </tbody>
       </table></td>
@@ -115,7 +81,6 @@
     <tr bgcolor="#751D1F">
     <td height="40" colspan="3" align="left" bgcolor="#06993C">
 		<a href="AppealPage.html" target="myframe">
-      	<input type="button" name="Appeal" id="submit" value="Appeal">
 			<button onclick="myFunction()">LogOut</button>
 			<script>
 			function myFunction() {

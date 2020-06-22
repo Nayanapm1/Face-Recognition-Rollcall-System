@@ -2,38 +2,25 @@
 <html>
 <body>
 
-<h1>UploadStudentInformation</h1>
+<table bgcolor="#06993C" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="color: #FFFFFF; font-size: 24px;">Upload student information</td>
+    </tr>
+  </tbody>
+</table>
 <p>
-  <label for="fname">First Name: </label>
-    <input type="text" id="fname" name="fname">
-    <label for="lname"><br>
-      <br>
-      Last Name: </label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <label for="text">Student Id:</label>
-    <input type="text" id="id" name="id"> <br>
-	<br>
-	<label for="text2">Student Email:</label></br>
-  <input type="text" id="id2" name="id2"><br><br>
-    <label for="Term" >Term:</label>
-  <select name="Term" id="Term">
-    <option value="Summer 2020">Summer 2020</option>
-    <option>Spring 2020</option>
-  </select>
-  <label for="Term"><br>
-    <br>
-    Course:</label>
-  <select name="Term" id="Term">
-    <option value="INFO 5717">INFO 5717</option>
-    <option value="INFO 5707">INFO 5707</option>
-  </select>
-</p>
-  <p>Upload Student Photograph:</p>
-  <input type="file" id="myFile" name="filename"><br><br>
-	<form action="MyAttendancePage.html" method="POST">
-		<p>
-		  <input type="image" src="./images/img_submit.gif" alt="Submit" width="48" height="48">
-		</p>
-	</form>
+  <label for="lname"><br>
+    </label>Upload your file:</p>
+  <p>
+    <input type="file" id="myFile" name="filename">
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit" onClick="alert('Upload succesfull!');">    
+    <br><br>
+  </p>
+  <form action="MyAttendancePage.html" method="POST">
+    <p></p>
+  </form>
 </body>
 </html>

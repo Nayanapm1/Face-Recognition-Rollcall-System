@@ -1,88 +1,51 @@
 <!doctype html>
 <html>
 <head>
+<style>
+.modal {
+  display: none;position: fixed;z-index: 1;padding-top: 100px;left: 0;top: 0;width: 100%;height: 100%; 
+  overflow: auto;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4);
+	}
+.modal-content {
+  background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;width: 80%;
+}
+.close {
+  color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;
+}
+
+.close1 {
+  color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;
+}
+	
+.close2 {
+  color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;
+}
+
+.close3 {
+  color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;
+}
+.close:hover,
+.close1:hover,
+.close2:hover,
+.close3:hover,
+.close:focus {
+  color: #000;text-decoration: none;cursor: pointer;
+	}
+.close1:focus {
+  color: #000;text-decoration: none;cursor: pointer;
+	}
+.close2:focus {
+  color: #000;text-decoration: none;cursor: pointer;
+	}
+.close3:focus {
+  color: #000;text-decoration: none;cursor: pointer;
+	}
+</style>
+
 <meta charset="UTF-8">
 <title>RollCallPage</title>
 </head>
-<script language="javascript">
-		var termObject = {
-			"Spring 2020":["INFO 5707 Data Modeling for Information Professionals","INFO 5810 Data Analysis and Knowledge Discovery"],
-			"Summer 2020":["INFO 5717 Dynamic WWW Control Structures","INFO 5305 System Analysis and Design"]
-		};
-	window.onload = function ()
-	{
-		var termSel = document.getElementById("termSel");
-		var	courseSel = document.getElementById("courseSel");
-		for (var term in termObject) {
-			termSel.options[termSel.options.length] = new Option(term, term);
-		}
-		termSel.onchange = function () {
-			courseSel.length = 1; // remove all options bar first
-			if (this.selectedIndex < 1) return; // done  
-			var courses = termObject[termSel.value];
-			for (var i = 0; i < courses.length; i++) {
-            	courseSel.options[courseSel.options.length] = new Option(courses[i], courses[i]);
-        	}	
-    	}
-	}
-	function edit(i)
-		{
-			document.getElementById("lblStudentNumber".concat(i)).style.display='none';
-			document.getElementById("txtStudentNumber".concat(i)).style.display='';
-			document.getElementById("lblStudentName".concat(i)).style.display='none';
-			document.getElementById("txtStudentName".concat(i)).style.display='';
-			document.getElementById("lblDate".concat(i)).style.display='none';
-			document.getElementById("txtDate".concat(i)).style.display='';
-			document.getElementById("lblTerm".concat(i)).style.display='none';
-			document.getElementById("txtTerm".concat(i)).style.display='';
-			document.getElementById("lblCourse".concat(i)).style.display='none';
-			document.getElementById("txtCourse".concat(i)).style.display='';
-			document.getElementById("lblAttended".concat(i)).style.display='none';
-			document.getElementById("txtAttended".concat(i)).style.display='';
-			document.getElementById("lblStudentPhoto".concat(i)).style.display='none';
-			document.getElementById("txtStudentPhoto".concat(i)).style.display='';
-			document.getElementById("btnUpdate".concat(i)).style.display='';
-			document.getElementById("btnEdit".concat(i)).style.display='none';
-			document.getElementById("btnDelete".concat(i)).style.display='none';
-		}
-	function update(i)
-		{
-			document.getElementById("lblStudentNumber".concat(i)).style.display='';
-			document.getElementById("txtStudentNumber".concat(i)).style.display='none';
-			document.getElementById("lblStudentName".concat(i)).style.display='';
-			document.getElementById("txtStudentName".concat(i)).style.display='none';
-			document.getElementById("lblDate".concat(i)).style.display='';
-			document.getElementById("txtDate".concat(i)).style.display='none';
-			document.getElementById("lblTerm".concat(i)).style.display='';
-			document.getElementById("txtTerm".concat(i)).style.display='none';
-			document.getElementById("lblCourse".concat(i)).style.display='';
-			document.getElementById("txtCourse".concat(i)).style.display='none';
-			document.getElementById("lblAttended".concat(i)).style.display='';
-			document.getElementById("txtAttended".concat(i)).style.display='none';
-			document.getElementById("lblStudentPhoto".concat(i)).style.display='';
-			document.getElementById("txtStudentPhoto".concat(i)).style.display='none';
-			document.getElementById("btnUpdate".concat(i)).style.display='none';
-			document.getElementById("btnEdit".concat(i)).style.display='';
-			document.getElementById("btnDelete".concat(i)).style.display='';
-			document.getElementById("lblStudentNumber".concat(i)).innerHTML=document.getElementById("txtStudentNumber".concat(i)).value;
-			document.getElementById("lblStudentName".concat(i)).innerHTML=document.getElementById("txtStudentName".concat(i)).value;
-			document.getElementById("lblDate".concat(i)).innerHTML=document.getElementById("txtDate".concat(i)).value;
-			document.getElementById("lblTerm".concat(i)).innerHTML=document.getElementById("txtTerm".concat(i)).value;
-			document.getElementById("lblCourse".concat(i)).innerHTML=document.getElementById("txtCourse".concat(i)).value;
-			document.getElementById("lblAttended".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
-			document.getElementById("lblStudentPhoto".concat(i)).innerHTML=document.getElementById("txtStudentPhoto".concat(i)).value;
-		}	
-	function delcon(i)
-	{
-		var con=confirm("Are you sure to delete the record? This action cannot be rolled back.Rownumber-".concat(i));
-		if(con==true)
-			{
-				alert("The record is deleted");
-			}else
-				alert("The record is not deleted")
-	}
 
-	</script>
 <body>
 <table width="100%" height="33" border="0">
   <tbody>
@@ -102,25 +65,125 @@
               <tbody>
                 <tr>
                   <th width="82%" height="23" align="left" valign="middle" bgcolor="#ACB0AE" scope="col">
-					  					    <label for="Term" >Term:</label>
-		      <select name="optone" id="termSel" size="1">
-        <option value="" selected="selected">Select term</option>
-    </select>
-		  <label for="course">Course:</label>
-    <select name="opttwo" id="courseSel" size="1">
-        <option value="" selected="selected">Please select course </option>
-    </select>	
+					  					   
 					  <label for="textfield">Student No:</label>
                     <input type="text" name="textfield" id="textfield">
                     <label for="textfield2">Student Name:</label>
                     <input type="text" name="textfield2" id="textfield2">
                     <input type="button" name="button" id="button" value="RollCall">
 					</th>
-                  <th width="18%" align="right" valign="middle" bgcolor="#ACB0AE" scope="col">  
-					  <a href="SelectPage.html"><img src="./images/Select.PNG" width="36" height="36" alt=""/></a>
-					  <a href="UploadStudentInformationPage.html"><img src="./images/import_1.png" width="36" height="36" alt=""/></a>
-					  <a href="UploadClassStudentPhotoPage.html"><img src="./images/Uploadicon.png" width="36" height="36" alt=""/></a>
-					  <a href="History.html"><img src="./images/history.jpg" width="36" height="36" alt=""/></a>
+                  <th width="18%" align="right" valign="middle" bgcolor="#ACB0AE" scope="col">
+	<button id="myBtn">
+	<img  src="images/Select.PNG" width="30" height="30" >
+	</button>  
+	<button id="myBtn1">
+	<img src="./images/import_1.PNG" width="30" height="30" >
+	</button>
+	<button id="myBtn2">
+	<img  src="images/UploadIcon.png" width="30" height="30" >
+	</button>
+	<button id="myBtn3">
+	<img   src="images/history.jpg" width="30" height="30" >
+	</button>
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+	<div id="frameholder">
+		<iframe width="100%" height="300px" frameborder="0" src="./CourseSelectionPage.html" name="full_info">
+		</iframe>
+	</div>
+  </div>
+</div>
+	
+	
+	<div id="myModal1" class="modal">
+<div class="modal-content">
+    <span class="close1">&times;</span>
+	<div id="frameholder">
+		<iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="./UploadStudentInformationPage.html" name="full_info">
+		</iframe>
+	</div>
+  </div>
+</div>
+	
+	<div id="myModal2" class="modal">
+<div class="modal-content">
+    <span class="close2">&times;</span>
+	<div id="frameholder">
+		<iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="./UploadClassStudentPhotoPage.html" name="full_info">
+		</iframe>
+	</div>
+  </div>
+</div>
+	
+	<div id="myModal3" class="modal">
+<div class="modal-content">
+    <span class="close3">&times;</span>
+	<div id="frameholder">
+		<iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="./History.html" name="full_info">
+		</iframe>
+	</div>
+  </div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+var span3 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+					  </script>
+
 					</th>
                 </tr>
               </tbody>
@@ -137,47 +200,35 @@
             <td width="134" align="center" bgcolor="#DEE0DF">Student Photo</td>
             <td width="141" height="21" align="center" bgcolor="#DEE0DF">Management</td>
           </tr>
-          <tr>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber1"><a href="StudentRecord.html">2020A001</a></label>
-              <input type="text" name="textfield" id="txtStudentNumber1" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName1">Willem Baxter</label><input type="text" name="textfield" id="txtStudentName1" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate1">06/01/2020</label>
-                    <input type="text" name="textfield" id="txtDate1" style="display: none"></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Summer 2020</label>
-                    <input type="text" name="textfield" id="txtTerm1" style="display: none"></td>
- 				<td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5717 Dynamic WWW Control Structures</label>
-                    <input type="text" name="textfield" id="txtCourse1" style="display: none"></td> 
-			  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttended1">Y</label>
-                    <input type="text" name="textfield" id="txtAttended1" style="display: none"></td> 
-			  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentPhoto1"></label>
-                    <input type="text" name="textfield" id="txtStudentPhoto1" style="display: none"></td>
-                  <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
-					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
-					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
-                    <input type="button" name="button3" id="btnDelete1" value="Delete" onClick="delcon(1);">
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
+            <td height="44" align="center">&nbsp;<a href="StudentRecord.html">2020A001</a></td>
+            <td align="center">&nbsp;Willem Baxter</td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;Spring 2020</td>
+            <td align="center">INFO 5707 - Data Modeling for Information Professionals</td>
+            <td align="center">Y(100%)</td>
+            <td align="center"><img src="images/Willem Baxter.jpg" width="52" height="41" alt=""/></td>
+            <td align="center" valign="middle">
+				<input type="button" name="button2" id="button2" value="Edit">
+                    <input type="button" name="button3" id="button3" value="Delete">
+				
 			  </td>
           </tr>
-          <tr>
-	                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber2">2020A002</label>
-                    <input type="text" name="textfield" id="txtStudentNumber2" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName2">Samantha Chu</label><input type="text" name="textfield" id="txtStudentName2" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate2">06/01/2020</label>
-                    <input type="text" name="textfield" id="txtDate2" style="display: none"></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Summer 2020</label>
-                    <input type="text" name="textfield" id="txtTerm2" style="display: none"></td>
- 				<td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label>
-                    <input type="text" name="textfield" id="txtCourse2" style="display: none"></td> 
-			  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttended2">N</label>
-                    <input type="text" name="textfield" id="txtAttended2" style="display: none"></td> 
-			  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentPhoto2"></label>
-                    <input type="text" name="textfield" id="txtStudentPhoto2" style="display: none"></td>
-                  <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
-					<input type="button" name="button2" id="btnEdit2" value="Edit" onClick="edit(2);">
-					<input type="button" name="button4" id="btnUpdate2" value="Update" style="display: none" onClick="update(2);"> 
-                    <input type="button" name="button3" id="btnDelete2" value="Delete" onClick="delcon(2);">
-					</td>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
+            <td align="center">&nbsp;2020A002</td>
+            <td align="center">&nbsp;Samantha Chu</td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;Spring 2020</td>
+            <td align="center">INFO 5707 - Data Modeling for Information Professionals</td>
+            <td align="center">&nbsp;</td>
+            <td align="center"><img src="images/Samantha Chu.jpg" width="52" height="41" alt=""/></td>
+            <td align="center">
+				<input type="button" name="button2" id="button2" value="Edit">
+                    <input type="button" name="button3" id="button3" value="Delete">
+
+			  </td>
           </tr>
-          <tr>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
@@ -187,7 +238,7 @@
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
           </tr>
-          <tr>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
@@ -197,7 +248,7 @@
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
           </tr>
-          <tr>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
@@ -207,7 +258,7 @@
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
           </tr>
-          <tr>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
@@ -217,117 +268,7 @@
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
           </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr>
+          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
             <td align="center">&nbsp;</td>
