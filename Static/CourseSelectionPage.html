@@ -71,7 +71,7 @@
 <table width="100%" border="0">
   <tbody>
     <tr>
-      <th colspan="3" align="left" bgcolor="#06993C" scope="col"><img src="./images/Course.PNG" width="41" height="35" alt=""/><span style="font-size: 24px; color: #FFFFFF;">Course selection</span></th>
+      <th colspan="3" align="left" bgcolor="#06993C" scope="col"><img src="./images/Course.PNG" width="41" height="35" alt=""/><span style="font-size: 24px; color: #FFFFFF;">Course Selection</span></th>
     </tr>
     <tr>
       <td width="0" bgcolor="#06993C">&nbsp;</td>
@@ -88,33 +88,30 @@
     <select name="opttwo" id="courseSel" size="1">
         <option value="" selected="selected">Please select course </option>
     </select>	
-        <input type="button" name="button" id="button" value="Search">
+        <input type="button" name="button" id="button" value="Select">
         <table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
             <td width="40%" align="center" bgcolor="#DEE0DF"><table width="100%" border="1" cellpadding="0" cellspacing="0">
               <tbody>
                 <tr>
-                  <td width="10%" height="21" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Term</strong></td>
-                  <td width="25%" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Course&nbsp;&nbsp;</strong></td>
+                  <td width="15%" height="21" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Term</strong></td>
+                  <td width="35%" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Course&nbsp;&nbsp;</strong></td>
                   <td width="10%" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Course&nbsp;Start Date</strong></td>
                   <td width="10%" height="21" align="center" bgcolor="#DEE0DF"><strong>&nbsp;Course End Date&nbsp;&nbsp;</strong></td>
-                  <td width="25%" align="center" bgcolor="#DEE0DF" ><strong>Details</strong></td>
-                  <td width="25%" height="21" align="center" bgcolor="#DEE0DF" ><strong>&nbsp;Management</strong>&nbsp;</td>
+                  <td width="15%" align="center" bgcolor="#DEE0DF" ><strong>Details</strong></td>
+                  <td width="15%" height="21" align="center" bgcolor="#DEE0DF" ><strong>&nbsp;Management</strong>&nbsp;</td>
                   
                 </tr>
                 <tr>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Spring 2020</label>
-                    <input type="text" name="textfield" id="txtTerm1" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label><input type="text" name="textfield" id="txtCourse1" style="display: none"></td>
+                    <input type="text" name="textfield" id="txtTerm1" style="display: none" value="Spring 2020"></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label><input size="50" type="text" name="textfield" id="txtCourse1" style="display: none" value="INFO 5707 Data Modeling for Information Professionals"></td>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate1">01/01/2020</label>
-                    <input type="text" name="textfield" id="txtStartDate1" style="display: none"></td>
+                    <input type="text" name="textfield" id="txtStartDate1" style="display: none" value="01/01/2020"></td>
                   <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate1">05/08/2020</label>
-                    <input type="text" name="textfield" id="txtEndDate1" style="display: none"></td>
-                  <td align="center" valign="middle" bgcolor="#FFFFFF">
-					  <a href="ClassDetailsPage.html" target="myiframe">Class Details</a>
-                    <a href="BasicStudentInformation.html" target="myiframe">Student Details</a>
-					  <a href="History.html" target="myiframe">Attendance Details</a></td>
+                    <input type="text" name="textfield" id="txtEndDate1" style="display: none" value="05/08/2020"></td>
+                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="History.html" target="myiframe">Attendance Details</a></td>
                   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
 					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
@@ -122,15 +119,13 @@
 					</td></tr>
                 <tr>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Summer 2020</label>
-                    <input type="text" name="textfield" id="txtTerm2" style="display: none"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label><input type="text" name="textfield" id="txtCourse2" style="display: none"></td>
+                    <input type="text" name="textfield" id="txtTerm2" style="display: none" value="Summer 2020"></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label><input size="50" type="text" name="textfield" id="txtCourse2" style="display: none" value="INFO 5717 Dynamic WWW Control Structures"></td>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate2">06/01/2020</label>
-                    <input type="text" name="textfield" id="txtStartDate2" style="display: none"></td>
+                    <input type="text" name="textfield" id="txtStartDate2" style="display: none" value="06/01/2020" ></td>
                   <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate2">08/23/2020</label>
-                    <input type="text" name="textfield" id="txtEndDate2" style="display: none"></td>
-                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="ClassDetailsPage.html" target="myiframe">Class Details</a>
-                    <a href="BasicStudentInformation.html" target="myiframe">Student Details</a>
-					  <a href="History.html" target="myiframe">Attendance Details</a></td>
+                    <input type="text" name="textfield" id="txtEndDate2" style="display: none" value="08/23/2020"></td>
+                  <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="History.html" target="myiframe">Attendance Details</a></td>
                   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit2" value="Edit" onClick="edit(2);">
 					<input type="button" name="button4" id="btnUpdate2" value="Update" style="display: none" onClick="update(2);"> 
