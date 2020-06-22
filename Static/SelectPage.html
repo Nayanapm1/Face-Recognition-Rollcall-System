@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <title>SelectPage</title>
 </head>
+<script language="javascript">
+		function delcon(i)
+	{
+		var con=confirm("Are you sure to delete the record? This action cannot be rolled back.Rownumber-".concat(i));
+		if(con==true)
+			{
+				alert("Record deleted");
+			}else
+				alert("Record not deleted")
+	}
+	</script>
 
 <body>
 <table width="100%" border="0">
@@ -24,7 +35,9 @@
                     <label for="textfield2">Student Name:</label>
                     <input type="text" name="textfield2" id="textfield2">
                     <input type="button" name="button" id="button" value="RollCall"></th>
-                  <th width="51%" align="right" valign="middle" bgcolor="#ACB0AE" scope="col"><img src="images/Grey Space.png" width="9" height="30" alt=""/><img src="images/edit.png" width="42" height="31" alt=""/><img src="images/Grey Space.png" width="9" height="30" alt=""/><img src="images/delete.png" width="42" height="31" alt=""/></th>
+                  <th width="51%" align="right" valign="middle" bgcolor="#ACB0AE" scope="col"><img src="images/Grey Space.png" width="9" height="30" alt=""/>
+                    <input type="button" name="button2" id="button2" value="Edit">
+                    <input type="button" name="button3" id="button3" value="Delete" onClick="delcon();"><img src="images/Grey Space.png" width="9" height="30" alt=""/></th>
                 </tr>
               </tbody>
             </table></th>

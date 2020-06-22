@@ -40,6 +40,11 @@
 			}else
 				alert("The term ".concat(pmt).concat(" was added to the table"))
 	}
+	function isNull(para)
+	{
+		if(para.value=="")
+			alert("the value of "+para.name+" is empty!");
+	}
 </script>
 <body style="text-align: center">
 <table width="100%" border="0">
@@ -56,7 +61,9 @@
               <tbody>
                 <tr>
                   <th width="45%" height="19" align="right" valign="middle" bgcolor="#A1A6A3" scope="col"><label for="textfield">Term:&nbsp;</label>
-                    <input type="text" name="textfield" id="textfield">
+                    <input type="text" name="textfield" id="textfield" value="Nayana" onSelect="alert('yo slede');">
+					  <input type="text" name="username" onfocus="Select text(this);">
+					  <input type="text" name="username" id="id_username" onfocus="Select text(this);" onBlur="isNull(this);">
                     <input type="button" name="button" id="button" value="Add" onClick="pmt();"></th>
 </tr>
               </tbody>
@@ -69,7 +76,7 @@
           </tr>
           <tr>
  				<td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Spring 2020</label>
-                    <input size="30" type="text" name="textfield" id="txtTerm1" style="display: none" value="Spring 2020"></td>
+                    <input type="text" name="textfield" id="txtTerm1" style="display: none"></td>
             	<td height="21" align="center">
 					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
 				 	<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
@@ -77,7 +84,7 @@
           </tr>
           <tr>
  				<td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Summer 2020</label>
-                    <input size="30" type="text" name="textfield" id="txtTerm2" style="display: none" value="Summer 2020"></td>
+                    <input type="text" name="textfield" id="txtTerm2" style="display: none"></td>
             	<td height="21" align="center">
 					<input type="button" name="button2" id="btnEdit2" value="Edit" onClick="edit(2);">
 				 	<input type="button" name="button4" id="btnUpdate2" value="Update" style="display: none" onClick="update(2);"> 
