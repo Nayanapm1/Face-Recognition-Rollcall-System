@@ -31,7 +31,17 @@
 			}else
 				alert("Record not deleted")
 	}
+		function pmt()
+		{
+		var pmt=prompt("Please add a course id & name");
+		if(pmt==null || pmt=="")
+			{
+				alert("No course was added to the table");
+			}else
+				alert("The course ".concat(pmt).concat(" was added to the table"))
+		}
 </script>
+
 <body style="text-align: center">
 <table width="100%" border="0">
   <tbody>
@@ -49,7 +59,7 @@
 <th width="45%" height="19" align="right" valign="middle" bgcolor="#A1A6A3" scope="col"><label for="textfield">Course:&nbsp;</label>
 
                     <input type="text" name="textfield" id="textfield">
-                    <input type="button" name="button" id="button" value="Quick Add"></th>
+                    <input type="button" name="button" id="button" value="Quick Add" onClick="pmt();"></th>
 </tr>
               </tbody>
             </table></th>
