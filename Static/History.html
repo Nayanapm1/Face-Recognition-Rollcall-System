@@ -7,14 +7,6 @@
 	<script language="javascript">
 function edit(i)
 		{
-			document.getElementById("lblStudentNumber".concat(i)).style.display='none';
-			document.getElementById("txtStudentNumber".concat(i)).style.display='';
-			document.getElementById("lblStudentName".concat(i)).style.display='none';
-			document.getElementById("txtStudentName".concat(i)).style.display='';
-			document.getElementById("lblCourse".concat(i)).style.display='none';
-			document.getElementById("txtCourse".concat(i)).style.display='';
-			document.getElementById("lblDate".concat(i)).style.display='none';
-			document.getElementById("txtDate".concat(i)).style.display='';
 			document.getElementById("lblAttended".concat(i)).style.display='none';
 			document.getElementById("txtAttended".concat(i)).style.display='';
 			document.getElementById("btnUpdate".concat(i)).style.display='';
@@ -23,24 +15,12 @@ function edit(i)
 		}
 	function update(i)
 		{
-			document.getElementById("lblStudentNumber".concat(i)).style.display='';
-			document.getElementById("txtStudentNumber".concat(i)).style.display='none';
-			document.getElementById("lblStudentName".concat(i)).style.display='';
-			document.getElementById("txtStudentName".concat(i)).style.display='none';
-			document.getElementById("lblCourse".concat(i)).style.display='';
-			document.getElementById("txtCourse".concat(i)).style.display='none';
-			document.getElementById("lblDate".concat(i)).style.display='';
-			document.getElementById("txtDate".concat(i)).style.display='none';
-						document.getElementById("lblAttended".concat(i)).style.display='';
+			document.getElementById("lblAttended".concat(i)).style.display='';
 			document.getElementById("txtAttended".concat(i)).style.display='none';
 			document.getElementById("btnUpdate".concat(i)).style.display='none';
 			document.getElementById("btnEdit".concat(i)).style.display='';
 			document.getElementById("btnDelete".concat(i)).style.display='';
-			document.getElementById("lblTerm".concat(i)).innerHTML=document.getElementById("txtStudentNumber".concat(i)).value;
-			document.getElementById("lblCourse".concat(i)).innerHTML=document.getElementById("txtStudentName".concat(i)).value;
-			document.getElementById("lblStartDate".concat(i)).innerHTML=document.getElementById("txtCourse".concat(i)).value;
-						document.getElementById("lblStartDate".concat(i)).innerHTML=document.getElementById("txtDate".concat(i)).value;
-			document.getElementById("lblEndDate".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
+			document.getElementById("lblAttended".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
 		}	
 	function delcon(i)
 	{
@@ -76,13 +56,10 @@ function edit(i)
             </tr>
           <tr
 			  onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" >
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber1">2020A001</label>
-                    <input type="text" name="textfield" id="txtStudentNumber1" style="display: none" value="2020A001"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName1">William</label><input size="50" type="text" name="textfield" id="txtStudentName1" style="display: none" value="William"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label>
-                    <input type="text" name="textfield" id="txtCourse1" style="display: none" value="INFO 5707 Data Modeling for Information Professionals"></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate1">01/01/2020</label>
-                    <input type="text" name="textfield" id="txtDate1" style="display: none" value="01/01/2020"></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber1">2020A001</label></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName1">William</label></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label></td>
+                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate1">01/01/2020</label></td>
 			           <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttended1">Yes</label>
                     <input type="text" name="textfield" id="txtAttended1" style="display: none" value="Yes"></td>
 			   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
