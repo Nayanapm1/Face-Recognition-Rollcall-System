@@ -8,9 +8,9 @@
 	function edit(i)
 		{
 			document.getElementById("lblTerm".concat(i)).style.display='none';
-			document.getElementById("txtTerm".concat(i)).style.display='';
+			document.getElementById("TermSel".concat(i)).style.display='';
 			document.getElementById("lblCourse".concat(i)).style.display='none';
-			document.getElementById("txtCourse".concat(i)).style.display='';
+			document.getElementById("CourseSel".concat(i)).style.display='';
 			document.getElementById("lblStartDate".concat(i)).style.display='none';
 			document.getElementById("txtStartDate".concat(i)).style.display='';
 			document.getElementById("lblEndDate".concat(i)).style.display='none';
@@ -22,9 +22,9 @@
 	function update(i)
 		{
 			document.getElementById("lblTerm".concat(i)).style.display='';
-			document.getElementById("txtTerm".concat(i)).style.display='none';
+			document.getElementById("TermSel".concat(i)).style.display='none';
 			document.getElementById("lblCourse".concat(i)).style.display='';
-			document.getElementById("txtCourse".concat(i)).style.display='none';
+			document.getElementById("CourseSel".concat(i)).style.display='none';
 			document.getElementById("lblStartDate".concat(i)).style.display='';
 			document.getElementById("txtStartDate".concat(i)).style.display='none';
 			document.getElementById("lblEndDate".concat(i)).style.display='';
@@ -32,8 +32,8 @@
 			document.getElementById("btnUpdate".concat(i)).style.display='none';
 			document.getElementById("btnEdit".concat(i)).style.display='';
 			document.getElementById("btnDelete".concat(i)).style.display='';
-			document.getElementById("lblTerm".concat(i)).innerHTML=document.getElementById("txtTerm".concat(i)).value;
-			document.getElementById("lblCourse".concat(i)).innerHTML=document.getElementById("txtCourse".concat(i)).value;
+			document.getElementById("lblTerm".concat(i)).innerHTML=document.getElementById("TermSel1".concat(i)).value;
+			document.getElementById("lblCourse".concat(i)).innerHTML=document.getElementById("CourseSel".concat(i)).value;
 			document.getElementById("lblStartDate".concat(i)).innerHTML=document.getElementById("txtStartDate".concat(i)).value;
 			document.getElementById("lblEndDate".concat(i)).innerHTML=document.getElementById("txtEndDate".concat(i)).value;
 		}	
@@ -105,8 +105,8 @@
                 </tr>
                 <tr>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm1">Spring 2020</label>
-                    <input type="text" name="textfield" id="txtTerm1" style="display: none" value="Spring 2020"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label><input size="50" type="text" name="textfield" id="txtCourse1" style="display: none" value="INFO 5707 Data Modeling for Information Professionals"></td>
+					<select name="optone" id="TermSel1" size="1" style="display: none" ><option value="Spring 2020" selected="selected" style="display: none" >Select term</option></select></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label><select name="optone" id="CourseSel1" size="1" style="display: none" ><option value="Spring 2020" selected="selected" style="display: none" >Select course</option></select></td>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate1">01/01/2020</label>
                     <input type="text" name="textfield" id="txtStartDate1" style="display: none" value="01/01/2020"></td>
                   <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate1">05/08/2020</label>
@@ -119,8 +119,8 @@
 					</td></tr>
                 <tr>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm2">Summer 2020</label>
-                    <input type="text" name="textfield" id="txtTerm2" style="display: none" value="Summer 2020"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label><input size="50" type="text" name="textfield" id="txtCourse2" style="display: none" value="INFO 5717 Dynamic WWW Control Structures"></td>
+                   <select name="optone" id="TermSel2" size="1" style="display: none" ><option value="Spring 2020" selected="selected" style="display: none" >Select term</option></select></td>
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse2">INFO 5717 Dynamic WWW Control Structures</label><select name="optone" id="CourseSel2" size="1" style="display: none" ><option value="Spring 2020" selected="selected" style="display: none" >Select course</option></select></td>
                   <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate2">06/01/2020</label>
                     <input type="text" name="textfield" id="txtStartDate2" style="display: none" value="06/01/2020" ></td>
                   <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate2">08/23/2020</label>
