@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <h1>Student Appeal Page</h1>
-  <p>Appeal Notes:
-    <textarea name="textarea" maxlength="2500" id="textarea"></textarea>
+	<script Language="javascript">
+	function checknull(obj)
+		{
+			if(obj.value=="")
+			{
+				alert("the value of "+obj.name+" cannot be nul");
+			}
+		}
+	</script>
+
+<p>Appeal comments:
+    <textarea name="appeal comments" maxlength="2500" id="textarea" onBlur="checknull(this);"></textarea>
   </p>
   <p>
-    <input type="submit" name="submit" id="submit" value="Submit">
-    <br>
+    <input type="submit" name="submit" id="submit" value="Submit" onClick="alert('Your appeal has been received');" >
   </p>
-</body>
-</html>
+
+
