@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'rollcall.wsgi.application'
 DATABASES = {
  'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'rollcalldb',
+    'NAME': 'coursedb',
     'USER': 'root',
     'PASSWORD': 'Nay@atharv89',
     'HOST': '127.0.0.1',
