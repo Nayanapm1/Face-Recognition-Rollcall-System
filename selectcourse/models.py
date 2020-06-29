@@ -18,10 +18,10 @@ class Course(models.Model):
 
 class SelectCourse(models.Model):
     SelectCourseId = models.AutoField(primary_key=True)
-    TermId = models.AutoField(int)
-    CourseId = models.AutoField(int)
-    StartDate = models.AutoField(Date)
-    EndDate = models.AutoField(Date)
+    TermId = models.ForeignKey(max_length=45)
+    CourseId = models.ForeignKey(max_length=90)
+    StartDate = models.DateTimeField()
+    EndDate = models.DateTimeField()
 
     class Meta:
         db_table='Course'
