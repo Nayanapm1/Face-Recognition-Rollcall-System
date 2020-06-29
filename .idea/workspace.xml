@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b51c8c4c-97e2-491d-a2dd-8ce7091bf1cb" name="Default Changelist" comment="With sam's database as default">
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Admin Login.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Attendance2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Course.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Extracting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Grey Space.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Roll Call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Roll call1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Rollcall.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Samantha Chu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Select.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Term.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/UNT System.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Untitled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/UploadIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/Willem Baxter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/checkmarck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/course1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/exit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/history.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/images1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/img_submit.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/import_1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/roll_call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/sign list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/stu_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/term1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/images/unnamed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/Template/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/ForgotPasswordPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Admin Login.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Attendance2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Course.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Extracting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Grey Space.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Roll Call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Roll call1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Rollcall.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Samantha Chu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Select.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Term.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/UNT System.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Untitled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/UploadIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/Willem Baxter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/checkmarck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/course1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/exit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/history.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/images1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/img_submit.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/import_1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/roll_call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/sign list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/stu_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/term1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/Template/images/unnamed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/untitled.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/untitled1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/template/ClassDetailsPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/Template/ClassDetailsPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/template/CoursePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/Template/CoursePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/template/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/Template/CourseSelectionPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/template/TermPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/Template/TermPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0002_auto_20200628_1740.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0003_auto_20200628_1820.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/models.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1d3WeD18oFwwmSagNaP0MDDfN58" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/usermgnt/Template" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kalou\PycharmProjects\rollcall\usermgnt\Template" />
+      <recent name="C:\Users\kalou\PycharmProjects\rollcall\selectcourse\Template" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b51c8c4c-97e2-491d-a2dd-8ce7091bf1cb" name="Default Changelist" comment="" />
+      <created>1591654349814</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591654349814</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Edited pages">
+      <created>1592165122720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592165122720</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Edited pages with links">
+      <created>1592199333861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592199333861</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Sam's pages and iFrames">
+      <created>1592607145251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592607145251</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Last edits for assignment1">
+      <created>1592709820988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592709820988</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Sam's edits">
+      <created>1592862375914</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592862375914</updated>
+    </task>
+    <task id="LOCAL-00006" summary="With sam's database as default">
+      <created>1593387009362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593387009396</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Edited pages" />
+    <MESSAGE value="Edited pages with links" />
+    <MESSAGE value="Sam's pages and iFrames" />
+    <MESSAGE value="Last edits for assignment1" />
+    <MESSAGE value="Sam's edits" />
+    <MESSAGE value="With sam's database as default" />
+    <option name="LAST_COMMIT_MESSAGE" value="With sam's database as default" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593351386831">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1593351386831" />
+    <state x="121" y="55" key="MergeDialog" timestamp="1592862504569">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="55" key="MergeDialog/0.0.1280.720@0.0.1280.720" timestamp="1592862504569" />
+    <state x="280" y="122" key="MultipleFileMergeDialog" timestamp="1592867354630">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="280" y="122" key="MultipleFileMergeDialog/0.0.1280.720@0.0.1280.720" timestamp="1592867354630" />
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2" timestamp="1593387026984">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593387026943" />
+    <state x="376" y="149" key="git4idea.merge.GitPullDialog" timestamp="1593288976004">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="376" y="149" key="git4idea.merge.GitPullDialog/0.0.1280.720@0.0.1280.720" timestamp="1593288976004" />
+    <state x="471" y="152" key="svn.repositoryBrowser" timestamp="1592592133017">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="471" y="152" key="svn.repositoryBrowser/0.0.1280.720@0.0.1280.720" timestamp="1592592133017" />
+  </component>
+</project>
