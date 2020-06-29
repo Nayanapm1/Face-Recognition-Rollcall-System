@@ -19,24 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Updated select course app template folder">
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/BasicStudentInformation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/ComparingPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/ExtractingComparing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/ExtractingPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/History.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/MyAttendancePage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/SelectPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/template/StudentRecord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/views.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Added rollcall app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
@@ -78,18 +61,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rollcallmodule/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rollcallmodule/template" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+      <recent name="$PROJECT_DIR$/course/template" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Static" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
-      <recent name="$PROJECT_DIR$/course/template" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.rollcall">
@@ -170,7 +154,11 @@
       <workItem from="1593200943761" duration="1530000" />
       <workItem from="1593202482981" duration="1723000" />
       <workItem from="1593205337532" duration="9260000" />
-      <workItem from="1593420184822" duration="1356000" />
+      <workItem from="1593420184822" duration="1771000" />
+      <workItem from="1593448445090" duration="532000" />
+      <workItem from="1593458580384" duration="785000" />
+      <workItem from="1593470496442" duration="68000" />
+      <workItem from="1593470610266" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -256,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593389254575</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added rollcall app">
+      <created>1593422152744</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1593422152744</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,13 +279,14 @@
     <MESSAGE value="Updated history page edit button" />
     <MESSAGE value="Made changes on the course selection page" />
     <MESSAGE value="Updated select course app template folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated select course app template folder" />
+    <MESSAGE value="Added rollcall app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rollcall app" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593149199799">
+    <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593470563722">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
-    <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.956@0.23.1680.956" timestamp="1593149199799" />
+    <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.956@0.23.1680.956" timestamp="1593470563722" />
     <state x="677" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593388101126">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
@@ -356,10 +352,10 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593203476938" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593389263008">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593422171614">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593389263008" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593422171614" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
     </state>

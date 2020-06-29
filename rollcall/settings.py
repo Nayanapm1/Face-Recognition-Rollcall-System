@@ -85,24 +85,16 @@ WSGI_APPLICATION = 'rollcall.wsgi.application'
 #}
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'studentdb',
-        'USER': 'root',
-        'PASSWORD': 'Mukalayi21',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
-    }
+ 'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'rollcalldb',
+    'USER': 'root',
+    'PASSWORD': 'Nay@atharv89',
+    'HOST': '127.0.0.1',
+    'PORT': '3306'
+}
 }
 
-#'default': {
-    #'ENGINE': 'django.db.backends.mysql',
-    #'NAME': 'coursedb',
-    #'USER': 'root',
-   # 'PASSWORD': 'Nay@atharv89',
-  #  'HOST': '127.0.0.1',
- #   'PORT': '3306'
-#},
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

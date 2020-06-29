@@ -15,13 +15,3 @@ class Course(models.Model):
 
     class Meta:
         db_table='Course'
-
-class SelectCourse(models.Model):
-    SelectCourseId = models.AutoField(primary_key=True)
-    TermId = models.ForeignKey(max_length=45)
-    CourseId = models.ForeignKey(max_length=90)
-    StartDate = models.DateTimeField()
-    EndDate = models.DateTimeField()
-
-    class Meta:
-        db_table='Course'
