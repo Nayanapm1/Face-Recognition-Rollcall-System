@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Added rollcall app">
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="updated">
       <change afterPath="$PROJECT_DIR$/usermgnt/Template/AppealPage.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/BasicStudentInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/Template/BasicStudentInformation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/template/ExtractingPage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,8 @@
       <workItem from="1593458580384" duration="785000" />
       <workItem from="1593470496442" duration="68000" />
       <workItem from="1593470610266" duration="70000" />
-      <workItem from="1593470783939" duration="349000" />
+      <workItem from="1593470783939" duration="615000" />
+      <workItem from="1593471438940" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -262,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593470839479</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated">
+      <created>1593471138007</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1593471138007</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +298,8 @@
     <MESSAGE value="Made changes on the course selection page" />
     <MESSAGE value="Updated select course app template folder" />
     <MESSAGE value="Added rollcall app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rollcall app" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593470563722">
@@ -367,10 +375,10 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593203476938" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593470882970">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593471219750">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593470882970" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593471219750" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
