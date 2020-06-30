@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Removed unwanted pages">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rollcall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rollcall.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +170,12 @@
       <workItem from="1593470783939" duration="615000" />
       <workItem from="1593471438940" duration="77000" />
       <workItem from="1593471520612" duration="1228000" />
-      <workItem from="1593473093121" duration="986000" />
+      <workItem from="1593473093121" duration="1171000" />
+      <workItem from="1593474288548" duration="118000" />
+      <workItem from="1593474499816" duration="176000" />
+      <workItem from="1593489411284" duration="89000" />
+      <workItem from="1593490069584" duration="119000" />
+      <workItem from="1593533123232" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -306,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593472937444</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Removed unwanted pages">
+      <created>1593474262655</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1593474262655</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,10 +429,10 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593472945691">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1593474274770">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593472945691" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1593474274770" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
