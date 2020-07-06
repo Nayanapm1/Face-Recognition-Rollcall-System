@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'newapp',
     'selectcourse',
     'usermgnt',
     'rollcallmodule'
@@ -87,9 +86,9 @@ WSGI_APPLICATION = 'rollcall.wsgi.application'
 DATABASES = {
  'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'coursedb',
+    'NAME': 'rollcall',
     'USER': 'root',
-    'PASSWORD': 'Nay@atharv89',
+    'PASSWORD': 'INFO5717!',
     'HOST': '127.0.0.1',
     'PORT': '3306'
 }
