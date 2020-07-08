@@ -88,7 +88,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'rollcall',
     'USER': 'root',
-    'PASSWORD': 'INFO5717!',
+    'PASSWORD': 'INFO5717',
     'HOST': '127.0.0.1',
     'PORT': '3306'
 }
