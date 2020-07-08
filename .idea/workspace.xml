@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Testing">
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Reverting back">
+      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0002_auto_20200708_0428.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0003_auto_20200708_0431.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/migrations/0002_auto_20200708_0410.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +185,7 @@
       <workItem from="1593533123232" duration="993000" />
       <workItem from="1593549766470" duration="190000" />
       <workItem from="1594062953688" duration="189000" />
-      <workItem from="1594065966437" duration="3686000" />
+      <workItem from="1594065966437" duration="6138000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -360,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594181084996</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Reverting back">
+      <created>1594181209895</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1594181209895</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +404,8 @@
     <MESSAGE value="Removed unwanted syntax" />
     <MESSAGE value="Made some changes with db" />
     <MESSAGE value="Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
+    <MESSAGE value="Reverting back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reverting back" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594066483938">
@@ -514,11 +524,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594181110902">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594181223546">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594181110902" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594181223546" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
