@@ -11,6 +11,9 @@ class StudentInfo(models.Model):
     Username = models.CharField(max_length=45)
     Password = models.CharField(max_length=45)
 
+    class Meta:
+        db_table = 'StudentInfo'
+
 class AdminInfo(models.Model):
     ID = models.AutoField(primary_key=True)
     AdminNo = models.CharField(max_length=45)
@@ -19,3 +22,6 @@ class AdminInfo(models.Model):
     Course = models.CharField(max_length=45)
     Username = models.CharField(max_length=45)
     Password = models.CharField(max_length=45)
+
+    class Meta:
+        db_table = 'AdminInfo'
