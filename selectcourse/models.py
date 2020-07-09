@@ -20,8 +20,8 @@ class TSelectCourse(models.Model):
     scid = models.AutoField(primary_key=True)
     term = models.ForeignKey('Tterm', on_delete=models.CASCADE, db_column='termid')
     course = models.ForeignKey('Tcourse', on_delete=models.CASCADE, db_column='courseid')
-    tstartdate = models.DateTimeField(null=True)
-    tenddate = models.DateTimeField(null=True)
+    startdate = models.DateTimeField(null=True)
+    enddate = models.DateTimeField(null=True)
 
     class Meta:
         db_table = 'TSelectCourse'

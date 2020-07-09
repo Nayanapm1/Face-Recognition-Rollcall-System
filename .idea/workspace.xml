@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Adding select course model info">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0004_auto_20200708_0525.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0005_auto_20200709_0533.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0006_tcourse_tselectcourse_tterm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0007_auto_20200709_0542.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
     </list>
@@ -188,7 +185,7 @@
       <workItem from="1593549766470" duration="190000" />
       <workItem from="1594062953688" duration="189000" />
       <workItem from="1594065966437" duration="7303000" />
-      <workItem from="1594240620047" duration="1464000" />
+      <workItem from="1594240620047" duration="1651000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -379,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594185421963</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adding select course model info">
+      <created>1594273195969</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1594273195969</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,11 +539,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594185452561">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594273209694">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594185452561" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594273209694" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
