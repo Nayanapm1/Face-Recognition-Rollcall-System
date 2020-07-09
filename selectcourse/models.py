@@ -2,16 +2,26 @@ from django.db import models
 
 # Create your models here.
 
-class Term(models.Model):
-    TermId = models.AutoField(primary_key=True)
-    TermName = models.CharField(max_length=45)
+class Tterm(models.Model):
+    termid = models.AutoField(primary_key=True)
+    termname = models.CharField(max_length=100)
 
     class Meta:
-        db_table='Term'
+        db_table='Tterm'
 
-class Course(models.Model):
-    CourseId = models.AutoField(primary_key=True)
-    CourseName = models.CharField(max_length=90)
+class Tcourse(models.Model):
+    courseid = models.AutoField(primary_key=True)
+    coursename = models.CharField(max_length=200)
 
     class Meta:
-        db_table='Course'
+        db_table='Tcourse'
+
+class TSelectCourse(models.Model):
+    scid = models.AutoField(primary_key=True)
+    term = models.ForeignKey('Tterm', on_delete=models.CASCADE, db_column='termid')
+    course = models.ForeignKey('Tcourse', on_delete=models.CASCADE, db_column='courseid')
+    tstartdate = models.DateTimeField(null=True)
+    tenddate = models.DateTimeField(null=True)
+
+    class Meta:
+        db_table = 'TSelectCourse'
