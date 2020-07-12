@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Updated sc field names">
-      <change afterPath="$PROJECT_DIR$/Static/ComparingPage.html" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Adding pages to the apps">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/MyAttendancePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/MyAttendancePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/StudentAppeals.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/StudentAppeals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,20 +68,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rollcallmodule/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/usermgnt/Template" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/usermgnt/Template" />
+      <recent name="$PROJECT_DIR$/rollcallmodule/template" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+      <recent name="$PROJECT_DIR$/course/template" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Static" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rollcallmodule/template" />
-      <recent name="$PROJECT_DIR$/usermgnt/Template" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
-      <recent name="$PROJECT_DIR$/course/template" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.rollcall">
@@ -187,7 +185,8 @@
       <workItem from="1594062953688" duration="189000" />
       <workItem from="1594065966437" duration="7303000" />
       <workItem from="1594240620047" duration="1771000" />
-      <workItem from="1594590977184" duration="2228000" />
+      <workItem from="1594590977184" duration="2995000" />
+      <workItem from="1594595564285" duration="180000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -392,7 +391,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594273426526</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updated the pages">
+      <created>1594594798407</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1594594798407</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Adding pages to the apps">
+      <created>1594594883429</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1594594883429</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +443,9 @@
     <MESSAGE value="Reverting back" />
     <MESSAGE value="Adding select course model info" />
     <MESSAGE value="Updated sc field names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated sc field names" />
+    <MESSAGE value="Updated the pages" />
+    <MESSAGE value="Adding pages to the apps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding pages to the apps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -442,10 +457,10 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="677" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.956@0.23.1680.956" timestamp="1593388101126" />
-    <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593472879038">
+    <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594594760126">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
-    <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.956@0.23.1680.956" timestamp="1593472879038" />
+    <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.956@0.23.1680.956" timestamp="1594594760126" />
     <state x="526" y="131" key="#rollcall" timestamp="1594066661109">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -549,11 +564,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594273442320">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594594894657">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594273442320" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594594894657" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
