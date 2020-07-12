@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Adding select course model info">
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0007_auto_20200709_0542.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Updated sc field names">
+      <change afterPath="$PROJECT_DIR$/Static/ComparingPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/MyAttendancePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/MyAttendancePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/StudentAppeals.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/StudentAppeals.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,15 +75,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rollcallmodule/template" />
       <recent name="$PROJECT_DIR$/usermgnt/Template" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
       <recent name="$PROJECT_DIR$/course/template" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.rollcall">
@@ -185,7 +186,8 @@
       <workItem from="1593549766470" duration="190000" />
       <workItem from="1594062953688" duration="189000" />
       <workItem from="1594065966437" duration="7303000" />
-      <workItem from="1594240620047" duration="1651000" />
+      <workItem from="1594240620047" duration="1771000" />
+      <workItem from="1594590977184" duration="2228000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -383,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594273195969</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Updated sc field names">
+      <created>1594273426526</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1594273426526</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +429,8 @@
     <MESSAGE value="Testing" />
     <MESSAGE value="Reverting back" />
     <MESSAGE value="Adding select course model info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding select course model info" />
+    <MESSAGE value="Updated sc field names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated sc field names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -539,11 +549,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594273209694">
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594273442320">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594273209694" />
+    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594273442320" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
