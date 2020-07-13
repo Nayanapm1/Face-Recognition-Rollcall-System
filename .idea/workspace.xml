@@ -19,14 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Adding pages to the apps">
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0002_auto_20200713_1700.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0008_auto_20200713_1702.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usermgnt/migrations/0003_auto_20200713_1700.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 4">
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0003_auto_20200713_1713.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0010_auto_20200713_1713.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +192,7 @@
       <workItem from="1594595564285" duration="851000" />
       <workItem from="1594597094238" duration="256000" />
       <workItem from="1594597386114" duration="46000" />
-      <workItem from="1594659284935" duration="512000" />
+      <workItem from="1594659284935" duration="1158000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -420,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594595895403</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Assignment 4">
+      <created>1594659904128</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1594659904129</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +465,8 @@
     <MESSAGE value="Updated sc field names" />
     <MESSAGE value="Updated the pages" />
     <MESSAGE value="Adding pages to the apps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding pages to the apps" />
+    <MESSAGE value="Assignment 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -579,11 +585,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="-9" y="163" key="Vcs.Push.Dialog.v2" timestamp="1594595907124">
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1594659912893">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="-9" y="163" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594595907124" />
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594659912893" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />

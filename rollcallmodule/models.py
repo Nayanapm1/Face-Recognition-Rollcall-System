@@ -9,8 +9,8 @@ class attendancerec(models.Model):
     attdatetime = models.DateTimeField(null=True)
     attendance = models.BooleanField(default=True)
     studentphoto = models.CharField(max_length=45)
-    term = models.ForeignKey(selectcourse_models.Tterm, on_delete=models.CASCADE, db_column='termid')
-    course = models.ForeignKey(selectcourse_models.Tcourse, on_delete=models.CASCADE, db_column='courseid')
+    term = models.ForeignKey(selectcourse_models.term, on_delete=models.CASCADE, db_column='termid')
+    course = models.ForeignKey(selectcourse_models.course, on_delete=models.CASCADE, db_column='courseid')
 
     class Meta:
         db_table = 'attendancerec'
@@ -21,7 +21,7 @@ class studentrec(models.Model):
     stuid = models.AutoField(primary_key=True)
     stunum = models.CharField(max_length=50)
     stuname = models.CharField(max_length=50)
-    TSelectCourse = models.ForeignKey(selectcourse_models.TSelectCourse, on_delete=models.CASCADE, db_column='scid')
+    selectcourse = models.ForeignKey(selectcourse_models.selectcourse, on_delete=models.CASCADE, db_column='scid')
 
     class Meta:
         db_table = 'studentrec'
@@ -29,7 +29,7 @@ class studentrec(models.Model):
 class attendate(models.Model):
     attdateid = models.AutoField(primary_key=True)
     attdate = models.DateTimeField()
-    TSelectCourse = models.ForeignKey(selectcourse_models.TSelectCourse, on_delete=models.CASCADE, db_column='scid')
+    selectcourse = models.ForeignKey(selectcourse_models.selectcourse, on_delete=models.CASCADE, db_column='scid')
 
     class Meta:
         db_table='attendate'
