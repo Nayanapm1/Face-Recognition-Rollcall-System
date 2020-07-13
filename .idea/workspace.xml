@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Adding pages to the apps">
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0002_auto_20200713_1700.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0008_auto_20200713_1702.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermgnt/migrations/0003_auto_20200713_1700.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +191,10 @@
       <workItem from="1594065966437" duration="7303000" />
       <workItem from="1594240620047" duration="1771000" />
       <workItem from="1594590977184" duration="2995000" />
-      <workItem from="1594595564285" duration="180000" />
+      <workItem from="1594595564285" duration="851000" />
+      <workItem from="1594597094238" duration="256000" />
+      <workItem from="1594597386114" duration="46000" />
+      <workItem from="1594659284935" duration="512000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -405,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594594883429</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Adding pages to the apps">
+      <created>1594595895403</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1594595895403</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,11 +579,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594594894657">
+    <state x="-9" y="163" key="Vcs.Push.Dialog.v2" timestamp="1594595907124">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594594894657" />
+    <state x="-9" y="163" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594595907124" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />

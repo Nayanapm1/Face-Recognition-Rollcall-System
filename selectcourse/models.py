@@ -7,14 +7,14 @@ class Tterm(models.Model):
     termname = models.CharField(max_length=100)
 
     class Meta:
-        db_table='Tterm'
+        db_table='term'
 
 class Tcourse(models.Model):
     courseid = models.AutoField(primary_key=True)
     coursename = models.CharField(max_length=200)
 
     class Meta:
-        db_table='Tcourse'
+        db_table='course'
 
 class TSelectCourse(models.Model):
     scid = models.AutoField(primary_key=True)
@@ -24,4 +24,4 @@ class TSelectCourse(models.Model):
     enddate = models.DateTimeField(null=True)
 
     class Meta:
-        db_table = 'TSelectCourse'
+        db_table = 'selectcourse'

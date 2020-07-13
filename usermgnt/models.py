@@ -1,27 +1,13 @@
 from django.db import models
+from rollcallmodule import models as rollcallmodule_models
 
 # Create your models here.
-class StudentInfo(models.Model):
+class User(models.Model):
     UserID = models.AutoField(primary_key=True)
-    StudNo = models.CharField(max_length=45)
-    StudName = models.CharField(max_length=45)
-    Term = models.CharField(max_length=45)
-    Course = models.CharField(max_length=45)
-    RefName = models.CharField(max_length=45)
     Username = models.CharField(max_length=45)
     Password = models.CharField(max_length=45)
+    StudID = models.ForeignKey(rollcallmodule_models.attendancerec, on_delete=models.CASCADE, db_column='studetails')
+
 
     class Meta:
-        db_table = 'StudentInfo'
-
-class AdminInfo(models.Model):
-    ID = models.AutoField(primary_key=True)
-    AdminNo = models.CharField(max_length=45)
-    AdminName = models.CharField(max_length=45)
-    Term = models.CharField(max_length=45)
-    Course = models.CharField(max_length=45)
-    Username = models.CharField(max_length=45)
-    Password = models.CharField(max_length=45)
-
-    class Meta:
-        db_table = 'AdminInfo'
+        db_table='user'
