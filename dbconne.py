@@ -6,5 +6,5 @@ cursor=db.cursor()
 cursor.execute("select version()")
 data=cursor.fetchone()
 
-print("Database version:%s"%data)
+print("Databse version:%s"%data)
 db.close()

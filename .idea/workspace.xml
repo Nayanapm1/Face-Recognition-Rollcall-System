@@ -20,11 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 4">
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0003_auto_20200713_1713.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0010_auto_20200713_1713.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dbconne.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/RollCall.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/RollCall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/RollCallPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/UploadClassStudentPhotoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/UploadClassStudentPhotoPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/coursepopup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/coursepopup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbconnection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/coursepopup.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/coursepopup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/CoursePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/CourseSelectionPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/TermPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Admin Login.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Course.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Extracting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Grey Space.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Roll Call.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Roll call1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Rollcall.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Samantha Chu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Select.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Term.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/UNT System.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Untitled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/UploadIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Willem Baxter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/checkmarck.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/course1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/exit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/history.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/images.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/images1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/img_submit.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/import_1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/roll_call.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/sign list.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/stu_photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/term1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/unnamed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/Template/UploadClassStudentPhotoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/Template/UploadClassStudentPhotoPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/setuptools/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/setuptools/_vendor/pyparsing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,15 +126,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/usermgnt/Template" />
       <recent name="$PROJECT_DIR$/rollcallmodule/template" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
       <recent name="$PROJECT_DIR$/course/template" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.rollcall">
@@ -193,6 +243,8 @@
       <workItem from="1594597094238" duration="256000" />
       <workItem from="1594597386114" duration="46000" />
       <workItem from="1594659284935" duration="1158000" />
+      <workItem from="1594943313578" duration="61000" />
+      <workItem from="1595211283440" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
