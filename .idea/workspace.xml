@@ -19,62 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 4">
-      <change afterPath="$PROJECT_DIR$/dbconne.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/RollCall.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/RollCall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/RollCallPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/UploadClassStudentPhotoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/UploadClassStudentPhotoPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/coursepopup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/coursepopup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconnection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/coursepopup.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/template/coursepopup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/CoursePage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/CourseSelectionPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/TermPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Admin Login.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance 6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Attendance2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Course.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Extracting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Grey Space.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Roll Call.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Roll call1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Rollcall.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Samantha Chu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Select.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Term.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/UNT System.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/UploadIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/Willem Baxter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/checkmarck.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/course1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/exit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/history.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/images1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/img_submit.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/import_1.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/roll_call.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/sign list.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/stu_photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/term1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/Template/images/unnamed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/UploadClassStudentPhotoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/Template/UploadClassStudentPhotoPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/setuptools/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/setuptools/_vendor/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/templates/CoursePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/CoursePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/templates/TermPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/TermPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +194,7 @@
       <workItem from="1594597386114" duration="46000" />
       <workItem from="1594659284935" duration="1158000" />
       <workItem from="1594943313578" duration="61000" />
-      <workItem from="1595211283440" duration="19000" />
+      <workItem from="1595211283440" duration="2070000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -477,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594659904129</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Assignment 5">
+      <created>1595211360575</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1595211360575</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Assignment 5">
+      <created>1595211622033</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1595211622033</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +482,8 @@
     <MESSAGE value="Updated the pages" />
     <MESSAGE value="Adding pages to the apps" />
     <MESSAGE value="Assignment 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4" />
+    <MESSAGE value="Assignment 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -637,11 +602,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1594659912893">
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1595211634024">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594659912893" />
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595211634024" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />

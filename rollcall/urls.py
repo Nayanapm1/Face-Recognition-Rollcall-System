@@ -21,5 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+   # path('usermgmt/',include('usermgmt.urls')),
+   # path('rollcallmodule/',include('rollcallmodule.urls')),
     path('sc/',include('selectcourse.urls'))
 ]
