@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 4">
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0003_auto_20200713_1713.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse/migrations/0010_auto_20200713_1713.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5 - Updated to reflect images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/CourseSelectionPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,15 +74,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/usermgnt/Template" />
       <recent name="$PROJECT_DIR$/rollcallmodule/template" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
       <recent name="$PROJECT_DIR$/course/template" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.rollcall">
@@ -193,6 +191,8 @@
       <workItem from="1594597094238" duration="256000" />
       <workItem from="1594597386114" duration="46000" />
       <workItem from="1594659284935" duration="1158000" />
+      <workItem from="1594943313578" duration="61000" />
+      <workItem from="1595211283440" duration="3267000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -425,7 +425,28 @@
       <option name="project" value="LOCAL" />
       <updated>1594659904129</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Assignment 5">
+      <created>1595211360575</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1595211360575</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Assignment 5">
+      <created>1595211622033</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1595211622033</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Assignment 5 - Updated to reflect images">
+      <created>1595273200064</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1595273200064</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +487,9 @@
     <MESSAGE value="Updated the pages" />
     <MESSAGE value="Adding pages to the apps" />
     <MESSAGE value="Assignment 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4" />
+    <MESSAGE value="Assignment 5" />
+    <MESSAGE value="Assignment 5 - Updated to reflect images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 - Updated to reflect images" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -585,11 +608,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1594659912893">
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1595273211112">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1594659912893" />
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595273211112" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
