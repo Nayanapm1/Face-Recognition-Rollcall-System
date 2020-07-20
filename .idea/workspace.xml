@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5">
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5 - Updated to reflect images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/templates/CoursePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/CoursePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Static/CourseSelectionPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/CourseSelectionPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectcourse/templates/TermPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/templates/TermPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +192,7 @@
       <workItem from="1594597386114" duration="46000" />
       <workItem from="1594659284935" duration="1158000" />
       <workItem from="1594943313578" duration="61000" />
-      <workItem from="1595211283440" duration="2070000" />
+      <workItem from="1595211283440" duration="3267000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -441,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595211622033</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Assignment 5 - Updated to reflect images">
+      <created>1595273200064</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1595273200064</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +488,8 @@
     <MESSAGE value="Adding pages to the apps" />
     <MESSAGE value="Assignment 4" />
     <MESSAGE value="Assignment 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5" />
+    <MESSAGE value="Assignment 5 - Updated to reflect images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 - Updated to reflect images" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -602,11 +608,11 @@
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1595211634024">
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1595273211112">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595211634024" />
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595273211112" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
