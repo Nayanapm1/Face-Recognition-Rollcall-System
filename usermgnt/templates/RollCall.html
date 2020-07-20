@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html>
 <head>
@@ -11,7 +13,7 @@
 	    <tr>
 	      <th width="45%" height="111" align="left" valign="middle" bgcolor="#06993C" scope="col"> <label for="textfield3" style="align-content: center" title="Roll Call System" >&nbsp;<img src="/static/images/roll_call.png" width="450" height="98" alt=""/></label></th>
 	      <th align="right" valign="middle" bgcolor="#06993C" scope="col" hei>
-	        <p><a href="CoursePage.html" target="myframe"><img src="/static/images/Course.PNG" alt="" width="72" height="68" border="0"/></a><img src="/static/images/Untitled.png" width="13" height="71" alt=""/><a href="TermPage.html" target="myframe"><img src="/static/images/Term.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="13" height="66" alt=""/><a href="CourseSelectionPage.html" target="myframe"><img src="/static/images/Select.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="12" height="72" alt=""/><a href="RollCallPage.html" target="myframe"><img src="/static/images/Rollcall.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="14" height="70" alt=""/><a href="StudentAppeals.html" target="myframe"><img src="/static/images/Attendance 4.jpeg" width="62" height="67" alt=""/></a><img src="/static/images/Untitled.png" width="14" height="70" alt=""/><a href="AdminLoginPage.html"><img src="/static/images/exit.jpg" width="72" height="68"alt=""/></a>            
+	        <p><a href="{% static 'CoursePage.html' %}" target="myframe"><img src="/static/images/Course.PNG" alt="" width="72" height="68" border="0"/></a><img src="/static/images/Untitled.png" width="13" height="71" alt=""/><a href="{% static 'TermPage.html'%}" target="myframe"><img src="/static/images/Term.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="13" height="66" alt=""/><a href="{% static 'CourseSelectionPage.html'%}" target="myframe"><img src="/static/images/Select.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="12" height="72" alt=""/><a href="{% static 'RollCallPage.html'%}" target="myframe"><img src="/static/images/Rollcall.PNG" width="72" height="68" alt=""/></a><img src="/static/images/Untitled.png" width="14" height="70" alt=""/><a href="{% static 'StudentAppeals.html'%}" target="myframe"><img src="/static/images/Attendance 4.jpeg" width="62" height="67" alt=""/></a><img src="/static/images/Untitled.png" width="14" height="70" alt=""/><a href="{% static 'AdminLoginPage.html'%}"><img src="/static/images/exit.jpg" width="72" height="68"alt=""/></a>
           <p>&nbsp;</p></th>
         </tr>
       </tbody>
