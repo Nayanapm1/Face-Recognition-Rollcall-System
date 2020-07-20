@@ -19,87 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5 - Updated">
-      <change afterPath="$PROJECT_DIR$/usermgnt/migrations/0004_auto_20200720_2156.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usermgnt/templates/AdminLoginPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usermgnt/templates/RollCall.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usermgnt/templates/StudentLoginPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usermgnt/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/migrations/0002_auto_20200713_1700.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/migrations/0003_auto_20200713_1713.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/ComparingPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/ExtractingComparing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/History.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/MyAttendancePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/templates/MyAttendancePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/RollCallPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/StudentRecord.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/template/coursepopup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/AdminLoginPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/AppealPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/ForgotPasswordPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/Index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentAppeals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentLoginPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentRecord.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/StudentSignUpPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/UploadClassStudentPhotoPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/UploadStudentInformationPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Admin Login.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Attendance 6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Attendance2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Course.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Extracting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Grey Space.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Roll Call.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Roll call1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Rollcall.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Samantha Chu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Select.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Term.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/UNT System.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/UploadIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/Willem Baxter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/checkmarck.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/course1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/exit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/history.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/images1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/img_submit.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/import_1.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/roll_call.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/sign list.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/stu_photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/term1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/Template/images/unnamed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0002_auto_20200708_0410.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/migrations/0002_auto_20200708_0410.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/migrations/0003_auto_20200713_1700.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/migrations/0003_auto_20200713_1700.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usermgnt/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5 - Usermgnt and Rollcall" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -275,7 +195,7 @@
       <workItem from="1595279862372" duration="656000" />
       <workItem from="1595280526370" duration="1204000" />
       <workItem from="1595281737414" duration="397000" />
-      <workItem from="1595282138373" duration="126000" />
+      <workItem from="1595282138373" duration="409000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -536,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595274503640</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Assignment 5 - Usermgnt and Rollcall">
+      <created>1595282317934</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1595282317934</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +507,8 @@
     <MESSAGE value="Assignment 5" />
     <MESSAGE value="Assignment 5 - Updated to reflect images" />
     <MESSAGE value="Assignment 5 - Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 - Updated" />
+    <MESSAGE value="Assignment 5 - Usermgnt and Rollcall" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 - Usermgnt and Rollcall" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
