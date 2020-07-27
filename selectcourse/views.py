@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from .models import term
 from .models import course
 from .models import selectcourse
+from datetime import datetime
 
 # Create your views here.
 
@@ -58,11 +59,22 @@ def delCourse(request,cid):
     return HttpResponseRedirect('/sc/course')
 
 def SelectCourseList(request):
-    selectcourselist1 = selectcourse.objects.all()
+    selectcourselist = selectcourse.objects.all()
     termlist =term.objects.all()
     courselist = course.objects.all()
-    context = {'selectcourselist': selectcourselist1,'termlist':termlist, 'courselist':courselist}
+    context = {'selectcourselist': selectcourselist,'termlist':termlist, 'courselist':courselist}
     return render(request, 'CourseSelectionPage.html',context)
+
+def EditSelectCourse(request,scid1):
+    if request.method == "POST":
+        selectcourse1 = selectcourse.objects.get(scid=scid1)
+        print(selectcourse1)
+        selectcourse1.term.termname=request.POST.get('txtTerm'+str(scid1))
+        selectcourse1.course.coursename = request.POST.get('txtCourse' + str(scid1))
+        selectcourse1.startdate = datetime.strptime(request.POST.get('txtStartDate' + str(scid1)), "%Y-%m-%d")
+        selectcourse1.enddate = datetime.strptime(request.POST.get('txtEndDate' + str(scid1)), "%Y-%m-%d")
+        selectcourse1.save()
+        return HttpResponseRedirect('/sc/selectcourse')
 
 def delSelectCourse(request,scid1):
     selectcourse1=selectcourse.objects.get(scid=scid1)
@@ -81,3 +93,11 @@ def LoadCourse(request,termid1):
         courselist[sc.course.courseid]=sc.course.coursename
     print(courselist)
     return JsonResponse(courselist,safe=False)
+
+def CreateSelectCourse(request):
+    if request.method== "POST":
+        selectcourse1 = selectcourse()
+        selectcourse1.term_id=request.POST.get('selectTerm')
+        selectcourse1.course_id = request.POST.get('selectCourse')
+        selectcourse1.save()
+        return HttpResponseRedirect('/sc/selectcourse')

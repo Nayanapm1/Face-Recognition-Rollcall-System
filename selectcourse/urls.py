@@ -15,5 +15,7 @@ urlpatterns=[
     path('course/update/<int:cid>', views.EditCourse),
     path('course/del/<int:cid>', views.delCourse),
     path('selectcourse',views.SelectCourseList),
-    path('selectcourse/del/<int:scid1>', views.delSelectCourse)
+    path('selectcourse/update/<int:scid1>', views.EditSelectCourse),
+    path('selectcourse/del/<int:scid1>', views.delSelectCourse),
+    path('selectcourse/create', views.CreateSelectCourse)
 ]
