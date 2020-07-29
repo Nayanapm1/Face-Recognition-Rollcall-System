@@ -7,5 +7,7 @@ urlpatterns=[
     path('student', views.StudLogin),
     path('admin', views.AdminLogin),
     path('student/login', views.SLoginAction),
-    path('admin/login', views.ALoginAction)
+    path('admin/login', views.ALoginAction),
+    path('admin/logout', views.Alogout),
+    path('student/logout', views.Alogout)
 ]

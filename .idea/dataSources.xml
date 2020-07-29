@@ -9,5 +9,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1:3306/rollcall</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="database" uuid="f030fae5-fb5e-441f-b305-46a8cbefea60">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Downloads/database.db</jdbc-url>
+    </data-source>
   </component>
 </project>

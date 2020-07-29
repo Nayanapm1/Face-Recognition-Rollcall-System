@@ -10,9 +10,3 @@ class User(models.Model):
     class Meta:
         db_table='user'
 
-class MyAttendance(models.Model):
-    myattendanceid = models.AutoField(primary_key=True)
-    studnum = models.ForeignKey(rollcallmodule_models.attendancerec, on_delete=models.CASCADE, db_column='studetails')
-
-    class Meta:
-        db_table='attendance'

@@ -6,5 +6,10 @@
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="database" uuid="f030fae5-fb5e-441f-b305-46a8cbefea60">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
