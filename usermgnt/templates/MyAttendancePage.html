@@ -69,13 +69,10 @@
     </tr>
     <tr bgcolor="#751D1F">
     <td height="40" colspan="3" align="left" bgcolor="#06993C">
-		<a href="AppealPage.html" target="myframe">
-			<button onclick="myFunction()">LogOut</button>
-			<script>
-			function myFunction() {
-			  location.replace("StudentLoginPage.html")
-			}
-			</script>
+	<form action="/usermgnt/student/logout" method="POST">
+        {% csrf_token %}
+			<input name="submit" type="submit" id="submit" value="Log out" >
+    </form>
 	</tr>
   </tbody>
 </table>

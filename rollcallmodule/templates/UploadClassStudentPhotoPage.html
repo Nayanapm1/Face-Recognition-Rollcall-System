@@ -71,8 +71,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </div><br>
 <input type="submit" onClick="alert('Upload succesfull!');"><br><br>
 </form>
-<input type="reset"><br><br>
-
+<form id="reset-form" action = "UploadClassStudentPhoto/reset" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button id="myBtn">Reset</button>
+</form>
+<br>
 <!-- Trigger/Open The Modal -->
 <form id="upload-form" action = "UploadClassStudentPhoto/proceed" method="POST" enctype="multipart/form-data">
     {% csrf_token %}

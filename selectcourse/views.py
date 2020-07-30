@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from django.http import JsonResponse
+from django import forms
 from .models import term
 from .models import course
 from .models import selectcourse

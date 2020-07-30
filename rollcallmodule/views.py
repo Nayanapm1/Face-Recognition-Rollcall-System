@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from django.core.files.storage import FileSystemStorage, default_storage
-from .models import studentrec
+from .models import attendancerec, studentrec, attendate
+from selectcourse.models import term, course, selectcourse
+
+
 import os
 from rollcallmodule.Attendance import *
 
@@ -15,7 +18,7 @@ def r1(request):
 def r2(request):
     return render(request, 'coursepopup.html')
 
-def r3(request):
+def ExtractingComparingPage(request):
     return render(request, 'ExtractingComparing.html')
 
 def r4(request):
@@ -36,6 +39,15 @@ def r8(request):
 def ViewStudentInformation(request):
     return render(request, 'UploadStudentInformationPage.html')
 
+
+# def ExtractData(request,attid):
+#     # if request.method== "POST":
+#     #     attrecord = attendancerec.objects.get(attendanceID=attid)
+#     #     print(attrecord)
+#     #     term1.termname=request.POST.get('txtTerm'+str(tid))
+#     #     term1.save()
+#     #     return HttpResponseRedirect('/sc/term')
+
 def UploadClassStudentPhoto(request):
     return render(request, 'UploadClassStudentPhotoPage.html')
 
@@ -49,7 +61,29 @@ def upload(request):
     return render(request, 'UploadClassStudentPhotoPage.html')
 
 def Attendancerun(request):
-    Run()
+    matchedIds = Run()
+    # matchedIds =  ['2020A011', '2020A001'] #Run()
+    # for id in matchedIds:
+    #     std = studentrec.objects.get(stunum=id)
+    #     tt = term.objects.get(termid=2) # Comes term selection
+    #     cc = course.objects.get(courseid=4) # Comes course selection
+    #     ad = attendate.objects.get(attdateid=1)# Comes date selection
+    #     if std is not None:
+    #         attd = attendancerec()
+    #         attd.studetails = std
+    #         attd.attdatetime = datetime.now()
+    #         attd.attendetails = ad
+    #         attd.attendance = True
+    #         attd.term = tt
+    #         attd.course = cc
+    #         attd.save()
+    return render(request,'ExtractingComparing.html')
+
+def Udelete(request):
+    fileitem = request.FILES['filename']
+    print(fileitem)
+    fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
+    fs.delete(fileitem.name, fileitem)
     return render(request, 'UploadClassStudentPhotoPage.html')
 
     # check if the file has been uploaded
