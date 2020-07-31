@@ -15,20 +15,29 @@ def TermList(request):
     return render(request, 'TermPage.html', context)
 
 def CreateTerm(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method== "POST":
         term1 = term()
         term1.termname=request.POST.get('termname')
         term1.save()
-        return HttpResponseRedirect('/sc/term')
+    return HttpResponseRedirect('/sc/term')
 
 def EditTerm(request,tid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method== "POST":
         term1 = term.objects.get(termid=tid)
         term1.termname=request.POST.get('txtTerm'+str(tid))
         term1.save()
-        return HttpResponseRedirect('/sc/term')
+    return HttpResponseRedirect('/sc/term')
 
 def delTerm(request,tid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     term1=term.objects.get(termid=tid)
     term1.delete()
     return HttpResponseRedirect('/sc/term')
@@ -40,21 +49,30 @@ def CourseList(request):
     return render(request, 'CoursePage.html', context)
 
 def CreateCourse(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method== "POST":
         course1 = course()
         course1.coursename=request.POST.get('coursename')
         print(request.POST.get('coursename'))
         course1.save()
-        return HttpResponseRedirect('/sc/course')
+    return HttpResponseRedirect('/sc/course')
 
 def EditCourse(request,cid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method== "POST":
         course1 = course.objects.get(courseid=cid)
         course1.coursename=request.POST.get('txtCourse'+str(cid))
         course1.save()
-        return HttpResponseRedirect('/sc/course')
+    return HttpResponseRedirect('/sc/course')
 
 def delCourse(request,cid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     course1=course.objects.get(courseid=cid)
     course1.delete()
     return HttpResponseRedirect('/sc/course')
@@ -67,6 +85,9 @@ def SelectCourseList(request):
     return render(request, 'CourseSelectionPage.html',context)
 
 def EditSelectCourse(request,scid1):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method == "POST":
         selectcourse1 = selectcourse.objects.get(scid=scid1)
         print(selectcourse1)
@@ -75,9 +96,12 @@ def EditSelectCourse(request,scid1):
         selectcourse1.startdate = datetime.strptime(request.POST.get('txtStartDate' + str(scid1)), "%Y-%m-%d")
         selectcourse1.enddate = datetime.strptime(request.POST.get('txtEndDate' + str(scid1)), "%Y-%m-%d")
         selectcourse1.save()
-        return HttpResponseRedirect('/sc/selectcourse')
+    return HttpResponseRedirect('/sc/selectcourse')
 
 def delSelectCourse(request,scid1):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     selectcourse1=selectcourse.objects.get(scid=scid1)
     selectcourse1.delete()
     return HttpResponseRedirect('/sc/selectcourse')
@@ -96,9 +120,12 @@ def LoadCourse(request,termid1):
     return JsonResponse(courselist,safe=False)
 
 def CreateSelectCourse(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     if request.method== "POST":
         selectcourse1 = selectcourse()
         selectcourse1.term_id=request.POST.get('selectTerm')
         selectcourse1.course_id = request.POST.get('selectCourse')
         selectcourse1.save()
-        return HttpResponseRedirect('/sc/selectcourse')
+    return HttpResponseRedirect('/sc/selectcourse')

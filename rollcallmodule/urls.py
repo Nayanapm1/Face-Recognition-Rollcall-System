@@ -17,4 +17,6 @@ urlpatterns=[
     path('UploadClassStudentPhoto/upload', views.upload),
     path('UploadClassStudentPhoto/reset', views.Udelete),
     path('UploadClassStudentPhoto/proceed', views.Attendancerun),
+    path('UploadClassStudentPhoto/upload/proceed', views.Attendancerun),
+    path('StudentInformation/importstu',views.importstu)
 ]

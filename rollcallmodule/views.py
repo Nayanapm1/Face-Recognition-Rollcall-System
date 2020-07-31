@@ -3,7 +3,10 @@ from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from django.core.files.storage import FileSystemStorage, default_storage
 from .models import attendancerec, studentrec, attendate
 from selectcourse.models import term, course, selectcourse
-
+import pandas as pd
+import os
+import datetime as d
+#import pymysql
 
 import os
 from rollcallmodule.Attendance import *
@@ -101,16 +104,16 @@ def Attendancerun(request):
             attd.attendance = False
             attd.term = tt
             attd.course = cc
-        attd.save()
+            attd.save()
 
     return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
 def Udelete(request):
-    fileitem = request.FILES['filename']
-    print(fileitem)
-    fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
-    fs.delete(fileitem.name, fileitem)
-    return render(request, 'UploadClassStudentPhotoPage.html')
+#     # fileitem = request.FILES['filename']
+#     # print(fileitem)
+#     # fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
+#     # fs.delete(fileitem.name, fileitem)
+        return render(request, 'UploadClassStudentPhotoPage.html')
 
     # check if the file has been uploaded
     #if fileitem.filename:
@@ -147,3 +150,32 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
   #      studentrec1.save()
    #     return HttpResponseRedirect('/rollcallmodule/StudentInformation')
 
+def getext(filename):
+    strlist=filename.split('.')
+    return strlist[len(strlist)-1]
+
+def importstu(request):
+    if request.method == "POST":
+        file = request.FILES.get('filename')
+        print(file.name)
+        type_excel = getext(file.name)
+        print(type_excel)
+        if 'xlsx' == type_excel or 'xls'==type_excel:
+            filename=pd.read_excel(file)
+            rows=len(filename)
+            # termid=request.session.get('termid')
+            # courseid=request.session.get('courseid')
+            # term1 = term.objects.get(termid=termid)
+            # course1 = course.objects.get(courseid=courseid)
+            # sc=selectcourse.objects.filter(scid=scid,course=course1)
+            for i in range(rows):
+                stunum=filename['stunum'][i]
+                stuname=filename['stuname'][i]
+                scid1 = filename['scid'][i]
+                sc = selectcourse.objects.get(scid=scid1)
+                student = studentrec()
+                student.stunum=stunum
+                student.stuname=stuname
+                student.selectcourse=sc
+                student.save()
+            return HttpResponseRedirect('/rollcallmodule/StudentInformation')
