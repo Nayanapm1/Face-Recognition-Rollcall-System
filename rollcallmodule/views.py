@@ -15,11 +15,15 @@ from flask import Flask, request, render_template
 def r1(request):
     return render(request, 'ComparingPage.html')
 
-def r2(request):
-    return render(request, 'coursepopup.html')
+def CoursePopUp(request):
+    termlist=term.objects.all()
+    context={'termlist':termlist}
+    return render(request, 'coursepopup.html', context)
 
 def ExtractingComparingPage(request):
-    return render(request, 'ExtractingComparing.html')
+    attdlist = attendancerec.objects.all().filter(term=2, course=4)
+    context = {'attdlist': attdlist}
+    return render(request, 'ExtractingComparing.html', context)
 
 def r4(request):
     return render(request, 'History.html')
@@ -62,22 +66,44 @@ def upload(request):
 
 def Attendancerun(request):
     matchedIds = Run()
-    # matchedIds =  ['2020A011', '2020A001'] #Run()
-    # for id in matchedIds:
-    #     std = studentrec.objects.get(stunum=id)
-    #     tt = term.objects.get(termid=2) # Comes term selection
-    #     cc = course.objects.get(courseid=4) # Comes course selection
-    #     ad = attendate.objects.get(attdateid=1)# Comes date selection
-    #     if std is not None:
-    #         attd = attendancerec()
-    #         attd.studetails = std
-    #         attd.attdatetime = datetime.now()
-    #         attd.attendetails = ad
-    #         attd.attendance = True
-    #         attd.term = tt
-    #         attd.course = cc
-    #         attd.save()
-    return render(request,'ExtractingComparing.html')
+    #matchedIds =  {'2020A001': 63, '2020A011': 49}
+    tt = term.objects.get(termid=2)  # Comes term selection
+    cc = course.objects.get(courseid=4)  # Comes course selection
+    ad = attendate.objects.get(attdateid=1)  # Comes date selection
+    for id, perc in matchedIds.items():
+        std = studentrec.objects.filter(stunum=id)
+        if len(std)!=0:
+            attd = attendancerec.objects.filter(studetails=std[0], attendetails=ad, term=tt, course=cc)
+            if len(attd)==0:
+                attd = attendancerec()
+                attd.studetails = std[0]
+                attd.attdatetime = datetime.now()
+                attd.attendetails = ad
+                attd.attendance = True if perc > 60 else False
+                attd.matchrate = perc
+                attd.term = tt
+                attd.course = cc
+            else:
+                attd = attendancerec.objects.get(studetails=std[0], attendetails=ad, term=tt, course=cc)
+                attd.attdatetime = datetime.now()
+                attd.attendance = True if perc > 60 else False
+                attd.matchrate = perc
+            attd.save()
+
+    unmatched = studentrec.objects.filter(selectcourse_id=2).exclude(stunum__in=matchedIds.keys())
+    for ustd in unmatched:
+        attd = attendancerec.objects.filter(studetails=ustd, attendetails=ad, term=tt, course=cc)
+        if len(attd)==0:
+            attd = attendancerec()
+            attd.studetails = ustd
+            attd.attdatetime = datetime.now()
+            attd.attendetails = ad
+            attd.attendance = False
+            attd.term = tt
+            attd.course = cc
+        attd.save()
+
+    return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
 def Udelete(request):
     fileitem = request.FILES['filename']

@@ -8,6 +8,7 @@ class attendancerec(models.Model):
     attendetails = models.ForeignKey('attendate', on_delete=models.CASCADE, db_column='attdateid')
     attdatetime = models.DateTimeField(null=True)
     attendance = models.BooleanField(default=True)
+    matchrate = models.CharField(null=True, max_length=45)
     studentphoto = models.CharField(max_length=45)
     term = models.ForeignKey(selectcourse_models.term, on_delete=models.CASCADE, db_column='termid')
     course = models.ForeignKey(selectcourse_models.course, on_delete=models.CASCADE, db_column='courseid')

@@ -20,8 +20,7 @@
 			document.getElementById("CourseSel".concat(i)).style.display='none';
 			document.getElementById("lblTerm".concat(i)).innerHTML=document.getElementById("TermSel1".concat(i)).value;
 			document.getElementById("lblCourse".concat(i)).innerHTML=document.getElementById("CourseSel".concat(i)).value;
-		}	
-	}
+		}
 	var termObject = {
 			"Spring 2020":["INFO 5707 Data Modeling for Information Professionals","INFO 5810 Data Analysis and Knowledge Discovery"],
 			"Summer 2020":["INFO 5717 Dynamic WWW Control Structures","INFO 5305 System Analysis and Design"]
@@ -42,6 +41,90 @@
         	}	
     	}
 	}
+var XMLHttpReq;
+
+function createXMLHttpRequest() {
+    if(window.XMLHttpRequest) {
+        XMLHttpReq = new XMLHttpRequest();
+    }else if (window.ActiveXObject) {
+        try
+        {
+            XMLHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                XMLHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {}
+        }
+    }
+}
+
+function SendPost(param, type, url, funcname)
+{
+    createXMLHttpRequest();
+    XMLHttpReq.open(type, url, true);
+    XMLHttpReq.onreadystatechange = funcname;
+
+    if(type=="post")
+        XMLHttpReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    else if (type=="get")
+        param=null;
+
+    XMLHttpReq.setRequestHeader("If-Modified-Since","0");
+    XMLHttpReq.send(param);
+}
+
+function loadcourseselectbox()
+{
+    if (XMLHttpReq.readyState==4)
+    {
+        if (XMLHttpReq.status == 200)
+        {
+            var result=XMLHttpReq.responseText;
+            result=JSON.parse(result);
+            var courselist=document.getElementById("course");
+            courselist.options.length=0;
+            courselist.options.add(new Option("Please select a course",0));
+            for(var item in result){
+                courselist.options.add(new Option(result[item],item));
+            }
+        }else
+        {
+            alert("error loading course options.");
+        }
+    }
+}
+	function loadcourse(obj)
+    {
+        createXMLHttpRequest();
+        url="/sc/course/list/"+obj.value;
+        SendPost("","get",url,loadcourseselectbox);
+    }
+    function loadresults(scid)
+    {
+        if (selectcourse.termname && selectcourse.coursename)
+        {
+            print(scid)
+        }
+    }
+    function loadtermcourseresults()
+    {
+        if (XMLHttpReq.readyState==4)
+        {
+            if (XMLHttpReq.status == 200)
+            {
+                var result=XMLHttpReq.responseText;
+                result=JSON.parse(result);
+                var courselist=document.getElementById("course");
+                courselist.options.length=0;
+                for(var item in result){
+                    courselist.options.add(new Option(result[item],item));
+                }
+            }else
+            {
+                alert("error loading results.");
+            }
+        }
+    }
 </script>
 <body style="text-align: center">
 <table width="42%" border="0">
@@ -56,11 +139,14 @@
         </tbody>
       </table>
        <label for="Term" >Term:</label>
-		      <select name="optone" id="termSel" size="1">
-        <option value="" selected="selected">Select term</option>
+		      <select name="select" class="inputbox1" onchange="loadcourse(this);">
+        <option value="0">Please select a term</option>
+        {% for term in termlist %}
+        <option value="{{ term.termid }}" >{{ term.termname }}</option>
+         {% endfor %}
     </select><br><br>
 		  <label for="course">Course:</label>
-    <select name="opttwo" id="courseSel" size="1">
+    <select name="select" class="inputbox1" id="course">
         <option value="" selected="selected">Please select course </option>
     </select><br><br>
         <input type="button" name="button" id="button" value="Ok">

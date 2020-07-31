@@ -22,23 +22,25 @@ def findLoc(StudentImages):
         print(faceLoc)
 
 def findEncodings1(StudentUplaodedImages):
-    encodeList1 = []
+    #encodeList1 = []
     for img1 in StudentUplaodedImages:
         img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
-        encode1 = face_recognition.face_encodings(img1)
-        encodeList1.append(encode1)
-    return encodeList1
+        return face_recognition.face_encodings(img1)
+    #     encodeList1.append(encode1)
+    # return encodeList1
 
 def findLoc1(StudentUplaodedImages):
     for img1 in StudentUplaodedImages:
         img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
-        faceLoc1 = face_recognition.face_locations(img1)[0]
-        cv2.rectangle(img1, (faceLoc1[3], faceLoc1[0]), (faceLoc1[1], faceLoc1[2]), (255, 0, 255), 2)
-        print(faceLoc1)
+        return face_recognition.face_locations(img1)
+        # cv2.rectangle(img1, (faceLoc1[3], faceLoc1[0]), (faceLoc1[1], faceLoc1[2]), (255, 0, 255), 2)
+        # print(faceLoc1)
 
-def getEncoding(StudentUplaodedImages):
-    img1 = cv2.cvtColor(StudentUplaodedImages, cv2.COLOR_BGR2RGB)
-    return face_recognition.face_encodings(img1)[0]
+
+
+# def getEncoding(StudentUplaodedImages):
+#     img1 = cv2.cvtColor(StudentUplaodedImages, cv2.COLOR_BGR2RGB)
+#     return face_recognition.face_encodings(img1)[0]
 
 def calculateMatchPercent(loc):
     return round((1-loc)*100)
@@ -76,11 +78,16 @@ def Run():
     print(len(encodeListKnown1))
     print('Encoding Complete')
 
+    LocList1 = findLoc1(StudentUplaodedImages)
+    print(LocList1)
+    print(len(LocList1))
+
     matchedStudents = []
     myDict={}
-    for img in StudentUplaodedImages:
-        result = face_recognition.compare_faces(encodeListKnown, getEncoding(img))
-        faceDis = face_recognition.face_distance(encodeListKnown, getEncoding(img))
+   # for img in StudentUplaodedImages:
+    for encodeFace, faceLoc in zip(encodeListKnown1, findLoc1(StudentUplaodedImages)):
+        result = face_recognition.compare_faces(encodeListKnown, encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown, encodeFace)
         print("Given match list is : " + str(result))
         print("Face Distance is", faceDis)
         res = list(compress(range(len(result)), result))

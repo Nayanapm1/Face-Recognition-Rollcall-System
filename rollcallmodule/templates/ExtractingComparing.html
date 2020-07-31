@@ -37,6 +37,24 @@
             <td width="134" align="center" bgcolor="#DEE0DF">Match Rate</td>
             <td width="134" align="center" bgcolor="#DEE0DF">Attendance</td>
           </tr>
+          {% for attd in attdlist %}
+              <tr align="center">
+                <td>{{ attd.studetails.stunum }}</td>
+                <td>{{ attd.studetails.stuname }}</td>
+                <td><img src="/rollcallmodule/StudentImages/{{attd.studetails.stunum}}.jpg" width="52" height="41" alt=""/></td>
+                <td>{% if attd.matchrate == null or att.matchrate == ""%}
+                    0%
+                    {% else %}
+                    {{ attd.matchrate }}%
+                    {% endif %}
+                </td>
+                <td>
+                    {% if attd.attendance %}Present
+                    {% else %}Absent
+                    {% endif %}
+                </td>
+              </tr>
+          {% endfor %}
           <tr>
             <td height="44" align="center">&nbsp;2020A001</td>
             <td align="center">&nbsp;Willem Baxter</td>
