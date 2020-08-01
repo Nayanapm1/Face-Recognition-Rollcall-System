@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+    function myFunction() {
+  alert("Please wait while the extraction is in progress");
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 .thumb-image{
@@ -69,7 +74,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<input id="fileUpload" multiple="multiple" name="filename" type="file" accept="image/*">
 <div id="image-holder"></div>
 </div><br>
-<input type="submit" onClick="alert('Upload succesfull!');"><br><br>
+<input type="submit" onClick="alert('Upload Successful!');"><br><br>
 </form>
 <form id="reset-form" action = "UploadClassStudentPhoto/reset" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
@@ -79,8 +84,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!-- Trigger/Open The Modal -->
 <form id="upload-form" action = "UploadClassStudentPhoto/proceed" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-<button id="myBtn">Proceed</button>
+<button id="myBtn" onclick="myFunction()">Proceed</button>
 </form>
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 

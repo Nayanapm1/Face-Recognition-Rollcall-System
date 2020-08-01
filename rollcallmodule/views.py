@@ -23,8 +23,18 @@ def CoursePopUp(request):
     context={'termlist':termlist}
     return render(request, 'coursepopup.html', context)
 
+def CoursePopUpOk(request):
+    if request.method == "POST":
+        request.session['termid'] = request.POST.get('term')
+        request.session['courseid'] = request.POST.get('course')
+        request.session['date'] = request.POST.get('date')
+        print (request.session.items())
+        return HttpResponse(status=204)
+
 def ExtractingComparingPage(request):
-    attdlist = attendancerec.objects.all().filter(term=2, course=4)
+    tid = request.session['termid']
+    cid = request.session['courseid']
+    attdlist = attendancerec.objects.all().filter(term=tid, course=cid)
     context = {'attdlist': attdlist}
     return render(request, 'ExtractingComparing.html', context)
 
@@ -59,48 +69,50 @@ def UploadClassStudentPhoto(request):
     return render(request, 'UploadClassStudentPhotoPage.html')
 
 def upload(request):
-    fileitem = request.FILES['filename']
-    print(fileitem)
+    fileitems = request.FILES.getlist('filename')
+    print(fileitems)
     fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
-    #fs = default_storage()
-    #fs.save(fileitem.name, fileitem)
-    fs.save(fileitem.name, fileitem)
+    for fileitem in fileitems:
+        fs.save(fileitem.name, fileitem)
     return render(request, 'UploadClassStudentPhotoPage.html')
 
 def Attendancerun(request):
     matchedIds = Run()
     #matchedIds =  {'2020A001': 63, '2020A011': 49}
-    tt = term.objects.get(termid=2)  # Comes term selection
-    cc = course.objects.get(courseid=4)  # Comes course selection
-    ad = attendate.objects.get(attdateid=1)  # Comes date selection
+    tid = request.session['termid']
+    cid = request.session['courseid']
+    date = request.session['date']
+    tt = term.objects.get(termid=tid)  # Comes term selection
+    cc = course.objects.get(courseid=cid)  # Comes course selection
+    #ad = attendate.objects.get(attdatetime=did)  # Comes date selection
     for id, perc in matchedIds.items():
         std = studentrec.objects.filter(stunum=id)
         if len(std)!=0:
-            attd = attendancerec.objects.filter(studetails=std[0], attendetails=ad, term=tt, course=cc)
+            attd = attendancerec.objects.filter(studetails=std[0], term=tt, course=cc)
             if len(attd)==0:
                 attd = attendancerec()
                 attd.studetails = std[0]
-                attd.attdatetime = datetime.now()
-                attd.attendetails = ad
+                attd.attdatetime = date
+                #attd.attendetails = ad
                 attd.attendance = True if perc > 60 else False
                 attd.matchrate = perc
                 attd.term = tt
                 attd.course = cc
             else:
-                attd = attendancerec.objects.get(studetails=std[0], attendetails=ad, term=tt, course=cc)
+                attd = attendancerec.objects.get(studetails=std[0],term=tt, course=cc)
                 attd.attdatetime = datetime.now()
                 attd.attendance = True if perc > 60 else False
                 attd.matchrate = perc
             attd.save()
 
-    unmatched = studentrec.objects.filter(selectcourse_id=2).exclude(stunum__in=matchedIds.keys())
+    unmatched = studentrec.objects.filter(selectcourse__term=tt, selectcourse__course=cc).exclude(stunum__in=matchedIds.keys())
     for ustd in unmatched:
-        attd = attendancerec.objects.filter(studetails=ustd, attendetails=ad, term=tt, course=cc)
+        attd = attendancerec.objects.filter(studetails=ustd, term=tt, course=cc)
         if len(attd)==0:
             attd = attendancerec()
             attd.studetails = ustd
             attd.attdatetime = datetime.now()
-            attd.attendetails = ad
+            #attd.attendetails = ad
             attd.attendance = False
             attd.term = tt
             attd.course = cc
@@ -156,26 +168,27 @@ def getext(filename):
 
 def importstu(request):
     if request.method == "POST":
-        file = request.FILES.get('filename')
-        print(file.name)
-        type_excel = getext(file.name)
-        print(type_excel)
-        if 'xlsx' == type_excel or 'xls'==type_excel:
-            filename=pd.read_excel(file)
-            rows=len(filename)
-            # termid=request.session.get('termid')
-            # courseid=request.session.get('courseid')
-            # term1 = term.objects.get(termid=termid)
-            # course1 = course.objects.get(courseid=courseid)
-            # sc=selectcourse.objects.filter(scid=scid,course=course1)
-            for i in range(rows):
-                stunum=filename['stunum'][i]
-                stuname=filename['stuname'][i]
-                scid1 = filename['scid'][i]
-                sc = selectcourse.objects.get(scid=scid1)
-                student = studentrec()
-                student.stunum=stunum
-                student.stuname=stuname
-                student.selectcourse=sc
-                student.save()
-            return HttpResponseRedirect('/rollcallmodule/StudentInformation')
+        files = request.FILES.getlist('filename')
+        print(files)
+        for file in files:
+            type_excel = getext(file.name)
+            print(type_excel)
+            if 'xlsx' == type_excel or 'xls'==type_excel:
+                filename=pd.read_excel(file)
+                rows=len(filename)
+                # termid=request.session.get('termid')
+                # courseid=request.session.get('courseid')
+                # term1 = term.objects.get(termid=termid)
+                # course1 = course.objects.get(courseid=courseid)
+                # sc=selectcourse.objects.filter(scid=scid,course=course1)
+                for i in range(rows):
+                    stunum=filename['stunum'][i]
+                    stuname=filename['stuname'][i]
+                    scid1 = filename['scid'][i]
+                    sc = selectcourse.objects.get(scid=scid1)
+                    student = studentrec()
+                    student.stunum=stunum
+                    student.stuname=stuname
+                    student.selectcourse=sc
+                    student.save()
+        return HttpResponseRedirect('/rollcallmodule/StudentInformation')

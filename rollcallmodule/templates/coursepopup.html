@@ -128,6 +128,8 @@ function loadcourseselectbox()
 </script>
 <body style="text-align: center">
 <table width="42%" border="0">
+<form action="coursepopup/ok" method="POST">
+{% csrf_token %}
   <tbody>
     <tr>
       <th colspan="3" align="left" bgcolor="#06993C" scope="col"><img src="/static/images/Course.PNG" width="41" height="35" alt=""/><span style="font-size: 24px; color: #FFFFFF;">Course Selection</span></th>
@@ -138,24 +140,37 @@ function loadcourseselectbox()
           <tr>            </tr>
         </tbody>
       </table>
-       <label for="Term" >Term:</label>
-		      <select name="select" class="inputbox1" onchange="loadcourse(this);">
-        <option value="0">Please select a term</option>
+        <p>
+          <label for="Term" >Term:</label>
+          <select name="term" class="inputbox1" onchange="loadcourse(this);">
+            <option value="0">Please select a term</option>
+            
         {% for term in termlist %}
-        <option value="{{ term.termid }}" >{{ term.termname }}</option>
+        
+            <option value="{{ term.termid }}" >{{ term.termname }}</option>
+            
          {% endfor %}
-    </select><br><br>
-		  <label for="course">Course:</label>
-    <select name="select" class="inputbox1" id="course">
-        <option value="" selected="selected">Please select course </option>
-    </select><br><br>
-        <input type="button" name="button" id="button" value="Ok">
+    
+          </select>
+          <br><br>
+          <label for="course">Course:</label>
+          <select name="course" class="inputbox1" id="course">
+            <option value="" selected="selected">Please select course </option>
+          </select>
+          </p>
+        <p>Date:
+          <input type="date" name="date" id="date">
+          <br>
+          <br>
+          <input type="submit" name="button" id="button" value="Ok" onclick="parent.window.close()">
+        </p>
         <table width="100%" border="1" cellpadding="0" cellspacing="0">
-        <tbody>          
+          <tbody>          
               </tbody>
-            </table></td>
+      </table></td>
           </tr>
         </tbody>
+</form>
       </table></td>
 <td width="0" bgcolor="#06993C">&nbsp;</td>
     </tr>

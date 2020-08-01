@@ -5,7 +5,7 @@ from selectcourse import models as selectcourse_models
 class attendancerec(models.Model):
     attendanceID = models.AutoField(primary_key=True)
     studetails = models.ForeignKey('studentrec', on_delete=models.CASCADE, db_column='stuid')
-    attendetails = models.ForeignKey('attendate', on_delete=models.CASCADE, db_column='attdateid')
+   # attendetails = models.ForeignKey('attendate', on_delete=models.CASCADE, db_column='attdateid')
     attdatetime = models.DateTimeField(null=True)
     attendance = models.BooleanField(default=True)
     matchrate = models.CharField(null=True, max_length=45)

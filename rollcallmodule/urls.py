@@ -6,6 +6,7 @@ app_name='rollcallmodule'
 urlpatterns=[
     path('comparing', views.r1),
     path('coursepopup', views.CoursePopUp),
+    path('coursepopup/ok', views.CoursePopUpOk),
     path('ExtractingComparing', views.ExtractingComparingPage),
     path('History', views.r4),
     path('MyAttendance', views.r5),

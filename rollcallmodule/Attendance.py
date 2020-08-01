@@ -22,28 +22,46 @@ def findLoc(StudentImages):
         print(faceLoc)
 
 def findEncodings1(StudentUplaodedImages):
-    #encodeList1 = []
+    encodeList1 = []
     for img1 in StudentUplaodedImages:
         img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
-        return face_recognition.face_encodings(img1)
-    #     encodeList1.append(encode1)
-    # return encodeList1
+        encode1 = face_recognition.face_encodings(img1)[0]
+        encodeList1.append(encode1)
+    return encodeList1
 
 def findLoc1(StudentUplaodedImages):
     for img1 in StudentUplaodedImages:
         img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
-        return face_recognition.face_locations(img1)
-        # cv2.rectangle(img1, (faceLoc1[3], faceLoc1[0]), (faceLoc1[1], faceLoc1[2]), (255, 0, 255), 2)
-        # print(faceLoc1)
-
-
+        return face_recognition.face_locations(img1)[0]
+        cv2.rectangle(img1, (faceLoc1[3], faceLoc1[0]), (faceLoc1[1], faceLoc1[2]), (255, 0, 255), 2)
+        print(faceLoc1)
 
 # def getEncoding(StudentUplaodedImages):
 #     img1 = cv2.cvtColor(StudentUplaodedImages, cv2.COLOR_BGR2RGB)
 #     return face_recognition.face_encodings(img1)[0]
 
 def calculateMatchPercent(loc):
-    return round((1-loc)*100)
+    m = loc*2
+    if m <= 1:
+        return 100
+    elif m > 1 and m <= 1.1:
+        return 80
+    elif m > 1.1 and m <= 1.3:
+        return 70
+    elif m > 1.3 and m <= 1.5:
+        return 60
+    elif m > 1.5 and m <= 1.7:
+        return 50
+    elif m > 1.7 and m <= 1.9:
+        return 40
+    elif m > 1.9 and m <= 2.1:
+        return 30
+    elif m > 2.1 and m <= 2.3:
+        return 30
+    elif m > 2.3 and m <= 2.5:
+        return 20
+    elif m > 2.5:
+        return 10
 
 def Run():
     path = 'rollcallmodule/StudentImages'
