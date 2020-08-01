@@ -19,20 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Added upload student details functionality">
-      <change afterPath="$PROJECT_DIR$/Static/images/Import.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0008_remove_attendancerec_attendetails.py" afterDir="false" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Added database relations">
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/AttendanceNew.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/2020A011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/2020A012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0009_attendancerec_attendetails.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0010_remove_attendancerec_matchrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0011_auto_20200801_2122.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/Attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/Attendance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/Test111.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/Test111_CO6DXhR.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/download.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/2020A015.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages/BA.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/migrations/0008_remove_attendancerec_attendetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/migrations/0008_remove_attendancerec_attendetails.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/History.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/History.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/RollCallPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/UploadClassStudentPhotoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/UploadClassStudentPhotoPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/UploadStudentInformationPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/UploadStudentInformationPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/coursepopup.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/coursepopup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollcallmodule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/views.py" afterDir="false" />
     </list>
@@ -83,30 +86,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rollcallmodule/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rollcallmodule" />
+      <recent name="$PROJECT_DIR$/Static/images" />
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/selectcourse/template" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages" />
       <recent name="$PROJECT_DIR$/rollcallmodule/templates" />
       <recent name="$PROJECT_DIR$/usermgnt/templates" />
       <recent name="$PROJECT_DIR$/usermgnt/Template" />
       <recent name="$PROJECT_DIR$/rollcallmodule/template" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static/images" />
-      <recent name="$PROJECT_DIR$/rollcallmodule" />
-      <recent name="$PROJECT_DIR$/Static" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Attendance">
+  <component name="RunManager" selected="Python.AttendanceNew">
     <configuration name="UploadClassStudentPhotoPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rollcall/rollcallmodule/templates/UploadClassStudentPhotoPage.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rollcall/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Attendance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -123,6 +123,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rollcallmodule/Attendance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AttendanceNew" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rollcall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rollcallmodule" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rollcallmodule/AttendanceNew.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,19 +223,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.rollcall" />
-      <item itemvalue="JavaScript Debug.test.html" />
       <item itemvalue="JavaScript Debug.UploadClassStudentPhotoPage.html" />
       <item itemvalue="Python.Uploa" />
       <item itemvalue="Python.app" />
       <item itemvalue="Python.Attendance" />
+      <item itemvalue="Python.AttendanceNew" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AttendanceNew" />
         <item itemvalue="Python.Attendance" />
         <item itemvalue="Python.app" />
         <item itemvalue="JavaScript Debug.UploadClassStudentPhotoPage.html" />
         <item itemvalue="Python.Uploa" />
-        <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +311,9 @@
       <workItem from="1596061093025" duration="40679000" />
       <workItem from="1596163428573" duration="129000" />
       <workItem from="1596163870828" duration="21037000" />
-      <workItem from="1596251430711" duration="9813000" />
+      <workItem from="1596251430711" duration="13518000" />
+      <workItem from="1596300724591" duration="402000" />
+      <workItem from="1596301645034" duration="13712000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -613,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596237459351</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added database relations">
+      <created>1596296350566</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1596296350566</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +664,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated select course app template folder" />
     <MESSAGE value="Added rollcall app" />
     <MESSAGE value="updated" />
     <MESSAGE value="updated css" />
@@ -658,7 +688,8 @@
     <MESSAGE value="Pushed sessions functionality" />
     <MESSAGE value="Added dropdown functionality to coursepop up" />
     <MESSAGE value="Added upload student details functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added upload student details functionality" />
+    <MESSAGE value="Added database relations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database relations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
@@ -693,41 +724,41 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="553" y="294" key="FileChooserDialogImpl/0.23.1680.956@0.23.1680.956" timestamp="1593148652614" />
-    <state width="1638" height="251" key="GridCell.Tab.0.bottom" timestamp="1596258635226">
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom" timestamp="1596300711526">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406222" />
-    <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1596258635226" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1596300711526" />
     <state width="1638" height="252" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1596057034896" />
     <state width="1638" height="316" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1594240608308" />
     <state width="1638" height="255" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594155704552" />
     <state width="819" height="253" key="GridCell.Tab.0.bottom/0.23.1680.960@0.23.1680.960" timestamp="1596074631667" />
     <state width="1638" height="253" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1596075756723" />
-    <state width="1638" height="251" key="GridCell.Tab.0.center" timestamp="1596258635224">
+    <state width="1638" height="251" key="GridCell.Tab.0.center" timestamp="1596300711524">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state width="1638" height="290" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406221" />
-    <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1596258635224" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1596300711524" />
     <state width="1638" height="252" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594155704551" />
     <state width="819" height="253" key="GridCell.Tab.0.center/0.23.1680.960@0.23.1680.960" timestamp="1596074631666" />
     <state width="1638" height="253" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1596075756722" />
-    <state width="1638" height="251" key="GridCell.Tab.0.left" timestamp="1596258635224">
+    <state width="1638" height="251" key="GridCell.Tab.0.left" timestamp="1596300711524">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state width="1638" height="290" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406220" />
-    <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1596258635224" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1596300711524" />
     <state width="1638" height="252" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594155704550" />
     <state width="819" height="253" key="GridCell.Tab.0.left/0.23.1680.960@0.23.1680.960" timestamp="1596074631666" />
     <state width="1638" height="253" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1596075756721" />
-    <state width="1638" height="251" key="GridCell.Tab.0.right" timestamp="1596258635225">
+    <state width="1638" height="251" key="GridCell.Tab.0.right" timestamp="1596300711525">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state width="1638" height="290" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406221" />
-    <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1596258635225" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1596300711525" />
     <state width="1638" height="252" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594155704552" />
@@ -802,11 +833,11 @@
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
     <state x="254" y="80" width="1084" height="810" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1596074431577" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596237466233">
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596296358351">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596145655338" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596237466233" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596296358351" />
     <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595283251946" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="506" y="250" key="Vcs.Push.Dialog.v2/0.23.1680.961@0.23.1680.961" timestamp="1596066445092" />
@@ -835,6 +866,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rollcall$dbconnection.coverage" NAME="dbconnection Coverage Results" MODIFIED="1593203569164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rollcall$app.coverage" NAME="app Coverage Results" MODIFIED="1595995707525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
+    <SUITE FILE_PATH="coverage/rollcall$AttendanceNew.coverage" NAME="AttendanceNew Coverage Results" MODIFIED="1596298188047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
     <SUITE FILE_PATH="coverage/rollcall$Attendance.coverage" NAME="Attendance Coverage Results" MODIFIED="1596258554252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
   </component>
 </project>

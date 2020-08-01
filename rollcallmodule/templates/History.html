@@ -21,7 +21,12 @@ function edit(i)
 			document.getElementById("btnEdit".concat(i)).style.display='';
 			document.getElementById("btnDelete".concat(i)).style.display='';
 			document.getElementById("lblAttended".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
-		}	
+		}
+
+    function update1(attendance) {
+	    location.href="/sc/term/update/"+termid+""
+    }
+
 	function delcon(i)
 	{
 		var con=confirm("Are you sure to delete the record? This action cannot be rolled back.Rownumber-".concat(i));
@@ -31,6 +36,13 @@ function edit(i)
 			}else
 				alert("The record is not deleted")
 	}
+
+	function changedate(dateid)
+            {
+                url="/rollcallmodule/history/"+dateid;
+                gourl(url);
+            }
+
 		</script>
 <body>
 <table width="100%" border="0">
@@ -43,119 +55,57 @@ function edit(i)
       <td width="98%"><table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
-            <td height="21" colspan="6" align="left" valign="middle" bgcolor="#ACB0AE"><label for="date">Date:</label>
-              <input type="date" name="date" id="date"></td>
+            <td height="21" colspan="7" align="left" valign="middle" bgcolor="#ACB0AE">Date:
+				 <select name="attdateid" class="inputbox1" id="attdateid" onchange="changedate(this.value)">
+                    {% for attdate  in  attdatelist %}
+                    {% if attdateid == attdate.attdateid %}
+                    <option value="{{attdateid}}" selected>{{attdate.attdate}}</option>
+                    {% else %}
+                    <option value="{{attdate.attdateid}}">{{attdate.attdate}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                &nbsp;
+                <input name="button" type="submit" class="btn" id="button" value="Clear" onclick="del();">
+                Total：{{ total }} Students &nbsp; Attendance：{{attended }} students&nbsp; Attendance rate：{{rate}}</td>
             </tr>
           <tr>
-            <td width="10%" height="21" align="center" bgcolor="#DEE0DF">Student Number</td>
-            <td width="20%" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
-            <td width="25%" height="21" align="center" bgcolor="#DEE0DF">Course</td>
-            <td width="10%" align="center" bgcolor="#DEE0DF">Date</td>
-            <td width="10%" height="21" align="center" bgcolor="#DEE0DF">Attended</td>
-            <td width="25%" align="center" bgcolor="#DEE0DF">Management</td>
+			<td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attendance Date</td>
+            <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Student Number</td>
+            <td width="19%" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
+            <td width="19%" height="21" align="center" bgcolor="#DEE0DF">Term</td>
+            <td width="19%" align="center" bgcolor="#DEE0DF">Course</td>
+            <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attended</td>
+            <td width="16%" align="center" bgcolor="#DEE0DF">Management</td>
             </tr>
-          <tr
-			  onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" >
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber1">2020A001</label></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName1">William</label></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate1">01/01/2020</label></td>
-			           <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttended1">Yes</label>
-                    <input type="text" name="textfield" id="txtAttended1" style="display: none" value="Yes"></td>
+			{% for attd in attdlist %}
+          <tr align="center" onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" >
+              <td align="center" bgcolor="#FFFFFF">{{ attd.attdatetime }}</td>
+			  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.stunum }}</td>
+                  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.stuname }}</td>
+                  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.term.termname }}</td>
+            <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.course.coursename }}</td>
+              {% for term in termlist %}
+              <tr>
+              <form action="term/update/{{term.termid}}" method="POST">
+                  {% csrf_token %}
+                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm{{term.termid}}">{{term.termname}}</label>
+                      <input size="30" type="text" name="txtTerm{{term.termid}}" id="txtTerm{{term.termid}}" style="display: none" value="{{term.termname}}">
+                  </td>
+                  <td height="21" align="center">
+                        <input type="button" name="button2" id="btnEdit{{term.termid}}" value="Edit" onClick="edit({{term.termid}});">
+                        <input type="submit" name="button4" id="btnUpdate{{term.termid}}" value="Update" style="display: none">
+                        <input type="button" name="button3" id="btnDelete{{term.termid}}" value="Delete" onClick="del({{term.termid}});">
+                  </td>
+              </form>
+              </tr>
+          {% endfor %}
+          <td align="center" bgcolor="#FFFFFF">{{ attd.attendance }}</td>
 			   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
-					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
-                    <input type="button" name="button3" id="btnDelete1" value="Delete" onClick="delcon(1);">
+					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);">
 					</td></tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-        </tbody>
+			{% endfor %}
       </table></td>
       <td width="1%"bgcolor="#228744">&nbsp;</td>
     </tr>

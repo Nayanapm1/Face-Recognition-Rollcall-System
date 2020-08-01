@@ -4,12 +4,13 @@ from django.core.files.storage import FileSystemStorage, default_storage
 from .models import attendancerec, studentrec, attendate
 from selectcourse.models import term, course, selectcourse
 import pandas as pd
+from django.urls import reverse
 import os
 import datetime as d
 #import pymysql
 
 import os
-from rollcallmodule.Attendance import *
+from rollcallmodule.AttendanceNew import *
 
 from flask import Flask, request, render_template
 
@@ -37,9 +38,6 @@ def ExtractingComparingPage(request):
     attdlist = attendancerec.objects.all().filter(term=tid, course=cid)
     context = {'attdlist': attdlist}
     return render(request, 'ExtractingComparing.html', context)
-
-def r4(request):
-    return render(request, 'History.html')
 
 def r5(request):
     return render(request, 'MyAttendancePage.html')
@@ -74,7 +72,7 @@ def upload(request):
     fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
     for fileitem in fileitems:
         fs.save(fileitem.name, fileitem)
-    return render(request, 'UploadClassStudentPhotoPage.html')
+    return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
 
 def Attendancerun(request):
     matchedIds = Run()
@@ -84,35 +82,43 @@ def Attendancerun(request):
     date = request.session['date']
     tt = term.objects.get(termid=tid)  # Comes term selection
     cc = course.objects.get(courseid=cid)  # Comes course selection
-    #ad = attendate.objects.get(attdatetime=did)  # Comes date selection
+    sc = selectcourse.objects.get(term=tt, course=cc)
+    ad = attendate.objects.filter(attdate=date, selectcourse=sc)  # Comes date selection
+    if len(ad)==0:
+        ad = attendate()
+        ad.attdate = date
+        ad.selectcourse = sc
+        ad.save()
+    else:
+        ad = attendate.objects.get(attdate=date, selectcourse=sc)
     for id, perc in matchedIds.items():
-        std = studentrec.objects.filter(stunum=id)
+        std = studentrec.objects.filter(stunum=id, selectcourse=sc)
         if len(std)!=0:
             attd = attendancerec.objects.filter(studetails=std[0], term=tt, course=cc)
             if len(attd)==0:
                 attd = attendancerec()
                 attd.studetails = std[0]
                 attd.attdatetime = date
-                #attd.attendetails = ad
+                attd.attendetails = ad
                 attd.attendance = True if perc > 60 else False
                 attd.matchrate = perc
                 attd.term = tt
                 attd.course = cc
             else:
                 attd = attendancerec.objects.get(studetails=std[0],term=tt, course=cc)
-                attd.attdatetime = datetime.now()
+                attd.attdatetime = date
                 attd.attendance = True if perc > 60 else False
                 attd.matchrate = perc
             attd.save()
 
-    unmatched = studentrec.objects.filter(selectcourse__term=tt, selectcourse__course=cc).exclude(stunum__in=matchedIds.keys())
+    unmatched = studentrec.objects.filter(selectcourse=sc).exclude(stunum__in=matchedIds.keys())
     for ustd in unmatched:
         attd = attendancerec.objects.filter(studetails=ustd, term=tt, course=cc)
         if len(attd)==0:
             attd = attendancerec()
             attd.studetails = ustd
-            attd.attdatetime = datetime.now()
-            #attd.attendetails = ad
+            attd.attdatetime = date
+            attd.attendetails = ad
             attd.attendance = False
             attd.term = tt
             attd.course = cc
@@ -121,11 +127,8 @@ def Attendancerun(request):
     return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
 def Udelete(request):
-#     # fileitem = request.FILES['filename']
-#     # print(fileitem)
-#     # fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
-#     # fs.delete(fileitem.name, fileitem)
-        return render(request, 'UploadClassStudentPhotoPage.html')
+#        return render(request, 'UploadClassStudentPhotoPage.html')
+        return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
 
     # check if the file has been uploaded
     #if fileitem.filename:
@@ -191,4 +194,31 @@ def importstu(request):
                     student.stuname=stuname
                     student.selectcourse=sc
                     student.save()
-        return HttpResponseRedirect('/rollcallmodule/StudentInformation')
+        else:
+            fs = FileSystemStorage(location='rollcallmodule/StudentImages/')
+            for fileitem in files:
+                fs.save(fileitem.name, fileitem)
+    return HttpResponseRedirect('/rollcallmodule/StudentInformation')
+
+#       return HttpResponseRedirect('/rollcallmodule/StudentInformation')
+
+    # def upload(request):
+    #     fileitems = request.FILES.getlist('filename')
+    #     print(fileitems)
+    #     fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
+    #     for fileitem in fileitems:
+    #         fs.save(fileitem.name, fileitem)
+    #     return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
+
+def histrec(request):
+    tid = request.session['termid']
+    cid = request.session['courseid']
+    attdlist = attendancerec.objects.filter(term=tid, course=cid)
+    context = {'attdlist': attdlist}
+    print(attdlist)
+    # maxid=context.get('attdateid')
+    # statistic=attendancerec.stats(maxid)
+    # context=dict(context,**statistic)
+    return render(request,'History.html',context)
+
+
