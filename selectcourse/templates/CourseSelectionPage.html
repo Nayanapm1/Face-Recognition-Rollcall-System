@@ -174,18 +174,18 @@ function loadcourseselectbox()
                   <td width="15%" height="21" align="center" bgcolor="#DEE0DF" ><strong>&nbsp;Management</strong>&nbsp;</td>
                 </tr>
                 {% for selectcourse in selectcourselist %}
-                <tr>
+                <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
                 <form action="selectcourse/update/{{ selectcourse.scid }}" method="POST">
                     {%  csrf_token %}
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm{{ selectcourse.scid }}">{{ selectcourse.term.termname }}</label>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm{{ selectcourse.scid }}">{{ selectcourse.term.termname }}</label>
 	             <input type="text" name="txtTerm{{ selectcourse.scid }}" id="txtTerm{{ selectcourse.scid }}" style="display: none" value="{{ selectcourse.term.termname }}"></td>
-                    <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse{{ selectcourse.scid}}">{{ selectcourse.course.coursename}}</label>
+                    <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'"align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse{{ selectcourse.scid}}">{{ selectcourse.course.coursename}}</label>
                         <input type="text" name="txtCourse{{ selectcourse.scid}}" id="txtCourse{{ selectcourse.scid}}" style="display: none" value="{{ selectcourse.course.coursename }}"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate{{ selectcourse.scid }}">{{ selectcourse.startdate }}</label>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'"align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStartDate{{ selectcourse.scid }}">{{ selectcourse.startdate }}</label>
                     <input type="date" name="txtStartDate{{ selectcourse.scid }}" id="txtStartDate{{ selectcourse.scid }}" style="display: none" value="{{ selectcourse.startdate |date:"Y-m-d"}}"></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate{{ selectcourse.scid }}">{{ selectcourse.enddate }}</label>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'"align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblEndDate{{ selectcourse.scid }}">{{ selectcourse.enddate }}</label>
                       <input type="date" name="txtEndDate{{ selectcourse.scid }}" id="txtEndDate{{ selectcourse.scid }}" style="display: none" value="{{ selectcourse.enddate |date:"Y-m-d"}}"></td>
-                  <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" height="21" align="center" valign="middle" bgcolor="#FFFFFF">
 					<input type="button" name="button2" id="btnEdit{{ selectcourse.scid }}" value="Edit" onClick="edit({{ selectcourse.scid }});">
 					<input type="submit" name="button4" id="btnUpdate{{ selectcourse.scid }}" value="Update" style="display: none">
                     <input type="button" name="button3" id="btnDelete{{selectcourse.scid}}" value="Delete" OnClick="del({{selectcourse.scid}});">

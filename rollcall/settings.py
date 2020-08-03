@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'selectcourse',
     'usermgnt',
     'rollcallmodule',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [

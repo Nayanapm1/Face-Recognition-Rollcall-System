@@ -7,24 +7,24 @@
 	<script language="javascript">
 function edit(i)
 		{
-			document.getElementById("lblAttended".concat(i)).style.display='none';
-			document.getElementById("txtAttended".concat(i)).style.display='';
+			document.getElementById("lblAttendance".concat(i)).style.display='none';
+			document.getElementById("txtAttendance".concat(i)).style.display='';
 			document.getElementById("btnUpdate".concat(i)).style.display='';
 			document.getElementById("btnEdit".concat(i)).style.display='none';
 			document.getElementById("btnDelete".concat(i)).style.display='none';
 		}
 	function update(i)
 		{
-			document.getElementById("lblAttended".concat(i)).style.display='';
-			document.getElementById("txtAttended".concat(i)).style.display='none';
+			document.getElementById("lblAttendance".concat(i)).style.display='';
+			document.getElementById("txtAttendance".concat(i)).style.display='none';
 			document.getElementById("btnUpdate".concat(i)).style.display='none';
 			document.getElementById("btnEdit".concat(i)).style.display='';
 			document.getElementById("btnDelete".concat(i)).style.display='';
-			document.getElementById("lblAttended".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
+			document.getElementById("lblAttendance".concat(i)).innerHTML=document.getElementById("txtAttendance".concat(i)).value;
 		}
 
-    function update1(attendance) {
-	    location.href="/sc/term/update/"+termid+""
+    function update1(attendanceID) {
+	    location.href="/rollcallmodule/history/update/"+attendanceID+""
     }
 
 	function delcon(i)
@@ -67,7 +67,7 @@ function edit(i)
                 </select>
                 &nbsp;
                 <input name="button" type="submit" class="btn" id="button" value="Clear" onclick="del();">
-                Total：{{ total }} Students &nbsp; Attendance：{{attended }} students&nbsp; Attendance rate：{{rate}}</td>
+                Total：{{ totalstu }} Students &nbsp; Attendance：{{attend }} students&nbsp; Attendance rate：{{rate}}</td>
             </tr>
           <tr>
 			<td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attendance Date</td>
@@ -78,34 +78,26 @@ function edit(i)
             <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attended</td>
             <td width="16%" align="center" bgcolor="#DEE0DF">Management</td>
             </tr>
+          <tr ></tr>
 			{% for attd in attdlist %}
-          <tr align="center" onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" >
-              <td align="center" bgcolor="#FFFFFF">{{ attd.attdatetime }}</td>
-			  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.stunum }}</td>
-                  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.stuname }}</td>
-                  <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.term.termname }}</td>
-            <td align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.course.coursename }}</td>
-              {% for term in termlist %}
-              <tr>
-              <form action="term/update/{{term.termid}}" method="POST">
+          <tr align="center" onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
+              <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.attdatetime }}</td>
+			  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.stunum }}</td>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.stuname }}</td>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.term.termname }}</td>
+            <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'"align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.course.coursename }}</td>
+
+              <form action="history/update/{{attd.attendanceID}}" method="POST">
                   {% csrf_token %}
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblTerm{{term.termid}}">{{term.termname}}</label>
-                      <input size="30" type="text" name="txtTerm{{term.termid}}" id="txtTerm{{term.termid}}" style="display: none" value="{{term.termname}}">
-                  </td>
-                  <td height="21" align="center">
-                        <input type="button" name="button2" id="btnEdit{{term.termid}}" value="Edit" onClick="edit({{term.termid}});">
-                        <input type="submit" name="button4" id="btnUpdate{{term.termid}}" value="Update" style="display: none">
-                        <input type="button" name="button3" id="btnDelete{{term.termid}}" value="Delete" onClick="del({{term.termid}});">
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttendance{{attd.attendanceID}}">{{attd.attendance}}</label>
+                      <input size="30" type="text" name="txtAttendance{{attd.attendanceID}}" id="txtAttendance{{attd.attendanceID}}" style="display: none" value="{{attd.attendance}}"></td>
+                  <td>
+                      <input type="button" name="button2" id="btnEdit{{attd.attendanceID}}" value="Edit" onClick="edit({{attd.attendanceID}});">
+                      <input type="submit" name="button4" id="btnUpdate{{attd.attendanceID}}" value="Update" style="display: none">
                   </td>
               </form>
-              </tr>
-          {% endfor %}
-          <td align="center" bgcolor="#FFFFFF">{{ attd.attendance }}</td>
-			   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
-					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
-					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);">
-					</td></tr>
-			{% endfor %}
+                </tr>
+            {% endfor %}
       </table></td>
       <td width="1%"bgcolor="#228744">&nbsp;</td>
     </tr>

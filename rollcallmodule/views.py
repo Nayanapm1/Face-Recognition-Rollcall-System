@@ -9,19 +9,26 @@ import os
 import datetime as d
 #import pymysql
 
-import os
 from rollcallmodule.AttendanceNew import *
 
 from flask import Flask, request, render_template
 
 # Create your views here.
 
-def r1(request):
-    return render(request, 'ComparingPage.html')
-
 def CoursePopUp(request):
     termlist=term.objects.all()
-    context={'termlist':termlist}
+    courselist=[]
+    tid = request.session.get('termid')
+    cid = request.session.get('courseid')
+    date = request.session.get('date')
+    context = {'termlist': termlist}
+    if tid is not None:
+        context['courselist']=course.objects.filter(selectcourse__term__in=[tid])
+        context['tid'] = int(tid)
+    if cid is not None:
+        context['cid'] = int(cid)
+    if date is not None:
+        context['date'] = date
     return render(request, 'coursepopup.html', context)
 
 def CoursePopUpOk(request):
@@ -33,23 +40,60 @@ def CoursePopUpOk(request):
         return HttpResponse(status=204)
 
 def ExtractingComparingPage(request):
+    tid = request.session.get('termid')
+    cid = request.session.get('courseid')
+    date = request.session.get('date')
+    if tid != '' and cid != '' and date != '':
+        attdlist = attendancerec.objects.all().filter(term=tid, attdatetime=date, course=cid)
+        context = {'attdlist': attdlist}
+        return render(request, 'ExtractingComparing.html', context)
+
+def MyAttendancePage(request):
     tid = request.session['termid']
     cid = request.session['courseid']
     attdlist = attendancerec.objects.all().filter(term=tid, course=cid)
     context = {'attdlist': attdlist}
-    return render(request, 'ExtractingComparing.html', context)
-
-def r5(request):
-    return render(request, 'MyAttendancePage.html')
+    return render(request, 'MyAttendancePage.html', context)
 
 def r6(request):
     return render(request, 'RollCall.html')
 
-def r7(request):
-    return render(request, 'RollCallPage.html')
+def RollCallPage(request):
+    tid = request.session.get('termid')
+    cid = request.session.get('courseid')
+    date = request.session.get('date')
+    context = {}
+    if tid!='' and cid!='':
+        studlist = studentrec.objects.filter(selectcourse__term=tid, selectcourse__course=cid)
+        studatt = {}
+        if date != '':
+            attd = attendate.objects.filter(attdate=date)
+            if len(attd) != 0:
+                attlist = attendancerec.objects.filter(term=tid, course=cid, attendetails=attd[0], studetails__in=studlist)
+                if len(attlist) != 0:
+                    for stud in studlist:
+                        for i in range(len(attlist)):
+                            if attlist[i].studetails.stunum == stud.stunum:
+                                studatt[stud.stunum] = attlist[i].attendance
+                                break
+        context = {'stdlist': studlist, 'studatt': studatt}
+    return render(request, 'RollCallPage.html', context)
+
+def EditRollCallPage(request,sid):
+    if request.method== "POST":
+        std = studentrec.objects.get(stuid=sid)
+        std.stunum = request.POST.get('txtStudentNum'+str(sid))
+        std.stuname = request.POST.get('txtStudentName'+str(sid))
+        std.save()
+    return HttpResponseRedirect('/rollcallmodule/RollCallPage')
+
+def DelRollCallPage(request,sid):
+    std1 = studentrec.objects.get(stuid=sid)
+    std1.delete()
+    return HttpResponseRedirect('/rollcallmodule/RollCallPage')
 
 def r8(request):
-    return render(request, 'StudenRecord.html')
+    return render(request, 'StudentRecord.html')
 
 def ViewStudentInformation(request):
     return render(request, 'UploadStudentInformationPage.html')
@@ -77,52 +121,53 @@ def upload(request):
 def Attendancerun(request):
     matchedIds = Run()
     #matchedIds =  {'2020A001': 63, '2020A011': 49}
-    tid = request.session['termid']
-    cid = request.session['courseid']
-    date = request.session['date']
-    tt = term.objects.get(termid=tid)  # Comes term selection
-    cc = course.objects.get(courseid=cid)  # Comes course selection
-    sc = selectcourse.objects.get(term=tt, course=cc)
-    ad = attendate.objects.filter(attdate=date, selectcourse=sc)  # Comes date selection
-    if len(ad)==0:
-        ad = attendate()
-        ad.attdate = date
-        ad.selectcourse = sc
-        ad.save()
-    else:
-        ad = attendate.objects.get(attdate=date, selectcourse=sc)
-    for id, perc in matchedIds.items():
-        std = studentrec.objects.filter(stunum=id, selectcourse=sc)
-        if len(std)!=0:
-            attd = attendancerec.objects.filter(studetails=std[0], term=tt, course=cc)
+    tid = request.session.get('termid')
+    cid = request.session.get('courseid')
+    date = request.session.get('date')
+    if tid!='' and cid!='' and date!='':
+        tt = term.objects.get(termid=tid)  # Comes term selection
+        cc = course.objects.get(courseid=cid)  # Comes course selection
+        sc = selectcourse.objects.get(term=tt, course=cc)
+        ad = attendate.objects.filter(attdate=date, selectcourse=sc)  # Comes date selection
+        if len(ad)==0:
+            ad = attendate()
+            ad.attdate = date
+            ad.selectcourse = sc
+            ad.save()
+        else:
+            ad = attendate.objects.get(attdate=date, selectcourse=sc)
+        for id, perc in matchedIds.items():
+            std = studentrec.objects.filter(stunum=id, selectcourse=sc)
+            if len(std)!=0:
+                attd = attendancerec.objects.filter(studetails=std[0], attendetails=ad, term=tt, course=cc)
+                if len(attd)==0:
+                    attd = attendancerec()
+                    attd.studetails = std[0]
+                    attd.attdatetime = date
+                    attd.attendetails = ad
+                    attd.attendance = True if perc > 60 else False
+                    attd.matchrate = perc
+                    attd.term = tt
+                    attd.course = cc
+                else:
+                    attd = attendancerec.objects.get(studetails=std[0], attendetails=ad, term=tt, course=cc)
+                    attd.attdatetime = date
+                    attd.attendance = True if perc > 60 else False
+                    attd.matchrate = perc
+                attd.save()
+
+        unmatched = studentrec.objects.filter(selectcourse=sc).exclude(stunum__in=matchedIds.keys())
+        for ustd in unmatched:
+            attd = attendancerec.objects.filter(studetails=ustd, attendetails=ad, term=tt, course=cc)
             if len(attd)==0:
                 attd = attendancerec()
-                attd.studetails = std[0]
+                attd.studetails = ustd
                 attd.attdatetime = date
                 attd.attendetails = ad
-                attd.attendance = True if perc > 60 else False
-                attd.matchrate = perc
+                attd.attendance = False
                 attd.term = tt
                 attd.course = cc
-            else:
-                attd = attendancerec.objects.get(studetails=std[0],term=tt, course=cc)
-                attd.attdatetime = date
-                attd.attendance = True if perc > 60 else False
-                attd.matchrate = perc
-            attd.save()
-
-    unmatched = studentrec.objects.filter(selectcourse=sc).exclude(stunum__in=matchedIds.keys())
-    for ustd in unmatched:
-        attd = attendancerec.objects.filter(studetails=ustd, term=tt, course=cc)
-        if len(attd)==0:
-            attd = attendancerec()
-            attd.studetails = ustd
-            attd.attdatetime = date
-            attd.attendetails = ad
-            attd.attendance = False
-            attd.term = tt
-            attd.course = cc
-            attd.save()
+                attd.save()
 
     return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
@@ -194,10 +239,10 @@ def importstu(request):
                     student.stuname=stuname
                     student.selectcourse=sc
                     student.save()
-        else:
-            fs = FileSystemStorage(location='rollcallmodule/StudentImages/')
-            for fileitem in files:
-                fs.save(fileitem.name, fileitem)
+            else:
+                fs = FileSystemStorage(location='rollcallmodule/StudentImages/')
+                for fileitem in files:
+                    fs.save(fileitem.name, fileitem)
     return HttpResponseRedirect('/rollcallmodule/StudentInformation')
 
 #       return HttpResponseRedirect('/rollcallmodule/StudentInformation')
@@ -210,15 +255,32 @@ def importstu(request):
     #         fs.save(fileitem.name, fileitem)
     #     return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
 
-def histrec(request):
-    tid = request.session['termid']
-    cid = request.session['courseid']
+def HistoryRec(request):
+    tid = request.session.get('termid')
+    cid = request.session.get('courseid')
     attdlist = attendancerec.objects.filter(term=tid, course=cid)
     context = {'attdlist': attdlist}
     print(attdlist)
     # maxid=context.get('attdateid')
     # statistic=attendancerec.stats(maxid)
     # context=dict(context,**statistic)
+    return render(request,'History.html',context)
+
+def EditHistory(request,aid):
+    if request.method== "POST":
+        attdl = attendancerec.objects.get(attendanceID=aid)
+        attdl.attendance = request.POST.get('txtAttendance'+str(aid))
+        attdl.save()
+
+    return HttpResponseRedirect('/rollcallmodule/history')
+
+def hiscall(request,calldateid):
+    tid = request.session['termid']
+    context=attendancerec.atthist(tid,calldateid)
+
+    maxid=context.get('calldateid')
+    statistic=attendancerec.statics(maxid)
+    context=dict(context,**statistic)
     return render(request,'History.html',context)
 
 

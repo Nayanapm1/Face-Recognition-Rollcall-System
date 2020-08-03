@@ -60,10 +60,10 @@
 			  <td width="45%" height="21" align="center" bgcolor="#DEE0DF" >&nbsp;<strong>Management</strong>&nbsp;</td>
           </tr>
           {% for course in courselist %}
-              <tr>
+              <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
               <form action="course/update/{{course.courseid}}" method="POST">
                   {% csrf_token %}
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse{{course.courseid}}">{{course.coursename}}</label>
+                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse{{course.courseid}}">{{course.coursename}}</label>
                       <input size="30" type="text" name="txtCourse{{course.courseid}}" id="txtCourse{{course.courseid}}" style="display: none" value="{{course.coursename}}">
                   </td>
                   <td height="21" align="center">

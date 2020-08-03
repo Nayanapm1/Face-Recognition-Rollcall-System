@@ -56,8 +56,8 @@ class attendate(models.Model):
     #     attdateid = attdate.attdateid
     #     return attdateid
 
-    def getmaxid(scid):
-        sql="select * from attendate where selectcourse="+str(scid.scid)+" order by attdate desc limit 1"
+    def getmaxid(scid1):
+        sql="select * from attendate where scid="+str(scid1)+" order by attdateid desc limit 1"
         lastdate=attendate.objects.raw(sql)
         attdateid=lastdate[0].attdateid
         return attdateid
@@ -69,6 +69,7 @@ class attendancerec(models.Model):
     attendetails = models.ForeignKey('attendate', on_delete=models.CASCADE, db_column='attdateid')
     attdatetime = models.DateField(null=True)
     attendance = models.BooleanField(default=True)
+    matchrate = models.CharField(null=True, max_length=45)
     studentphoto = models.CharField(max_length=45)
     term = models.ForeignKey(selectcourse_models.term, on_delete=models.CASCADE, db_column='termid')
     course = models.ForeignKey(selectcourse_models.course, on_delete=models.CASCADE, db_column='courseid')
@@ -76,28 +77,32 @@ class attendancerec(models.Model):
     class Meta:
         db_table = 'attendancerec'
 
-    def atthist(scid, attdateid):
-        scid = selectcourse_models.objects.get(scid=scid)
-        attdatelist = attendate.objects.filter(selectcourse=scid)
+    def atthist(scid1, attdateid):
+        rollcalldatelist = attendate.objects.filter(selectcourse=scid1)
+ #       attdatelist = attendate.objects.filter(selectcourse=scid)
         if attdateid == 0:
-            attdateid = attendate.getmaxid(scid)
-            attdate = attendate.objects.get(attdateid=attdateid)
-            attlist = attendancerec.objects.filter(attendetails=attdate)
+            tattdateid = attendate.getmaxid(scid1)
+   #         attdate = attendate.objects.get(attdateid=attdateid)
+            tattlist = attendancerec.objects.filter(attendate=tattdateid)
         else:
-            attdate = attendate.objects.get(attdateid=attdateid)
-            attlist = attendancerec.objects.filter(attendetails=attdate)
-        context = {'attdatelist': attdatelist, 'attreclist': attlist, 'attdateid': attdateid}
+            tattlist = attendancerec.objects.filter(attdateid=attdateid)
+   #         attlist = attendancerec.objects.filter(attendetails=attdate)
+        context = {'rollcalldatelist': rollcalldatelist, 'attreclist': tattlist, 'tattdateid': tattdateid}
         return context
 
-    def stats(attdateid):
-        attdate = attendate.objects.get(attdateid=attdateid)
-        total = attendancerec.objects.filter(attendetails=attdate)
-        attended = attendancerec.objects.filter(attendetails=attdate, attendance=1)
-        if total.count() == 0:
-            rate = "0%"
-        else:
-            rate = attended.count() / total.count()
-            rate = '%.2f%%' % (rate * 100)
-
-        stats = {'total': total.count(), 'attended': attended.count(), 'rate': rate}
-        return stats
+    def statics(attdateid):
+        #attdate = attendate.objects.get(attdateid=attdateid)
+        totalstu = attendancerec.objects.filter(attdateid=attdateid)
+        attend = attendancerec.objects.filter(attendetails=totalstu, tiscall=1)
+        rate = attend.count()/totalstu.count()
+        rate = '%.2f%%' % (rate * 100)
+        statistic = {'totalstu': totalstu.count(), 'attend': attend.count(), 'rate': rate}
+        return statistic
+        # if total.count() == 0:
+        #     rate = "0%"
+        # else:
+        #     rate = attended.count() / total.count()
+        #     rate = '%.2f%%' % (rate * 100)
+        #
+        # stats = {'total': total.count(), 'attended': attended.count(), 'rate': rate}
+        # return stats

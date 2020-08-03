@@ -38,7 +38,7 @@
             <td width="134" align="center" bgcolor="#DEE0DF">Attendance</td>
           </tr>
           {% for attd in attdlist %}
-              <tr align="center">
+              <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center">
                 <td>{{ attd.studetails.stunum }}</td>
                 <td>{{ attd.studetails.stuname }}</td>
                 <td><img src="/static/StudentImages/{{attd.studetails.stunum}}.jpg" width="52" height="41" onerror="this.onerror=null;this.src='/static/images/NoPhoto.jpg'"/></td>

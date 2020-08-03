@@ -147,22 +147,35 @@ function loadcourseselectbox()
             
         {% for term in termlist %}
         
-            <option value="{{ term.termid }}" >{{ term.termname }}</option>
+            <option value="{{ term.termid }}"
+            {% if term.termid == tid %}
+                selected
+            {% endif %}
+            >{{ term.termname }}</option>
             
          {% endfor %}
     
           </select>
           <br><br>
           <label for="course">Course:</label>
-          <select name="course" class="inputbox1" id="course">
-            <option value="" selected="selected">Please select course </option>
+          <select name="course" class="inputbox1" id="course" >
+            <option value="0" selected="selected">Please select course </option>
+              {% for course in courselist %}
+
+            <option value="{{ course.courseid }}"
+            {% if course.courseid == cid %}
+                selected
+            {% endif %}
+            >{{ course.coursename }}</option>
+
+         {% endfor %}
           </select>
           </p>
         <p>Date:
-          <input type="date" name="date" id="date">
+          <input type="date" name="date" id="date" value="{{ date }}">
           <br>
           <br>
-          <input type="submit" name="button" id="button" value="Ok" onclick="parent.window.close()">
+          <input type="submit" name="button" id="button" value="Ok" onclick="window.parent.location.href='../rollcallmodule/RollCallPage'">
         </p>
         <table width="100%" border="1" cellpadding="0" cellspacing="0">
           <tbody>          
