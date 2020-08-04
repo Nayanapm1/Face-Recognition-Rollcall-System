@@ -54,21 +54,19 @@ function edit(i)
       <td width="1%" bgcolor="#228744">&nbsp;</td>
       <td width="98%"><table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
-          <tr>
-            <td height="21" colspan="7" align="left" valign="middle" bgcolor="#ACB0AE">Date:
-				 <select name="attdateid" class="inputbox1" id="attdateid" onchange="changedate(this.value)">
-                    {% for attdate  in  attdatelist %}
-                    {% if attdateid == attdate.attdateid %}
-                    <option value="{{attdateid}}" selected>{{attdate.attdate}}</option>
-                    {% else %}
-                    <option value="{{attdate.attdateid}}">{{attdate.attdate}}</option>
-                    {% endif %}
-                    {% endfor %}
-                </select>
-                &nbsp;
-                <input name="button" type="submit" class="btn" id="button" value="Clear" onclick="del();">
-                Total：{{ totalstu }} Students &nbsp; Attendance：{{attend }} students&nbsp; Attendance rate：{{rate}}</td>
-            </tr>
+{#          <tr>#}
+{#            <td height="21" colspan="7" align="left" valign="middle" bgcolor="#ACB0AE">Date:#}
+{#				 <select name="attdateid" class="inputbox1" id="attdateid" onchange="changedate(this.value)">#}
+{#                    {% for attdate  in  attdatelist %}#}
+{#                    {% if attdateid == attdate.attdateid %}#}
+{#                    <option value="{{attdateid}}" selected>{{attdate.attdate}}</option>#}
+{#                    {% else %}#}
+{#                    <option value="{{attdate.attdateid}}">{{attdate.attdate}}</option>#}
+{#                    {% endif %}#}
+{#                    {% endfor %}#}
+{#                </select>#}
+{##}
+{#            </tr>#}
           <tr>
 			<td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attendance Date</td>
             <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Student Number</td>
@@ -81,15 +79,15 @@ function edit(i)
           <tr ></tr>
 			{% for attd in attdlist %}
           <tr align="center" onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-              <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.attdatetime }}</td>
-			  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.stunum }}</td>
-                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.stuname }}</td>
-                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.term.termname }}</td>
-            <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'"align="center" bgcolor="#FFFFFF">{{ attd.studetails.selectcourse.course.coursename }}</td>
+              <td>{{ attd.attdatetime }}</td>
+			  <td>{{ attd.studetails.stunum }}</td>
+                  <td>{{ attd.studetails.stuname }}</td>
+                  <td>{{ attd.studetails.selectcourse.term.termname }}</td>
+            <td >{{ attd.studetails.selectcourse.course.coursename }}</td>
 
               <form action="history/update/{{attd.attendanceID}}" method="POST">
                   {% csrf_token %}
-                  <td onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttendance{{attd.attendanceID}}">{{attd.attendance}}</label>
+                  <td><label for="textfield" id="lblAttendance{{attd.attendanceID}}">{{attd.attendance}}</label>
                       <input size="30" type="text" name="txtAttendance{{attd.attendanceID}}" id="txtAttendance{{attd.attendanceID}}" style="display: none" value="{{attd.attendance}}"></td>
                   <td>
                       <input type="button" name="button2" id="btnEdit{{attd.attendanceID}}" value="Edit" onClick="edit({{attd.attendanceID}});">

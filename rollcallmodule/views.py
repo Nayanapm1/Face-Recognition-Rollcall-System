@@ -37,7 +37,8 @@ def CoursePopUpOk(request):
         request.session['courseid'] = request.POST.get('course')
         request.session['date'] = request.POST.get('date')
         print (request.session.items())
-        return HttpResponse(status=204)
+        return render(request, 'coursepopup.html', {'context': 'ok'})
+        #return HttpResponse(status=204)
 
 def ExtractingComparingPage(request):
     tid = request.session.get('termid')
@@ -67,7 +68,8 @@ def RollCallPage(request):
         studlist = studentrec.objects.filter(selectcourse__term=tid, selectcourse__course=cid)
         studatt = {}
         if date != '':
-            attd = attendate.objects.filter(attdate=date)
+            attd = attendate.objects.filter(attdate=date, selectcourse__term=tid, selectcourse__course=cid)
+            print(attd)
             if len(attd) != 0:
                 attlist = attendancerec.objects.filter(term=tid, course=cid, attendetails=attd[0], studetails__in=studlist)
                 if len(attlist) != 0:
@@ -169,6 +171,12 @@ def Attendancerun(request):
                 attd.course = cc
                 attd.save()
 
+    #cleanup files
+    dir = 'rollcallmodule/StudentUplaodedImages'
+    for f in os.listdir(dir):
+        fpath = os.path.join(dir, f)
+        os.remove(fpath)
+
     return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
 def Udelete(request):
@@ -241,8 +249,7 @@ def importstu(request):
                     student.save()
             else:
                 fs = FileSystemStorage(location='rollcallmodule/StudentImages/')
-                for fileitem in files:
-                    fs.save(fileitem.name, fileitem)
+                fs.save(file.name, file)
     return HttpResponseRedirect('/rollcallmodule/StudentInformation')
 
 #       return HttpResponseRedirect('/rollcallmodule/StudentInformation')

@@ -64,11 +64,10 @@ def RollCall(request):
 
 def StudAttGet(request):
     if request.method == "GET":
-        stid = request.session.get('userid')
+        stunum = request.session.get('username')
         cid = int(request.GET.get('cid'))
         dt = request.GET.get('dt')
-        print(dt, ",", stid, ",", cid)
-        stud = studentrec.objects.filter(stuid=stid)
+        stud = studentrec.objects.filter(stunum=stunum)
         attd = attendancerec.objects.filter(studetails__in=stud)
         if cid is not None and cid != 0:
             attd = attendancerec.objects.filter(studetails__in=stud, course_id=cid)

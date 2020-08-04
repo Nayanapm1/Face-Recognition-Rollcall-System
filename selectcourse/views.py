@@ -9,6 +9,9 @@ from datetime import datetime
 # Create your views here.
 
 def TermList(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     termlist1 =term.objects.all()
     print(termlist1)
     context = {'termlist': termlist1}
@@ -43,6 +46,9 @@ def delTerm(request,tid):
     return HttpResponseRedirect('/sc/term')
 
 def CourseList(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     courselist1=course.objects.all()
     print(courselist1)
     context = {'courselist': courselist1}
@@ -78,6 +84,9 @@ def delCourse(request,cid):
     return HttpResponseRedirect('/sc/course')
 
 def SelectCourseList(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     selectcourselist = selectcourse.objects.all()
     termlist =term.objects.all()
     courselist = course.objects.all()
