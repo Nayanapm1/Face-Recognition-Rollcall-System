@@ -60,6 +60,9 @@ def Alogout(request):
     return HttpResponseRedirect('/usermgnt/admin')
 
 def RollCall(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
+
     return render(request, 'RollCall.html')
 
 def StudAttGet(request):
