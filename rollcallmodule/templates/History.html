@@ -7,21 +7,26 @@
 	<script language="javascript">
 function edit(i)
 		{
-			document.getElementById("lblAttended".concat(i)).style.display='none';
-			document.getElementById("txtAttended".concat(i)).style.display='';
+			document.getElementById("lblAttendance".concat(i)).style.display='none';
+			document.getElementById("txtAttendance".concat(i)).style.display='';
 			document.getElementById("btnUpdate".concat(i)).style.display='';
 			document.getElementById("btnEdit".concat(i)).style.display='none';
 			document.getElementById("btnDelete".concat(i)).style.display='none';
 		}
 	function update(i)
 		{
-			document.getElementById("lblAttended".concat(i)).style.display='';
-			document.getElementById("txtAttended".concat(i)).style.display='none';
+			document.getElementById("lblAttendance".concat(i)).style.display='';
+			document.getElementById("txtAttendance".concat(i)).style.display='none';
 			document.getElementById("btnUpdate".concat(i)).style.display='none';
 			document.getElementById("btnEdit".concat(i)).style.display='';
 			document.getElementById("btnDelete".concat(i)).style.display='';
-			document.getElementById("lblAttended".concat(i)).innerHTML=document.getElementById("txtAttended".concat(i)).value;
-		}	
+			document.getElementById("lblAttendance".concat(i)).innerHTML=document.getElementById("txtAttendance".concat(i)).value;
+		}
+
+    function update1(attendanceID) {
+	    location.href="/rollcallmodule/history/update/"+attendanceID+""
+    }
+
 	function delcon(i)
 	{
 		var con=confirm("Are you sure to delete the record? This action cannot be rolled back.Rownumber-".concat(i));
@@ -31,6 +36,13 @@ function edit(i)
 			}else
 				alert("The record is not deleted")
 	}
+
+	function changedate(dateid)
+            {
+                url="/rollcallmodule/history/"+dateid;
+                gourl(url);
+            }
+
 		</script>
 <body>
 <table width="100%" border="0">
@@ -42,120 +54,48 @@ function edit(i)
       <td width="1%" bgcolor="#228744">&nbsp;</td>
       <td width="98%"><table width="100%" border="1" cellpadding="0" cellspacing="0">
         <tbody>
+{#          <tr>#}
+{#            <td height="21" colspan="7" align="left" valign="middle" bgcolor="#ACB0AE">Date:#}
+{#				 <select name="attdateid" class="inputbox1" id="attdateid" onchange="changedate(this.value)">#}
+{#                    {% for attdate  in  attdatelist %}#}
+{#                    {% if attdateid == attdate.attdateid %}#}
+{#                    <option value="{{attdateid}}" selected>{{attdate.attdate}}</option>#}
+{#                    {% else %}#}
+{#                    <option value="{{attdate.attdateid}}">{{attdate.attdate}}</option>#}
+{#                    {% endif %}#}
+{#                    {% endfor %}#}
+{#                </select>#}
+{##}
+{#            </tr>#}
           <tr>
-            <td height="21" colspan="6" align="left" valign="middle" bgcolor="#ACB0AE"><label for="date">Date:</label>
-              <input type="date" name="date" id="date"></td>
+			<td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attendance Date</td>
+            <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Student Number</td>
+            <td width="19%" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
+            <td width="19%" height="21" align="center" bgcolor="#DEE0DF">Term</td>
+            <td width="19%" align="center" bgcolor="#DEE0DF">Course</td>
+            <td width="9%" height="21" align="center" bgcolor="#DEE0DF">Attended</td>
+            <td width="16%" align="center" bgcolor="#DEE0DF">Management</td>
             </tr>
-          <tr>
-            <td width="10%" height="21" align="center" bgcolor="#DEE0DF">Student Number</td>
-            <td width="20%" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
-            <td width="25%" height="21" align="center" bgcolor="#DEE0DF">Course</td>
-            <td width="10%" align="center" bgcolor="#DEE0DF">Date</td>
-            <td width="10%" height="21" align="center" bgcolor="#DEE0DF">Attended</td>
-            <td width="25%" align="center" bgcolor="#DEE0DF">Management</td>
-            </tr>
-          <tr
-			  onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'" >
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentNumber1">2020A001</label></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblStudentName1">William</label></td>
-                  <td align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblCourse1">INFO 5707 Data Modeling for Information Professionals</label></td>
-                  <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblDate1">01/01/2020</label></td>
-			           <td height="21" align="center" bgcolor="#FFFFFF"><label for="textfield" id="lblAttended1">Yes</label>
-                    <input type="text" name="textfield" id="txtAttended1" style="display: none" value="Yes"></td>
-			   <td height="21" align="center" valign="middle" bgcolor="#FFFFFF">
-					<input type="button" name="button2" id="btnEdit1" value="Edit" onClick="edit(1);">
-					<input type="button" name="button4" id="btnUpdate1" value="Update" style="display: none" onClick="update(1);"> 
-                    <input type="button" name="button3" id="btnDelete1" value="Delete" onClick="delcon(1);">
-					</td></tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-        </tbody>
+          <tr ></tr>
+			{% for attd in attdlist %}
+          <tr align="center" onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
+              <td>{{ attd.attdatetime }}</td>
+			  <td>{{ attd.studetails.stunum }}</td>
+                  <td>{{ attd.studetails.stuname }}</td>
+                  <td>{{ attd.studetails.selectcourse.term.termname }}</td>
+            <td >{{ attd.studetails.selectcourse.course.coursename }}</td>
+
+              <form action="history/update/{{attd.attendanceID}}" method="POST">
+                  {% csrf_token %}
+                  <td><label for="textfield" id="lblAttendance{{attd.attendanceID}}">{{attd.attendance}}</label>
+                      <input size="30" type="text" name="txtAttendance{{attd.attendanceID}}" id="txtAttendance{{attd.attendanceID}}" style="display: none" value="{{attd.attendance}}"></td>
+                  <td>
+                      <input type="button" name="button2" id="btnEdit{{attd.attendanceID}}" value="Edit" onClick="edit({{attd.attendanceID}});">
+                      <input type="submit" name="button4" id="btnUpdate{{attd.attendanceID}}" value="Update" style="display: none">
+                  </td>
+              </form>
+                </tr>
+            {% endfor %}
       </table></td>
       <td width="1%"bgcolor="#228744">&nbsp;</td>
     </tr>

@@ -18,8 +18,10 @@ from django.urls import path
 
 from django.contrib import admin
 from django.urls import path, include
+from usermgnt.views import AdminLogin
 
 urlpatterns = [
+    path('',AdminLogin),
     path('admin/', admin.site.urls),
     path('usermgnt/',include('usermgnt.urls')),
     path('rollcallmodule/',include('rollcallmodule.urls')),

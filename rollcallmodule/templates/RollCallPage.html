@@ -1,6 +1,37 @@
 <!doctype html>
 <html>
 <head>
+<script language="javascript">
+	function edit(i)
+		{
+			document.getElementById("lblStudentNum".concat(i)).style.display='none';
+			document.getElementById("txtStudentNum".concat(i)).style.display='';
+			document.getElementById("lblStudentName".concat(i)).style.display='none';
+			document.getElementById("txtStudentName".concat(i)).style.display='';
+			document.getElementById("btnUpdate".concat(i)).style.display='';
+			document.getElementById("btnEdit".concat(i)).style.display='none';
+			document.getElementById("btnDelete".concat(i)).style.display='none';
+		}
+	function update(i)
+		{
+			document.getElementById("lblStudentNum".concat(i)).style.display='';
+			document.getElementById("txtStudentNum".concat(i)).style.display='none';
+			document.getElementById("lblStudentName".concat(i)).style.display='';
+			document.getElementById("txtStudentName".concat(i)).style.display='none';
+			document.getElementById("btnUpdate".concat(i)).style.display='none';
+			document.getElementById("btnEdit".concat(i)).style.display='';
+			document.getElementById("btnDelete".concat(i)).style.display='';
+			document.getElementById("lblStudentNum".concat(i)).innerHTML=document.getElementById("txtStudentNum".concat(i)).value;
+			document.getElementById("lblStudentName".concat(i)).innerHTML=document.getElementById("txtStudentName".concat(i)).value;
+		}
+
+
+	function del(stuid)
+	{
+		if(confirm("Delete Confirm?"))
+		    location.href="/rollcallmodule/RollCallPage/delete/"+stuid+""
+	}
+</script>
 <style>
 .modal {
   display: none;position: fixed;z-index: 1;padding-top: 100px;left: 0;top: 0;width: 100%;height: 100%; 
@@ -68,68 +99,60 @@
             <th colspan="9" background="../materials//static/images/backt.jpg" height="25" scope="col"><table width="100%" border="0" cellpadding="0">
               <tbody>
                 <tr>
-                  <th width="82%" height="23" align="left" valign="middle" bgcolor="#ACB0AE" scope="col">
-					  					   
-					  <label for="textfield">Student No:</label>
-                    <input type="text" name="textfield" id="textfield">
-                    <label for="textfield2">Student Name:</label>
-                    <input type="text" name="textfield2" id="textfield2">
-                    <input type="button" name="button" id="button" value="RollCall">
-					</th>
-                  <th width="18%" align="right" valign="middle" bgcolor="#ACB0AE" scope="col">
-	<button id="myBtn">
-	<img  src="/static/images/Select.PNG" width="30" height="30" >
-	</button>  
-	<button id="myBtn1">
-	<img src=".//static/images/import_1.PNG" width="30" height="30" >
-	</button>
-	<button id="myBtn2">
-	<img  src="/static/images/starticon.jpg" width="30" height="30" >
-	</button>
-	<button id="myBtn3">
-	<img   src="/static/images/history.jpg" width="30" height="30" >
-	</button>
-<div id="myModal" class="modal">
-<div class="modal-content">
-    <span class="close">&times;</span>
-	<div id="frameholder">
-		<iframe width="100%" height="300px" frameborder="0" src="coursepopup.html" name="full_info">
-		</iframe>
-	</div>
+                  <th height="23" align="right" valign="middle" bgcolor="#ACB0AE" scope="col">
+                    <button id="myBtn">
+                      <img  src="/static/images/Select.PNG" width="30" height="30" >
+                      </button>  
+                    <button id="myBtn1">
+                      <img src="/static/images/import_1.PNG" width="30" height="30" >
+                      </button>
+                    <button id="myBtn2">
+                      <img  src="/static/images/starticon.jpg" width="30" height="30" >
+                      </button>
+                    <button id="myBtn3">
+                      <img   src="/static/images/history.jpg" width="30" height="30" >
+                      </button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="frameholder">
+        <iframe width="100%" height="300px" frameborder="0" src="coursepopup" name="full_info">
+          </iframe>
+        </div>
+      </div>
   </div>
-</div>
-	
-	
-	<div id="myModal1" class="modal">
-<div class="modal-content">
-    <span class="close1">&times;</span>
-	<div id="frameholder">
-		<iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="./UploadStudentInformationPage.html" name="full_info">
-		</iframe>
-	</div>
-  </div>
-</div>
-	
-	<div id="myModal2" class="modal">
-<div class="modal-content">
-    <span class="close2">&times;</span>
-	<div id="frameholder">
-		<iframe width="100%" height="300px" frameborder="0" src="./UploadClassStudentPhotoPage.html" name="full_info">
-		</iframe>
-	</div>
-  </div>
-</div>
-	
-	<div id="myModal3" class="modal">
-<div class="modal-content">
-    <span class="close3">&times;</span>
-	<div id="frameholder">
-		<iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="./History.html" name="full_info">
-		</iframe>
-	</div>
-  </div>
-</div>
-<script>
+                    
+                    
+                    <div id="myModal1" class="modal">
+                      <div class="modal-content">
+                        <span class="close1">&times;</span>
+                        <div id="frameholder">
+                          <iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="StudentInformation" name="full_info">
+                            </iframe>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div id="myModal2" class="modal">
+                      <div class="modal-content">
+                        <span class="close2">&times;</span>
+                        <div id="frameholder">
+                          <iframe width="100%" height="300px" frameborder="0" src="UploadClassStudentPhoto" name="full_info">
+                            </iframe>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div id="myModal3" class="modal">
+                      <div class="modal-content">
+                        <span class="close3">&times;</span>
+                        <div id="frameholder">
+                          <iframe width="100%" height="300px" frameborder="0" scrolling="yes" src="history" name="full_info">
+                            </iframe>
+                          </div>
+                        </div>
+                    </div>
+  <script>
 // Get the modal
 var modal = document.getElementById("myModal");
 var modal1 = document.getElementById("myModal1");
@@ -186,10 +209,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-					  </script>
 
-					</th>
-                </tr>
+					  </script>                  </th>
+                  </tr>
               </tbody>
             </table></th>
             </tr>
@@ -198,81 +220,35 @@ window.onclick = function(event) {
             <td width="106" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
             <td width="93" height="21" align="center" bgcolor="#DEE0DF">Term</td>
             <td width="235" height="21" align="center" bgcolor="#DEE0DF">Course</td>
-            <td width="218" height="21" align="center" bgcolor="#DEE0DF">Attended (Y/N)</td>
+            <td width="218" height="21" align="center" bgcolor="#DEE0DF">Attendance</td>
             <td width="134" align="center" bgcolor="#DEE0DF">Student Photo</td>
             <td width="141" height="21" align="center" bgcolor="#DEE0DF">Management</td>
           </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td height="44" align="center">&nbsp;<a href="StudentRecord.html">2020A001</a></td>
-            <td align="center">&nbsp;Willem Baxter</td>
-            <td align="center">&nbsp;Spring 2020</td>
-            <td align="center">INFO 5707 - Data Modeling for Information Professionals</td>
-            <td align="center">Y(100%)</td>
-            <td align="center"><img src="/static/images/Willem Baxter.jpg" width="52" height="41" alt=""/></td>
-            <td align="center" valign="middle">
-				<input type="button" name="button2" id="button2" value="Edit">
-                    <input type="button" name="button3" id="button3" value="Delete">
-				
-			  </td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;2020A002</td>
-            <td align="center">&nbsp;Samantha Chu</td>
-            <td align="center">&nbsp;Spring 2020</td>
-            <td align="center">INFO 5707 - Data Modeling for Information Professionals</td>
-            <td align="center">&nbsp;</td>
-            <td align="center"><img src="/static/images/Samantha Chu.jpg" width="52" height="41" alt=""/></td>
-            <td align="center">
-				<input type="button" name="button2" id="button2" value="Edit">
-                    <input type="button" name="button3" id="button3" value="Delete">
-
-			  </td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-            <td align="center">&nbsp;</td>
-          </tr>
+          {% for std in stdlist %}
+              <tr onMouseOver="this.style.background='#BBF8B3'" onMouseOut="this.style.background='#FFFFFF'">
+                <form action="RollCallPage/update/{{std.stuid}}" method="POST">
+                {% csrf_token %}
+                    <td align="center"><label for="textfield" id="lblStudentNum{{std.stuid}}">{{std.stunum}}</label>
+                      <input size="30" type="text" name="txtStudentNum{{std.stuid}}" id="txtStudentNum{{std.stuid}}" style="display: none" value="{{std.stunum}}"></td>
+                       <td align="center"><label for="textfield" id="lblStudentName{{std.stuid}}">{{std.stuname}}</label>
+                       <input size="30" type="text" name="txtStudentName{{std.stuid}}" id="txtStudentName{{std.stuid}}" style="display: none" value="{{std.stuname}}"></td>
+                      <td align="center">{{ std.selectcourse.term.termname }}</td>
+                      <td align="center">{{ std.selectcourse.course.coursename }}</td>
+                      <td align="center">
+                          {% for k, v in studatt.items %}
+                            {% if k == std.stunum %}{{ v }}
+                            {% endif %}
+                          {% endfor %}
+                          </td>
+                      <td align="center"><img src="/static/StudentImages/{{std.stunum}}.jpg" width="52" height="41" onerror="this.onerror=null;this.src='/static/images/NoPhoto.jpg'"/></td>
+                    <td align="center" valign="middle">
+                        <input type="button" name="button2" id="btnEdit{{std.stuid}}" value="Edit" onClick="edit({{std.stuid}});">
+                        <input type="submit" name="button4" id="btnUpdate{{std.stuid}}" value="Update" style="display: none">
+                        <input type="button" name="button3" id="btnDelete{{std.stuid}}" value="Delete" onClick="del({{std.stuid}});">
+                    </td>
+                </form>
+              </tr>
+          {% endfor %}
         </tbody>
       </table></td>
       <td width="1%"bgcolor="#228744">&nbsp;</td>

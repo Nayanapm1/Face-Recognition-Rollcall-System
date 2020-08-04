@@ -17,12 +17,12 @@
 	<p>
 	<form action="/usermgnt/student/login" method="POST"><p>
 		{% csrf_token %}
-		  <label for="textfield">Username:</label>
+		  <label for="textfield">Student ID</label>
           <input name="username" type="text" required="required" id="username" >
 		</p>
 	<p>
 		  <label for="password">Password:</label>
-          <input type="password" name="userpwd" required="required" id="userpwd">
+          <input type="password" name="password" required="required" id="password">
 </p>
           <input name="submit" type="submit" id="submit" formmethod="POST" value="Submit" align="center">
 				</p></form>

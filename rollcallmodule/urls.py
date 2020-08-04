@@ -1,15 +1,26 @@
 from django.urls import path
 from .import views
+from django.shortcuts import HttpResponseRedirect
 
 app_name='rollcallmodule'
 
 urlpatterns=[
-    path('ComparingPage', views.r1),
-    path('coursepopup', views.r2),
-    path('ExtractingComparing', views.r3),
-    path('History', views.r4),
-    path('MyAttendace', views.r5),
-    path('RollCall', views.r6),
-    path('RollCallPage', views.r7),
-    path('StudenRecord', views.r8),
+    path('coursepopup', views.CoursePopUp),
+    path('coursepopup/ok', views.CoursePopUpOk),
+    path('ExtractingComparing', views.ExtractingComparingPage),
+    path('MyAttendance', views.MyAttendancePage),
+    path('RollCallPage', views.RollCallPage),
+    path('RollCallPage/update/<int:sid>', views.EditRollCallPage),
+    path('RollCallPage/delete/<int:sid>', views.DelRollCallPage),
+    path('StudentInformation', views.ViewStudentInformation),
+    path('UploadClassStudentPhoto', views.UploadClassStudentPhoto),
+    path('UploadClassStudentPhoto/upload', views.upload),
+    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/upload', views.upload),
+    path('UploadClassStudentPhoto/reset', views.Udelete),
+    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/reset', views.Udelete),
+    path('UploadClassStudentPhoto/proceed', views.Attendancerun),
+    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/proceed', views.Attendancerun),
+    path('StudentInformation/importstu',views.importstu),
+    path('history',views.HistoryRec),
+    path('history/update/<int:aid>', views.EditHistory)
 ]

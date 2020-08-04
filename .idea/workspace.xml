@@ -19,7 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Assignment 5 - Rollcall Module" />
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Final">
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A005.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/History.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/History.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/templates/RollCallPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/templates/RollCallPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectcourse/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermgnt/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermgnt/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +46,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -60,30 +76,81 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/usermgnt/Template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/usermgnt/Template" />
-      <recent name="$PROJECT_DIR$/rollcallmodule/template" />
-      <recent name="$PROJECT_DIR$/selectcourse/template" />
-      <recent name="$PROJECT_DIR$/course/template" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rollcallmodule" />
+      <recent name="$PROJECT_DIR$/Static/images" />
       <recent name="$PROJECT_DIR$/Static" />
       <recent name="$PROJECT_DIR$/selectcourse/template" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rollcallmodule/StudentUplaodedImages" />
+      <recent name="$PROJECT_DIR$/rollcallmodule/templates" />
+      <recent name="$PROJECT_DIR$/usermgnt/templates" />
+      <recent name="$PROJECT_DIR$/usermgnt/Template" />
+      <recent name="$PROJECT_DIR$/rollcallmodule/template" />
+    </key>
   </component>
-  <component name="RunManager" selected="Django Server.rollcall">
-    <configuration name="dbconnection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.AttendanceNew">
+    <configuration name="UploadClassStudentPhotoPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/rollcall/rollcallmodule/templates/UploadClassStudentPhotoPage.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Attendance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rollcall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rollcallmodule" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rollcallmodule/Attendance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AttendanceNew" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rollcall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rollcallmodule" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rollcallmodule/AttendanceNew.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Uploa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rollcall" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +163,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbconnection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Uploa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rollcall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rollcallmodule" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rollcallmodule/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,11 +220,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.rollcall" />
-      <item itemvalue="Python.dbconnection" />
+      <item itemvalue="JavaScript Debug.UploadClassStudentPhotoPage.html" />
+      <item itemvalue="Python.Uploa" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.Attendance" />
+      <item itemvalue="Python.AttendanceNew" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dbconnection" />
+        <item itemvalue="Python.AttendanceNew" />
+        <item itemvalue="Python.Attendance" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="JavaScript Debug.UploadClassStudentPhotoPage.html" />
+        <item itemvalue="Python.Uploa" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +292,26 @@
       <workItem from="1595279862372" duration="656000" />
       <workItem from="1595280526370" duration="1204000" />
       <workItem from="1595281737414" duration="397000" />
-      <workItem from="1595282138373" duration="755000" />
+      <workItem from="1595282138373" duration="1041000" />
+      <workItem from="1595284224965" duration="135000" />
+      <workItem from="1595475641809" duration="2818000" />
+      <workItem from="1595523101037" duration="8916000" />
+      <workItem from="1595646299168" duration="3629000" />
+      <workItem from="1595728007542" duration="24000" />
+      <workItem from="1595731519013" duration="2957000" />
+      <workItem from="1595740216998" duration="2618000" />
+      <workItem from="1595804230434" duration="9250000" />
+      <workItem from="1595877601202" duration="1466000" />
+      <workItem from="1595901164879" duration="7622000" />
+      <workItem from="1595983232132" duration="16942000" />
+      <workItem from="1596057044439" duration="1127000" />
+      <workItem from="1596061093025" duration="40679000" />
+      <workItem from="1596163428573" duration="129000" />
+      <workItem from="1596163870828" duration="21037000" />
+      <workItem from="1596251430711" duration="13518000" />
+      <workItem from="1596300724591" duration="402000" />
+      <workItem from="1596301645034" duration="56921000" />
+      <workItem from="1596481383416" duration="11482000" />
     </task>
     <task id="LOCAL-00001" summary="Changed icons of edit and delete">
       <created>1592702934493</created>
@@ -470,7 +586,77 @@
       <option name="project" value="LOCAL" />
       <updated>1595282579164</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Assignment 5 - User management Module">
+      <created>1595283224238</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1595283224238</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Assignment 6">
+      <created>1595809221910</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1595809221910</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Selectcourse module updated along with face recognition">
+      <created>1596066433986</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1596066433986</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Pushed sessions functionality">
+      <created>1596145644926</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1596145644926</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added dropdown functionality to coursepop up">
+      <created>1596224271010</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1596224271010</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added upload student details functionality">
+      <created>1596237454562</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1596237454562</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added upload student details functionality">
+      <created>1596237459351</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1596237459351</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added database relations">
+      <created>1596296350566</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1596296350566</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added history page data">
+      <created>1596318375892</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1596318375892</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Final">
+      <created>1596429829336</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1596429829336</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,15 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added add,edit and delete button functionality" />
-    <MESSAGE value="Assignment 2" />
-    <MESSAGE value="Assignment 3" />
-    <MESSAGE value="Adding Select Course App" />
-    <MESSAGE value="Updated history page edit button" />
-    <MESSAGE value="Made changes on the course selection page" />
-    <MESSAGE value="Updated select course app template folder" />
-    <MESSAGE value="Added rollcall app" />
-    <MESSAGE value="updated" />
     <MESSAGE value="updated css" />
     <MESSAGE value="Removed unwanted pages" />
     <MESSAGE value="Removed unwanted syntax" />
@@ -515,22 +692,39 @@
     <MESSAGE value="Assignment 5 - Updated" />
     <MESSAGE value="Assignment 5 - Usermgnt and Rollcall" />
     <MESSAGE value="Assignment 5 - Rollcall Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 - Rollcall Module" />
+    <MESSAGE value="Assignment 5 - User management Module" />
+    <MESSAGE value="Assignment 6" />
+    <MESSAGE value="Selectcourse module updated along with face recognition" />
+    <MESSAGE value="Pushed sessions functionality" />
+    <MESSAGE value="Added dropdown functionality to coursepop up" />
+    <MESSAGE value="Added upload student details functionality" />
+    <MESSAGE value="Added database relations" />
+    <MESSAGE value="Added history page data" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="479" y="195" key="#Inspections" timestamp="1596481506053">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="479" y="195" key="#Inspections/0.23.1680.952@0.23.1680.952" timestamp="1596481506053" />
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594240652643">
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="370" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1594066483938" />
     <state x="370" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.956@0.23.1680.956" timestamp="1594240652643" />
-    <state x="677" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593388101126">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state x="677" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595970724070">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
+    <state x="677" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.952@0.23.1680.952" timestamp="1595970724070" />
     <state x="677" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.956@0.23.1680.956" timestamp="1593388101126" />
-    <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594594760126">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state x="581" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596423537488">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
+    <state x="581" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596145008767" />
+    <state x="581" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.952@0.23.1680.952" timestamp="1596423537488" />
     <state x="581" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.956@0.23.1680.956" timestamp="1594594760126" />
+    <state x="581" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.965@0.23.1680.965" timestamp="1596061217631" />
     <state x="526" y="131" key="#rollcall" timestamp="1594066661109">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -539,6 +733,10 @@
       <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state x="592" y="187" key="#settings/0.23.1680.958@0.23.1680.958" timestamp="1593200801869" />
+    <state x="587" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596481507552">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="587" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.952@0.23.1680.952" timestamp="1596481507552" />
     <state x="234" y="115" key="DiffContextDialog" timestamp="1594180731373">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
@@ -547,73 +745,93 @@
       <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="553" y="294" key="FileChooserDialogImpl/0.23.1680.956@0.23.1680.956" timestamp="1593148652614" />
-    <state width="1638" height="316" key="GridCell.Tab.0.bottom" timestamp="1594240608308">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom" timestamp="1596300711526">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666632" />
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406222" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1596300711526" />
+    <state width="1638" height="252" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1596057034896" />
     <state width="1638" height="316" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1594240608308" />
     <state width="1638" height="255" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594155704552" />
-    <state width="1638" height="316" key="GridCell.Tab.0.center" timestamp="1594240608307">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="819" height="253" key="GridCell.Tab.0.bottom/0.23.1680.960@0.23.1680.960" timestamp="1596074631667" />
+    <state width="1638" height="253" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1596075756723" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center" timestamp="1596300711524">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666631" />
+    <state width="1638" height="290" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406221" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1596300711524" />
+    <state width="1638" height="252" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594155704551" />
-    <state width="1638" height="316" key="GridCell.Tab.0.left" timestamp="1594240608307">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="819" height="253" key="GridCell.Tab.0.center/0.23.1680.960@0.23.1680.960" timestamp="1596074631666" />
+    <state width="1638" height="253" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1596075756722" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left" timestamp="1596300711524">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666630" />
+    <state width="1638" height="290" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406220" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1596300711524" />
+    <state width="1638" height="252" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594155704550" />
-    <state width="1638" height="316" key="GridCell.Tab.0.right" timestamp="1594240608307">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="819" height="253" key="GridCell.Tab.0.left/0.23.1680.960@0.23.1680.960" timestamp="1596074631666" />
+    <state width="1638" height="253" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1596075756721" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right" timestamp="1596300711525">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666631" />
+    <state width="1638" height="290" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1596163406221" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1596300711525" />
+    <state width="1638" height="252" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1596057034895" />
     <state width="1638" height="316" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1594240608307" />
     <state width="1638" height="255" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594155704552" />
-    <state width="1638" height="316" key="GridCell.Tab.1.bottom" timestamp="1594240608309">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="819" height="253" key="GridCell.Tab.0.right/0.23.1680.960@0.23.1680.960" timestamp="1596074631666" />
+    <state width="1638" height="253" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1596075756723" />
+    <state width="1638" height="313" key="GridCell.Tab.1.bottom" timestamp="1596037382405">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666634" />
+    <state width="1638" height="361" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891334" />
+    <state width="1638" height="313" key="GridCell.Tab.1.bottom/0.23.1680.952@0.23.1680.952" timestamp="1596037382405" />
     <state width="1638" height="316" key="GridCell.Tab.1.bottom/0.23.1680.956@0.23.1680.956" timestamp="1594240608309" />
     <state width="679" height="301" key="GridCell.Tab.1.bottom/0.23.1680.958@0.23.1680.958" timestamp="1593200925973" />
-    <state width="1638" height="316" key="GridCell.Tab.1.center" timestamp="1594240608308">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="313" key="GridCell.Tab.1.center" timestamp="1596037382405">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666633" />
+    <state width="1638" height="361" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891333" />
+    <state width="1638" height="313" key="GridCell.Tab.1.center/0.23.1680.952@0.23.1680.952" timestamp="1596037382405" />
     <state width="1638" height="316" key="GridCell.Tab.1.center/0.23.1680.956@0.23.1680.956" timestamp="1594240608308" />
     <state width="679" height="301" key="GridCell.Tab.1.center/0.23.1680.958@0.23.1680.958" timestamp="1593200925973" />
-    <state width="1638" height="316" key="GridCell.Tab.1.left" timestamp="1594240608308">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="313" key="GridCell.Tab.1.left" timestamp="1596037382404">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666633" />
+    <state width="1638" height="361" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891332" />
+    <state width="1638" height="313" key="GridCell.Tab.1.left/0.23.1680.952@0.23.1680.952" timestamp="1596037382404" />
     <state width="1638" height="316" key="GridCell.Tab.1.left/0.23.1680.956@0.23.1680.956" timestamp="1594240608308" />
     <state width="679" height="301" key="GridCell.Tab.1.left/0.23.1680.958@0.23.1680.958" timestamp="1593200925973" />
-    <state width="1638" height="316" key="GridCell.Tab.1.right" timestamp="1594240608309">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="313" key="GridCell.Tab.1.right" timestamp="1596037382405">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666634" />
+    <state width="1638" height="361" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891333" />
+    <state width="1638" height="313" key="GridCell.Tab.1.right/0.23.1680.952@0.23.1680.952" timestamp="1596037382405" />
     <state width="1638" height="316" key="GridCell.Tab.1.right/0.23.1680.956@0.23.1680.956" timestamp="1594240608309" />
     <state width="679" height="301" key="GridCell.Tab.1.right/0.23.1680.958@0.23.1680.958" timestamp="1593200925973" />
-    <state width="1638" height="316" key="GridCell.Tab.2.bottom" timestamp="1594240608310">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="361" key="GridCell.Tab.2.bottom" timestamp="1595727891336">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666637" />
+    <state width="1638" height="361" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891336" />
     <state width="1638" height="316" key="GridCell.Tab.2.bottom/0.23.1680.956@0.23.1680.956" timestamp="1594240608310" />
-    <state width="1638" height="316" key="GridCell.Tab.2.center" timestamp="1594240608310">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="361" key="GridCell.Tab.2.center" timestamp="1595727891335">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666635" />
+    <state width="1638" height="361" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891335" />
     <state width="1638" height="316" key="GridCell.Tab.2.center/0.23.1680.956@0.23.1680.956" timestamp="1594240608310" />
-    <state width="1638" height="316" key="GridCell.Tab.2.left" timestamp="1594240608309">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="361" key="GridCell.Tab.2.left" timestamp="1595727891334">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666635" />
+    <state width="1638" height="361" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891334" />
     <state width="1638" height="316" key="GridCell.Tab.2.left/0.23.1680.956@0.23.1680.956" timestamp="1594240608309" />
-    <state width="1638" height="316" key="GridCell.Tab.2.right" timestamp="1594240608310">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state width="1638" height="361" key="GridCell.Tab.2.right" timestamp="1595727891336">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1594066666636" />
+    <state width="1638" height="361" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595727891336" />
     <state width="1638" height="316" key="GridCell.Tab.2.right/0.23.1680.956@0.23.1680.956" timestamp="1594240608310" />
     <state x="234" y="116" key="MergeDialog" timestamp="1593388123743">
       <screen x="0" y="23" width="1680" height="956" />
@@ -628,18 +846,26 @@
     </state>
     <state x="680" y="218" key="RollbackChangesDialog/0.23.1680.956@0.23.1680.956" timestamp="1593473461599" />
     <state x="680" y="218" key="RollbackChangesDialog/0.23.1680.958@0.23.1680.958" timestamp="1593202437448" />
-    <state x="267" y="172" key="SettingsEditor" timestamp="1594154193318">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state x="267" y="171" width="1084" height="810" key="SettingsEditor" timestamp="1596481346488">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state x="267" y="163" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1594066658035" />
+    <state x="267" y="171" key="SettingsEditor/0.23.1680.952@0.23.1680.952" timestamp="1596481346488" />
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2" timestamp="1595282601482">
-      <screen x="0" y="23" width="1680" height="956" />
+    <state x="254" y="80" width="1084" height="810" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1596074431577" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596429836248">
+      <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594066702717" />
-    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595282601482" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596145655338" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596429836248" />
+    <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595283251946" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
+    <state x="506" y="250" key="Vcs.Push.Dialog.v2/0.23.1680.961@0.23.1680.961" timestamp="1596066445092" />
+    <state x="459" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596162739902">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="459" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1596162739902" />
     <state x="694" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593200161520">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
@@ -648,13 +874,24 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="796" y="243" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1680.1050@0.0.1680.1050" timestamp="1594066461266" />
+    <state x="541" y="254" width="598" height="490" key="find.popup" timestamp="1595970066019">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="541" y="254" width="598" height="490" key="find.popup/0.23.1680.952@0.23.1680.952" timestamp="1595970066019" />
     <state x="654" y="229" key="git4idea.branch.GitSmartOperationDialog" timestamp="1594180751329">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
     <state x="654" y="229" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.956@0.23.1680.956" timestamp="1592809677208" />
     <state x="654" y="229" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.958@0.23.1680.958" timestamp="1594180751329" />
+    <state x="506" y="232" width="670" height="676" key="search.everywhere.popup" timestamp="1596509065436">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="506" y="232" width="670" height="676" key="search.everywhere.popup/0.23.1680.952@0.23.1680.952" timestamp="1596509065436" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rollcall$dbconnection.coverage" NAME="dbconnection Coverage Results" MODIFIED="1593203569164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rollcall$app.coverage" NAME="app Coverage Results" MODIFIED="1595995707525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
+    <SUITE FILE_PATH="coverage/rollcall$AttendanceNew.coverage" NAME="AttendanceNew Coverage Results" MODIFIED="1596298188047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
+    <SUITE FILE_PATH="coverage/rollcall$Attendance.coverage" NAME="Attendance Coverage Results" MODIFIED="1596258554252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rollcallmodule" />
   </component>
 </project>
