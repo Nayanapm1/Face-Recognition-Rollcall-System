@@ -16,6 +16,8 @@ from flask import Flask, request, render_template
 # Create your views here.
 
 def CoursePopUp(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     termlist=term.objects.all()
     courselist=[]
     tid = request.session.get('termid')
@@ -32,6 +34,8 @@ def CoursePopUp(request):
     return render(request, 'coursepopup.html', context)
 
 def CoursePopUpOk(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     if request.method == "POST":
         request.session['termid'] = request.POST.get('term')
         request.session['courseid'] = request.POST.get('course')
@@ -41,6 +45,8 @@ def CoursePopUpOk(request):
         #return HttpResponse(status=204)
 
 def ExtractingComparingPage(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     tid = request.session.get('termid')
     cid = request.session.get('courseid')
     date = request.session.get('date')
@@ -50,16 +56,17 @@ def ExtractingComparingPage(request):
         return render(request, 'ExtractingComparing.html', context)
 
 def MyAttendancePage(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     tid = request.session['termid']
     cid = request.session['courseid']
     attdlist = attendancerec.objects.all().filter(term=tid, course=cid)
     context = {'attdlist': attdlist}
     return render(request, 'MyAttendancePage.html', context)
 
-def r6(request):
-    return render(request, 'RollCall.html')
-
 def RollCallPage(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     tid = request.session.get('termid')
     cid = request.session.get('courseid')
     date = request.session.get('date')
@@ -82,6 +89,8 @@ def RollCallPage(request):
     return render(request, 'RollCallPage.html', context)
 
 def EditRollCallPage(request,sid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     if request.method== "POST":
         std = studentrec.objects.get(stuid=sid)
         std.stunum = request.POST.get('txtStudentNum'+str(sid))
@@ -90,14 +99,15 @@ def EditRollCallPage(request,sid):
     return HttpResponseRedirect('/rollcallmodule/RollCallPage')
 
 def DelRollCallPage(request,sid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     std1 = studentrec.objects.get(stuid=sid)
     std1.delete()
     return HttpResponseRedirect('/rollcallmodule/RollCallPage')
 
-def r8(request):
-    return render(request, 'StudentRecord.html')
-
 def ViewStudentInformation(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     return render(request, 'UploadStudentInformationPage.html')
 
 
@@ -110,9 +120,13 @@ def ViewStudentInformation(request):
 #     #     return HttpResponseRedirect('/sc/term')
 
 def UploadClassStudentPhoto(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     return render(request, 'UploadClassStudentPhotoPage.html')
 
 def upload(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     fileitems = request.FILES.getlist('filename')
     print(fileitems)
     fs = FileSystemStorage(location='rollcallmodule/StudentUplaodedImages/')
@@ -180,6 +194,8 @@ def Attendancerun(request):
     return HttpResponseRedirect('/rollcallmodule/ExtractingComparing')
 
 def Udelete(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
 #        return render(request, 'UploadClassStudentPhotoPage.html')
         return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
 
@@ -263,6 +279,8 @@ def importstu(request):
     #     return HttpResponseRedirect('/rollcallmodule/UploadClassStudentPhoto')
 
 def HistoryRec(request):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     tid = request.session.get('termid')
     cid = request.session.get('courseid')
     attdlist = attendancerec.objects.filter(term=tid, course=cid)
@@ -274,6 +292,8 @@ def HistoryRec(request):
     return render(request,'History.html',context)
 
 def EditHistory(request,aid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     if request.method== "POST":
         attdl = attendancerec.objects.get(attendanceID=aid)
         attdl.attendance = request.POST.get('txtAttendance'+str(aid))
@@ -282,6 +302,8 @@ def EditHistory(request,aid):
     return HttpResponseRedirect('/rollcallmodule/history')
 
 def hiscall(request,calldateid):
+    if request.session.get('username') == None:
+        return HttpResponseRedirect('/usermgnt/admin')
     tid = request.session['termid']
     context=attendancerec.atthist(tid,calldateid)
 
