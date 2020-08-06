@@ -220,7 +220,7 @@ window.onclick = function(event) {
             <td width="106" height="21" align="center" bgcolor="#DEE0DF">Student Name</td>
             <td width="93" height="21" align="center" bgcolor="#DEE0DF">Term</td>
             <td width="235" height="21" align="center" bgcolor="#DEE0DF">Course</td>
-            <td width="218" height="21" align="center" bgcolor="#DEE0DF">Attendance</td>
+            <td width="218" height="21" align="center" bgcolor="#DEE0DF">Attendance%</td>
             <td width="134" align="center" bgcolor="#DEE0DF">Student Photo</td>
             <td width="141" height="21" align="center" bgcolor="#DEE0DF">Management</td>
           </tr>
@@ -236,7 +236,7 @@ window.onclick = function(event) {
                       <td align="center">{{ std.selectcourse.course.coursename }}</td>
                       <td align="center">
                           {% for k, v in studatt.items %}
-                            {% if k == std.stunum %}{{ v }}
+                            {% if k == std.stunum %}{{ v }}%
                             {% endif %}
                           {% endfor %}
                           </td>

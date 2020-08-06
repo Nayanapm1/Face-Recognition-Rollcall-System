@@ -7,4 +7,17 @@
   <component name="PyPackaging">
     <option name="earlyReleasesAsUpgrades" value="true" />
   </component>
+  <component name="RMarkdownSettings">
+    <option name="renderProfiles">
+      <map>
+        <entry key="$PROJECT_DIR$/ReadMe.rmd">
+          <value>
+            <RMarkdownRenderProfile>
+              <option name="knitRootDirectory" value="$PROJECT_DIR$" />
+            </RMarkdownRenderProfile>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </project>

@@ -3,20 +3,11 @@ from usermgnt.models import User
 from selectcourse.models import selectcourse, course
 from rollcallmodule.models import studentrec, attendancerec
 
-
-# Create your views here.
-#def UserType(request):
- #   return render(request,'Index.html')
-
 def AdminLogin(request):
-    #userform=UsermgntForm()
-    #context={'userform':userform}
-    return render(request,'AdminLoginPage.html')#,context
+    return render(request,'AdminLoginPage.html')
 
 def StudLogin(request):
-    #userform = UsermgntForm()
-    #context = {'userform': userform}
-    return render(request,'StudentLoginPage.html')#,context
+    return render(request,'StudentLoginPage.html')
 
 def SLoginAction(request):
     if request.method == "POST":
@@ -32,9 +23,6 @@ def SLoginAction(request):
             return render(request, 'MyAttendancePage.html', context)
         else:
             return HttpResponseRedirect('/usermgnt/student')
-    # else:
-    #     return HttpResponseRedirect('/users/AdminLoginPage')
-
 
 def Slogout(request):
     del request.session['username']
@@ -83,10 +71,3 @@ def StudAttGet(request):
         return render(request, 'MyAttendancePage.html', context)
 
 
-# def LoadStudentCourse(request,studid1):
-#     stulist1=list(studentrec.objects.get(studid=studid1))
-# #    courselist={}
-#     for studid1 in stulist1:
-#         courselist[sc.course.courseid]=sc.course.coursename
-#     print(courselist)
-#     return JsonResponse(courselist,safe=False)
