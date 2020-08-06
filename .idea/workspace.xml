@@ -19,9 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Final Push">
+    <list default="true" id="5e145031-42ba-4610-b688-feeb0fc32bd0" name="Default Changelist" comment="Updated Readme document">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/Attendance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A001_6s8a0zN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A002_uB4VMjC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A003_xqUXVht.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A004_YPJChrC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/StudentImages/2020A005_GWBuIfw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollcallmodule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rollcallmodule/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +306,9 @@
       <workItem from="1596251430711" duration="13518000" />
       <workItem from="1596300724591" duration="402000" />
       <workItem from="1596301645034" duration="56921000" />
-      <workItem from="1596481383416" duration="33816000" />
-    </task>
-    <task id="LOCAL-00006" summary="Added add,edit and delete button functionality">
-      <created>1592861012723</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1592861012723</updated>
+      <workItem from="1596481383416" duration="34146000" />
+      <workItem from="1596744712988" duration="31000" />
+      <workItem from="1596749631388" duration="429000" />
     </task>
     <task id="LOCAL-00007" summary="Assignment 2">
       <created>1592867227718</created>
@@ -645,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596742742993</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Updated Readme document">
+      <created>1596744487246</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1596744487246</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +673,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Testing" />
     <MESSAGE value="Reverting back" />
     <MESSAGE value="Adding select course model info" />
     <MESSAGE value="Updated sc field names" />
@@ -690,7 +697,8 @@
     <MESSAGE value="FINAL CHANGES" />
     <MESSAGE value="Sessions added" />
     <MESSAGE value="Final Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Push" />
+    <MESSAGE value="Updated Readme document" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme document" />
   </component>
   <component name="WindowStateProjectService">
     <state x="479" y="195" key="#Inspections" timestamp="1596481506053">
@@ -843,11 +851,11 @@
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
     <state x="254" y="80" width="1084" height="810" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1596074431577" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596742751521">
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596744497996">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596145655338" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596742751521" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596744497996" />
     <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595283251946" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="506" y="250" key="Vcs.Push.Dialog.v2/0.23.1680.961@0.23.1680.961" timestamp="1596066445092" />
