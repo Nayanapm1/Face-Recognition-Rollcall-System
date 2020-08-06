@@ -300,14 +300,7 @@
       <workItem from="1596251430711" duration="13518000" />
       <workItem from="1596300724591" duration="402000" />
       <workItem from="1596301645034" duration="56921000" />
-      <workItem from="1596481383416" duration="32546000" />
-    </task>
-    <task id="LOCAL-00005" summary="Added add,edit and delete button functionality">
-      <created>1592809782666</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1592809782666</updated>
+      <workItem from="1596481383416" duration="33816000" />
     </task>
     <task id="LOCAL-00006" summary="Added add,edit and delete button functionality">
       <created>1592861012723</created>
@@ -645,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596742455036</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Final Push">
+      <created>1596742742993</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1596742742993</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -843,11 +843,11 @@
     <state x="267" y="171" key="SettingsEditor/0.23.1680.956@0.23.1680.956" timestamp="1593473617238" />
     <state x="267" y="172" key="SettingsEditor/0.23.1680.958@0.23.1680.958" timestamp="1594154193318" />
     <state x="254" y="80" width="1084" height="810" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1596074431577" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596742466218">
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2" timestamp="1596742751521">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
     <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596145655338" />
-    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596742466218" />
+    <state x="506" y="248" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1596742751521" />
     <state x="440" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.956@0.23.1680.956" timestamp="1595283251946" />
     <state x="506" y="249" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1594156108048" />
     <state x="506" y="250" key="Vcs.Push.Dialog.v2/0.23.1680.961@0.23.1680.961" timestamp="1596066445092" />
