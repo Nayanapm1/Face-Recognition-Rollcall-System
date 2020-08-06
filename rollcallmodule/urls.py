@@ -15,11 +15,8 @@ urlpatterns=[
     path('StudentInformation', views.ViewStudentInformation),
     path('UploadClassStudentPhoto', views.UploadClassStudentPhoto),
     path('UploadClassStudentPhoto/upload', views.upload),
-    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/upload', views.upload),
     path('UploadClassStudentPhoto/reset', views.Udelete),
-    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/reset', views.Udelete),
     path('UploadClassStudentPhoto/proceed', views.Attendancerun),
-    #path('UploadClassStudentPhoto/UploadClassStudentPhoto/proceed', views.Attendancerun),
     path('StudentInformation/importstu',views.importstu),
     path('history',views.HistoryRec),
     path('history/update/<int:aid>', views.EditHistory)

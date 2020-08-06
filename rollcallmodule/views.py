@@ -74,17 +74,23 @@ def RollCallPage(request):
     if tid!='' and cid!='':
         studlist = studentrec.objects.filter(selectcourse__term=tid, selectcourse__course=cid)
         studatt = {}
-        if date != '':
-            attd = attendate.objects.filter(attdate=date, selectcourse__term=tid, selectcourse__course=cid)
-            print(attd)
-            if len(attd) != 0:
-                attlist = attendancerec.objects.filter(term=tid, course=cid, attendetails=attd[0], studetails__in=studlist)
-                if len(attlist) != 0:
-                    for stud in studlist:
-                        for i in range(len(attlist)):
-                            if attlist[i].studetails.stunum == stud.stunum:
-                                studatt[stud.stunum] = attlist[i].attendance
-                                break
+        attdlist = attendate.objects.filter(selectcourse__term=tid, selectcourse__course=cid)
+        tot = len(attdlist)
+        if tot != 0:
+            for std in studlist:
+                present = attendancerec.objects.filter(term=tid, course=cid, studetails=std, attendance=1)
+                studatt[std.stunum] = round((len(present)/tot)*100, 2)
+        # if date != '':
+        #     attd = attendate.objects.filter(attdate=date, selectcourse__term=tid, selectcourse__course=cid)
+        #     print(attd)
+        #     if len(attd) != 0:
+        #         attlist = attendancerec.objects.filter(term=tid, course=cid, attendetails=attd[0], studetails__in=studlist)
+        #         if len(attlist) != 0:
+        #             for stud in studlist:
+        #                 for i in range(len(attlist)):
+        #                     if attlist[i].studetails.stunum == stud.stunum:
+        #                         studatt[stud.stunum] = attlist[i].attendance
+        #                         break
         context = {'stdlist': studlist, 'studatt': studatt}
     return render(request, 'RollCallPage.html', context)
 
@@ -284,7 +290,8 @@ def HistoryRec(request):
     tid = request.session.get('termid')
     cid = request.session.get('courseid')
     attdlist = attendancerec.objects.filter(term=tid, course=cid)
-    context = {'attdlist': attdlist}
+    datelist = attendate.objects.filter(selectcourse__term=tid, selectcourse__course=cid)
+    context = {'attdlist': attdlist, 'datelist': datelist}
     print(attdlist)
     # maxid=context.get('attdateid')
     # statistic=attendancerec.stats(maxid)
